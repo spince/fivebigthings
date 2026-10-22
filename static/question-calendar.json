@@ -1,0 +1,4952 @@
+{
+  "2026-10-23": [
+    {
+      "id": "20261023-q1",
+      "type": "number",
+      "title": "Keys are on a standard full-size piano",
+      "prompt": "About how many keys are on a standard full-size piano?",
+      "unit": "keys",
+      "answer": 88,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 88 keys."
+    },
+    {
+      "id": "20261023-q2",
+      "type": "number",
+      "title": "Days are in a leap year",
+      "prompt": "How many days are in a leap year?",
+      "unit": "days",
+      "answer": 366,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 366 days."
+    },
+    {
+      "id": "20261023-q3",
+      "type": "number",
+      "title": "Miles across is Earth at the equator",
+      "prompt": "About how many miles across is Earth at the equator?",
+      "unit": "miles",
+      "answer": 7926,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 7,926 miles."
+    },
+    {
+      "id": "20261023-q4",
+      "type": "number",
+      "title": "Light-years across is the Milky Way",
+      "prompt": "About how many light-years across is the Milky Way?",
+      "unit": "light-years",
+      "answer": 100000,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 100,000 light-years."
+    },
+    {
+      "id": "20261023-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Stonehenge, England.",
+      "unit": "km",
+      "answer": {
+        "lat": 51.1789,
+        "lng": -1.8262
+      },
+      "hint": "Look for Stonehenge in England.",
+      "explanation": "Stonehenge is located at about 51.1789°, -1.8262°."
+    }
+  ],
+  "2026-10-24": [
+    {
+      "id": "20261024-q1",
+      "type": "number",
+      "title": "Planets are in our solar system",
+      "prompt": "How many planets are in our solar system?",
+      "unit": "planets",
+      "answer": 8,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 8 planets."
+    },
+    {
+      "id": "20261024-q2",
+      "type": "number",
+      "title": "Stripes are on the U.S. flag",
+      "prompt": "How many stripes are on the U.S. flag?",
+      "unit": "stripes",
+      "answer": 13,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 13 stripes."
+    },
+    {
+      "id": "20261024-q3",
+      "type": "number",
+      "title": "Does the International Space Station travel",
+      "prompt": "About how fast does the International Space Station travel?",
+      "unit": "miles per hour",
+      "answer": 17500,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 17,500 miles per hour."
+    },
+    {
+      "id": "20261024-q4",
+      "type": "number",
+      "title": "River miles long is the Grand Canyon",
+      "prompt": "How many river miles long is the Grand Canyon?",
+      "unit": "miles",
+      "answer": 277,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 277 miles."
+    },
+    {
+      "id": "20261024-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on The Colosseum, Rome, Italy.",
+      "unit": "km",
+      "answer": {
+        "lat": 41.8902,
+        "lng": 12.4922
+      },
+      "hint": "Look for The Colosseum in Rome, Italy.",
+      "explanation": "The Colosseum is located at about 41.8902°, 12.4922°."
+    }
+  ],
+  "2026-10-25": [
+    {
+      "id": "20261025-q1",
+      "type": "number",
+      "title": "Strings does a standard guitar have",
+      "prompt": "How many strings does a standard guitar have?",
+      "unit": "strings",
+      "answer": 6,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 6 strings."
+    },
+    {
+      "id": "20261025-q2",
+      "type": "number",
+      "title": "Cards are in a standard deck, excluding jokers",
+      "prompt": "How many cards are in a standard deck, excluding jokers?",
+      "unit": "cards",
+      "answer": 52,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 52 cards."
+    },
+    {
+      "id": "20261025-q3",
+      "type": "number",
+      "title": "Miles from Earth to the Sun",
+      "prompt": "About how many miles from Earth to the Sun?",
+      "unit": "miles",
+      "answer": 93000000,
+      "hint": "Think on the scale of millions.",
+      "explanation": "A commonly cited estimate is about 93,000,000 miles."
+    },
+    {
+      "id": "20261025-q4",
+      "type": "number",
+      "title": "Kilometers does the Great Barrier Reef stretch along Australia’s coast",
+      "prompt": "About how many kilometers does the Great Barrier Reef stretch along Australia’s coast?",
+      "unit": "kilometers",
+      "answer": 2300,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 2,300 kilometers."
+    },
+    {
+      "id": "20261025-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Christ the Redeemer, Rio de Janeiro, Brazil.",
+      "unit": "km",
+      "answer": {
+        "lat": -22.9519,
+        "lng": -43.2105
+      },
+      "hint": "Look for Christ the Redeemer in Rio de Janeiro, Brazil.",
+      "explanation": "Christ the Redeemer is located at about -22.9519°, -43.2105°."
+    }
+  ],
+  "2026-10-26": [
+    {
+      "id": "20261026-q1",
+      "type": "number",
+      "title": "Minutes are in a day",
+      "prompt": "How many minutes are in a day?",
+      "unit": "minutes",
+      "answer": 1440,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 1,440 minutes."
+    },
+    {
+      "id": "20261026-q2",
+      "type": "number",
+      "title": "Sides does a hexagon have",
+      "prompt": "How many sides does a hexagon have?",
+      "unit": "sides",
+      "answer": 6,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 6 sides."
+    },
+    {
+      "id": "20261026-q3",
+      "type": "number",
+      "title": "Bones are in a typical adult skeleton",
+      "prompt": "How many bones are in a typical adult skeleton?",
+      "unit": "bones",
+      "answer": 206,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 206 bones."
+    },
+    {
+      "id": "20261026-q4",
+      "type": "number",
+      "title": "Is the Statue of Liberty from the ground to the torch",
+      "prompt": "About how tall is the Statue of Liberty from the ground to the torch?",
+      "unit": "feet",
+      "answer": 305,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 305 feet."
+    },
+    {
+      "id": "20261026-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Sydney Opera House, Sydney, Australia.",
+      "unit": "km",
+      "answer": {
+        "lat": -33.8567,
+        "lng": 151.2152
+      },
+      "hint": "Look for Sydney Opera House in Sydney, Australia.",
+      "explanation": "Sydney Opera House is located at about -33.8567°, 151.2152°."
+    }
+  ],
+  "2026-10-27": [
+    {
+      "id": "20261027-q1",
+      "type": "number",
+      "title": "Rings are in the Olympic symbol",
+      "prompt": "How many rings are in the Olympic symbol?",
+      "unit": "rings",
+      "answer": 5,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 5 rings."
+    },
+    {
+      "id": "20261027-q2",
+      "type": "number",
+      "title": "Squares are on a standard chessboard",
+      "prompt": "How many squares are on a standard chessboard?",
+      "unit": "squares",
+      "answer": 64,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 64 squares."
+    },
+    {
+      "id": "20261027-q3",
+      "type": "number",
+      "title": "Earth years does Jupiter take to orbit the Sun",
+      "prompt": "About how many Earth years does Jupiter take to orbit the Sun?",
+      "unit": "years",
+      "answer": 12,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 12 years."
+    },
+    {
+      "id": "20261027-q4",
+      "type": "number",
+      "title": "Miles across is the Moon",
+      "prompt": "About how many miles across is the Moon?",
+      "unit": "miles",
+      "answer": 2159,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 2,159 miles."
+    },
+    {
+      "id": "20261027-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Angkor Wat, Cambodia.",
+      "unit": "km",
+      "answer": {
+        "lat": 13.4125,
+        "lng": 103.8667
+      },
+      "hint": "Look for Angkor Wat in Cambodia.",
+      "explanation": "Angkor Wat is located at about 13.4125°, 103.8667°."
+    }
+  ],
+  "2026-10-28": [
+    {
+      "id": "20261028-q1",
+      "type": "number",
+      "title": "Miles long is an official marathon",
+      "prompt": "How many miles long is an official marathon?",
+      "unit": "miles",
+      "answer": 26.2,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 26.2 miles."
+    },
+    {
+      "id": "20261028-q2",
+      "type": "number",
+      "title": "Colors are on a standard traffic light",
+      "prompt": "How many colors are on a standard traffic light?",
+      "unit": "colors",
+      "answer": 3,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 3 colors."
+    },
+    {
+      "id": "20261028-q3",
+      "type": "number",
+      "title": "Feet above sea level is the summit of Mount Fuji",
+      "prompt": "About how many feet above sea level is the summit of Mount Fuji?",
+      "unit": "feet",
+      "answer": 12389,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 12,389 feet."
+    },
+    {
+      "id": "20261028-q4",
+      "type": "number",
+      "title": "Feet tall is the Burj Khalifa",
+      "prompt": "About how many feet tall is the Burj Khalifa?",
+      "unit": "feet",
+      "answer": 2717,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 2,717 feet."
+    },
+    {
+      "id": "20261028-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on The Acropolis, Athens, Greece.",
+      "unit": "km",
+      "answer": {
+        "lat": 37.9715,
+        "lng": 23.7257
+      },
+      "hint": "Look for The Acropolis in Athens, Greece.",
+      "explanation": "The Acropolis is located at about 37.9715°, 23.7257°."
+    }
+  ],
+  "2026-10-29": [
+    {
+      "id": "20261029-q1",
+      "type": "number",
+      "title": "Players per team are on a soccer field",
+      "prompt": "How many players per team are on a soccer field?",
+      "unit": "players",
+      "answer": 11,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 11 players."
+    },
+    {
+      "id": "20261029-q2",
+      "type": "number",
+      "title": "Sides does a pentagon have",
+      "prompt": "How many sides does a pentagon have?",
+      "unit": "sides",
+      "answer": 5,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 5 sides."
+    },
+    {
+      "id": "20261029-q3",
+      "type": "number",
+      "title": "Miles long is the Panama Canal",
+      "prompt": "About how many miles long is the Panama Canal?",
+      "unit": "miles",
+      "answer": 50,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 50 miles."
+    },
+    {
+      "id": "20261029-q4",
+      "type": "number",
+      "title": "Feet long is the Golden Gate Bridge’s main span",
+      "prompt": "About how many feet long is the Golden Gate Bridge’s main span?",
+      "unit": "feet",
+      "answer": 4200,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 4,200 feet."
+    },
+    {
+      "id": "20261029-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Petra Treasury, Jordan.",
+      "unit": "km",
+      "answer": {
+        "lat": 30.3285,
+        "lng": 35.4444
+      },
+      "hint": "Look for Petra Treasury in Jordan.",
+      "explanation": "Petra Treasury is located at about 30.3285°, 35.4444°."
+    }
+  ],
+  "2026-10-30": [
+    {
+      "id": "20261030-q1",
+      "type": "number",
+      "title": "Holes are in a standard round of golf",
+      "prompt": "How many holes are in a standard round of golf?",
+      "unit": "holes",
+      "answer": 18,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 18 holes."
+    },
+    {
+      "id": "20261030-q2",
+      "type": "number",
+      "title": "Wheels does a tricycle have",
+      "prompt": "How many wheels does a tricycle have?",
+      "unit": "wheels",
+      "answer": 3,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 3 wheels."
+    },
+    {
+      "id": "20261030-q3",
+      "type": "number",
+      "title": "Miles wide is the Sahara Desert",
+      "prompt": "About how many miles wide is the Sahara Desert?",
+      "unit": "miles",
+      "answer": 3000,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 3,000 miles."
+    },
+    {
+      "id": "20261030-q4",
+      "type": "number",
+      "title": "Miles long is the Trans-Siberian Railway",
+      "prompt": "About how many miles long is the Trans-Siberian Railway?",
+      "unit": "miles",
+      "answer": 5772,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 5,772 miles."
+    },
+    {
+      "id": "20261030-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Hagia Sophia, Istanbul, Türkiye.",
+      "unit": "km",
+      "answer": {
+        "lat": 41.0086,
+        "lng": 28.9802
+      },
+      "hint": "Look for Hagia Sophia in Istanbul, Türkiye.",
+      "explanation": "Hagia Sophia is located at about 41.0086°, 28.9802°."
+    }
+  ],
+  "2026-10-31": [
+    {
+      "id": "20261031-q1",
+      "type": "number",
+      "title": "Players per team are on a basketball court",
+      "prompt": "How many players per team are on a basketball court?",
+      "unit": "players",
+      "answer": 5,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 5 players."
+    },
+    {
+      "id": "20261031-q2",
+      "type": "number",
+      "title": "Sides does an octagon have",
+      "prompt": "How many sides does an octagon have?",
+      "unit": "sides",
+      "answer": 8,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 8 sides."
+    },
+    {
+      "id": "20261031-q3",
+      "type": "number",
+      "title": "Feet tall is Denali",
+      "prompt": "About how many feet tall is Denali?",
+      "unit": "feet",
+      "answer": 20310,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 20,310 feet."
+    },
+    {
+      "id": "20261031-q4",
+      "type": "number",
+      "title": "Feet tall is the original Great Pyramid of Giza",
+      "prompt": "About how many feet tall is the original Great Pyramid of Giza?",
+      "unit": "feet",
+      "answer": 481,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 481 feet."
+    },
+    {
+      "id": "20261031-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Mutianyu section of the Great Wall, China.",
+      "unit": "km",
+      "answer": {
+        "lat": 40.4319,
+        "lng": 116.5704
+      },
+      "hint": "Look for Mutianyu section of the Great Wall in China.",
+      "explanation": "Mutianyu section of the Great Wall is located at about 40.4319°, 116.5704°."
+    }
+  ],
+  "2026-11-01": [
+    {
+      "id": "20261101-q1",
+      "type": "number",
+      "title": "Players per team are on an indoor volleyball court",
+      "prompt": "How many players per team are on an indoor volleyball court?",
+      "unit": "players",
+      "answer": 6,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 6 players."
+    },
+    {
+      "id": "20261101-q2",
+      "type": "number",
+      "title": "Suits are in a standard deck of cards",
+      "prompt": "How many suits are in a standard deck of cards?",
+      "unit": "suits",
+      "answer": 4,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 4 suits."
+    },
+    {
+      "id": "20261101-q3",
+      "type": "number",
+      "title": "Miles per hour can a peregrine falcon reach in a hunting dive",
+      "prompt": "About how many miles per hour can a peregrine falcon reach in a hunting dive?",
+      "unit": "miles per hour",
+      "answer": 200,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 200 miles per hour."
+    },
+    {
+      "id": "20261101-q4",
+      "type": "number",
+      "title": "Feet deep is the Mariana Trench at its deepest measured point",
+      "prompt": "About how many feet deep is the Mariana Trench at its deepest measured point?",
+      "unit": "feet",
+      "answer": 36000,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 36,000 feet."
+    },
+    {
+      "id": "20261101-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Chichén Itzá, Yucatán, Mexico.",
+      "unit": "km",
+      "answer": {
+        "lat": 20.6843,
+        "lng": -88.5678
+      },
+      "hint": "Look for Chichén Itzá in Yucatán, Mexico.",
+      "explanation": "Chichén Itzá is located at about 20.6843°, -88.5678°."
+    }
+  ],
+  "2026-11-02": [
+    {
+      "id": "20261102-q1",
+      "type": "number",
+      "title": "Days are in a common year",
+      "prompt": "How many days are in a common year?",
+      "unit": "days",
+      "answer": 365,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 365 days."
+    },
+    {
+      "id": "20261102-q2",
+      "type": "number",
+      "title": "Sides does a triangle have",
+      "prompt": "How many sides does a triangle have?",
+      "unit": "sides",
+      "answer": 3,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 3 sides."
+    },
+    {
+      "id": "20261102-q3",
+      "type": "number",
+      "title": "Miles long is Route 66",
+      "prompt": "About how many miles long is Route 66?",
+      "unit": "miles",
+      "answer": 2448,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 2,448 miles."
+    },
+    {
+      "id": "20261102-q4",
+      "type": "number",
+      "title": "Square miles does the Pacific Ocean cover",
+      "prompt": "About how many square miles does the Pacific Ocean cover?",
+      "unit": "square miles",
+      "answer": 63800000,
+      "hint": "Think on the scale of millions.",
+      "explanation": "A commonly cited estimate is about 63,800,000 square miles."
+    },
+    {
+      "id": "20261102-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Moai at Ahu Tongariki, Easter Island, Chile.",
+      "unit": "km",
+      "answer": {
+        "lat": -27.1259,
+        "lng": -109.2767
+      },
+      "hint": "Look for Moai at Ahu Tongariki in Easter Island, Chile.",
+      "explanation": "Moai at Ahu Tongariki is located at about -27.1259°, -109.2767°."
+    }
+  ],
+  "2026-11-03": [
+    {
+      "id": "20261103-q1",
+      "type": "number",
+      "title": "Bones are in one human hand",
+      "prompt": "How many bones are in one human hand?",
+      "unit": "bones",
+      "answer": 27,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 27 bones."
+    },
+    {
+      "id": "20261103-q2",
+      "type": "number",
+      "title": "Sides does a square have",
+      "prompt": "How many sides does a square have?",
+      "unit": "sides",
+      "answer": 4,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 4 sides."
+    },
+    {
+      "id": "20261103-q3",
+      "type": "number",
+      "title": "Feet tall is K2",
+      "prompt": "About how many feet tall is K2?",
+      "unit": "feet",
+      "answer": 28251,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 28,251 feet."
+    },
+    {
+      "id": "20261103-q4",
+      "type": "number",
+      "title": "Feet tall is Angel Falls",
+      "prompt": "About how many feet tall is Angel Falls?",
+      "unit": "feet",
+      "answer": 3212,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 3,212 feet."
+    },
+    {
+      "id": "20261103-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Sagrada Família, Barcelona, Spain.",
+      "unit": "km",
+      "answer": {
+        "lat": 41.4036,
+        "lng": 2.1744
+      },
+      "hint": "Look for Sagrada Família in Barcelona, Spain.",
+      "explanation": "Sagrada Família is located at about 41.4036°, 2.1744°."
+    }
+  ],
+  "2026-11-04": [
+    {
+      "id": "20261104-q1",
+      "type": "number",
+      "title": "Natural satellites orbit Earth",
+      "prompt": "How many natural satellites orbit Earth?",
+      "unit": "moon",
+      "answer": 1,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 1 moon."
+    },
+    {
+      "id": "20261104-q2",
+      "type": "number",
+      "title": "Great Lakes are there",
+      "prompt": "How many Great Lakes are there?",
+      "unit": "lakes",
+      "answer": 5,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 5 lakes."
+    },
+    {
+      "id": "20261104-q3",
+      "type": "number",
+      "title": "Miles across is Earth’s diameter",
+      "prompt": "About how many miles across is Earth’s diameter?",
+      "unit": "miles",
+      "answer": 7918,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 7,918 miles."
+    },
+    {
+      "id": "20261104-q4",
+      "type": "number",
+      "title": "Miles long is the Alaska Highway",
+      "prompt": "About how many miles long is the Alaska Highway?",
+      "unit": "miles",
+      "answer": 1387,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 1,387 miles."
+    },
+    {
+      "id": "20261104-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Mount Fuji, Japan.",
+      "unit": "km",
+      "answer": {
+        "lat": 35.3606,
+        "lng": 138.7274
+      },
+      "hint": "Look for Mount Fuji in Japan.",
+      "explanation": "Mount Fuji is located at about 35.3606°, 138.7274°."
+    }
+  ],
+  "2026-11-05": [
+    {
+      "id": "20261105-q1",
+      "type": "number",
+      "title": "Olympic rings are blue, black, or red",
+      "prompt": "How many Olympic rings are blue, black, or red?",
+      "unit": "rings",
+      "answer": 3,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 3 rings."
+    },
+    {
+      "id": "20261105-q2",
+      "type": "number",
+      "title": "Faces does a cube have",
+      "prompt": "How many faces does a cube have?",
+      "unit": "faces",
+      "answer": 6,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 6 faces."
+    },
+    {
+      "id": "20261105-q3",
+      "type": "number",
+      "title": "Miles per hour does Earth travel in its orbit around the Sun",
+      "prompt": "About how many miles per hour does Earth travel in its orbit around the Sun?",
+      "unit": "miles per hour",
+      "answer": 67000,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 67,000 miles per hour."
+    },
+    {
+      "id": "20261105-q4",
+      "type": "number",
+      "title": "Miles long is the Great Wall of China",
+      "prompt": "About how many miles long is the Great Wall of China?",
+      "unit": "miles",
+      "answer": 13171,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 13,171 miles."
+    },
+    {
+      "id": "20261105-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Kiyomizu-dera, Kyoto, Japan.",
+      "unit": "km",
+      "answer": {
+        "lat": 34.9949,
+        "lng": 135.785
+      },
+      "hint": "Look for Kiyomizu-dera in Kyoto, Japan.",
+      "explanation": "Kiyomizu-dera is located at about 34.9949°, 135.7850°."
+    }
+  ],
+  "2026-11-06": [
+    {
+      "id": "20261106-q1",
+      "type": "number",
+      "title": "Chambers does a human heart have",
+      "prompt": "How many chambers does a human heart have?",
+      "unit": "chambers",
+      "answer": 4,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 4 chambers."
+    },
+    {
+      "id": "20261106-q2",
+      "type": "number",
+      "title": "Sides does a heptagon have",
+      "prompt": "How many sides does a heptagon have?",
+      "unit": "sides",
+      "answer": 7,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 7 sides."
+    },
+    {
+      "id": "20261106-q3",
+      "type": "number",
+      "title": "Minutes does sunlight take to reach Earth",
+      "prompt": "About how many minutes does sunlight take to reach Earth?",
+      "unit": "minutes",
+      "answer": 8.3,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 8.3 minutes."
+    },
+    {
+      "id": "20261106-q4",
+      "type": "number",
+      "title": "Light-years across is the Andromeda Galaxy",
+      "prompt": "About how many light-years across is the Andromeda Galaxy?",
+      "unit": "light-years",
+      "answer": 220000,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 220,000 light-years."
+    },
+    {
+      "id": "20261106-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Mount Kilimanjaro, Tanzania.",
+      "unit": "km",
+      "answer": {
+        "lat": -3.0674,
+        "lng": 37.3556
+      },
+      "hint": "Look for Mount Kilimanjaro in Tanzania.",
+      "explanation": "Mount Kilimanjaro is located at about -3.0674°, 37.3556°."
+    }
+  ],
+  "2026-11-07": [
+    {
+      "id": "20261107-q1",
+      "type": "number",
+      "title": "Teeth are in a typical adult set including wisdom teeth",
+      "prompt": "How many teeth are in a typical adult set including wisdom teeth?",
+      "unit": "teeth",
+      "answer": 32,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 32 teeth."
+    },
+    {
+      "id": "20261107-q2",
+      "type": "number",
+      "title": "Legs does a spider have",
+      "prompt": "How many legs does a spider have?",
+      "unit": "legs",
+      "answer": 8,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 8 legs."
+    },
+    {
+      "id": "20261107-q3",
+      "type": "number",
+      "title": "Feet tall is Mauna Kea from its underwater base",
+      "prompt": "About how many feet tall is Mauna Kea from its underwater base?",
+      "unit": "feet",
+      "answer": 33500,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 33,500 feet."
+    },
+    {
+      "id": "20261107-q4",
+      "type": "number",
+      "title": "Square miles is the Sahara Desert",
+      "prompt": "About how many square miles is the Sahara Desert?",
+      "unit": "square miles",
+      "answer": 3600000,
+      "hint": "Think on the scale of millions.",
+      "explanation": "A commonly cited estimate is about 3,600,000 square miles."
+    },
+    {
+      "id": "20261107-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Victoria Falls, Zambia–Zimbabwe border.",
+      "unit": "km",
+      "answer": {
+        "lat": -17.9243,
+        "lng": 25.8572
+      },
+      "hint": "Look for Victoria Falls in Zambia–Zimbabwe border.",
+      "explanation": "Victoria Falls is located at about -17.9243°, 25.8572°."
+    }
+  ],
+  "2026-11-08": [
+    {
+      "id": "20261108-q1",
+      "type": "number",
+      "title": "Strings does a violin have",
+      "prompt": "How many strings does a violin have?",
+      "unit": "strings",
+      "answer": 4,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 4 strings."
+    },
+    {
+      "id": "20261108-q2",
+      "type": "number",
+      "title": "Sides does a decagon have",
+      "prompt": "How many sides does a decagon have?",
+      "unit": "sides",
+      "answer": 10,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 10 sides."
+    },
+    {
+      "id": "20261108-q3",
+      "type": "number",
+      "title": "Miles long is the Channel Tunnel",
+      "prompt": "About how many miles long is the Channel Tunnel?",
+      "unit": "miles",
+      "answer": 31,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 31 miles."
+    },
+    {
+      "id": "20261108-q4",
+      "type": "number",
+      "title": "Miles per hour does sound travel in dry air near room temperature",
+      "prompt": "About how many miles per hour does sound travel in dry air near room temperature?",
+      "unit": "miles per hour",
+      "answer": 767,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 767 miles per hour."
+    },
+    {
+      "id": "20261108-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Table Mountain, Cape Town, South Africa.",
+      "unit": "km",
+      "answer": {
+        "lat": -33.9628,
+        "lng": 18.4098
+      },
+      "hint": "Look for Table Mountain in Cape Town, South Africa.",
+      "explanation": "Table Mountain is located at about -33.9628°, 18.4098°."
+    }
+  ],
+  "2026-11-09": [
+    {
+      "id": "20261109-q1",
+      "type": "number",
+      "title": "Colors are on the U.S. flag",
+      "prompt": "How many colors are on the U.S. flag?",
+      "unit": "colors",
+      "answer": 3,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 3 colors."
+    },
+    {
+      "id": "20261109-q2",
+      "type": "number",
+      "title": "Points does a compass rose usually show for the four cardinal directions",
+      "prompt": "How many points does a compass rose usually show for the four cardinal directions?",
+      "unit": "directions",
+      "answer": 4,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 4 directions."
+    },
+    {
+      "id": "20261109-q3",
+      "type": "number",
+      "title": "Miles long is the Nile River",
+      "prompt": "About how many miles long is the Nile River?",
+      "unit": "miles",
+      "answer": 4132,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 4,132 miles."
+    },
+    {
+      "id": "20261109-q4",
+      "type": "number",
+      "title": "Square miles does Antarctica cover",
+      "prompt": "About how many square miles does Antarctica cover?",
+      "unit": "square miles",
+      "answer": 5400000,
+      "hint": "Think on the scale of millions.",
+      "explanation": "A commonly cited estimate is about 5,400,000 square miles."
+    },
+    {
+      "id": "20261109-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Lalibela rock-hewn churches, Ethiopia.",
+      "unit": "km",
+      "answer": {
+        "lat": 12.0319,
+        "lng": 39.0475
+      },
+      "hint": "Look for Lalibela rock-hewn churches in Ethiopia.",
+      "explanation": "Lalibela rock-hewn churches is located at about 12.0319°, 39.0475°."
+    }
+  ],
+  "2026-11-10": [
+    {
+      "id": "20261110-q1",
+      "type": "number",
+      "title": "Strings does a cello have",
+      "prompt": "How many strings does a cello have?",
+      "unit": "strings",
+      "answer": 4,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 4 strings."
+    },
+    {
+      "id": "20261110-q2",
+      "type": "number",
+      "title": "Sides does a nonagon have",
+      "prompt": "How many sides does a nonagon have?",
+      "unit": "sides",
+      "answer": 9,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 9 sides."
+    },
+    {
+      "id": "20261110-q3",
+      "type": "number",
+      "title": "Feet tall is the Eiffel Tower including its antenna",
+      "prompt": "About how many feet tall is the Eiffel Tower including its antenna?",
+      "unit": "feet",
+      "answer": 1083,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 1,083 feet."
+    },
+    {
+      "id": "20261110-q4",
+      "type": "number",
+      "title": "Miles long is the Amazon River",
+      "prompt": "About how many miles long is the Amazon River?",
+      "unit": "miles",
+      "answer": 4000,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 4,000 miles."
+    },
+    {
+      "id": "20261110-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Taj Mahal, Agra, India.",
+      "unit": "km",
+      "answer": {
+        "lat": 27.1751,
+        "lng": 78.0421
+      },
+      "hint": "Look for Taj Mahal in Agra, India.",
+      "explanation": "Taj Mahal is located at about 27.1751°, 78.0421°."
+    }
+  ],
+  "2026-11-11": [
+    {
+      "id": "20261111-q1",
+      "type": "number",
+      "title": "Sides does a regular pentagon have",
+      "prompt": "How many sides does a regular pentagon have?",
+      "unit": "sides",
+      "answer": 5,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 5 sides."
+    },
+    {
+      "id": "20261111-q2",
+      "type": "number",
+      "title": "Official languages does the United Nations use",
+      "prompt": "How many official languages does the United Nations use?",
+      "unit": "languages",
+      "answer": 6,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 6 languages."
+    },
+    {
+      "id": "20261111-q3",
+      "type": "number",
+      "title": "Feet tall is the Empire State Building to its antenna",
+      "prompt": "About how many feet tall is the Empire State Building to its antenna?",
+      "unit": "feet",
+      "answer": 1454,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 1,454 feet."
+    },
+    {
+      "id": "20261111-q4",
+      "type": "number",
+      "title": "Square miles is the Amazon basin",
+      "prompt": "About how many square miles is the Amazon basin?",
+      "unit": "square miles",
+      "answer": 2700000,
+      "hint": "Think on the scale of millions.",
+      "explanation": "A commonly cited estimate is about 2,700,000 square miles."
+    },
+    {
+      "id": "20261111-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Machu Picchu, Peru.",
+      "unit": "km",
+      "answer": {
+        "lat": -13.1631,
+        "lng": -72.545
+      },
+      "hint": "Look for Machu Picchu in Peru.",
+      "explanation": "Machu Picchu is located at about -13.1631°, -72.5450°."
+    }
+  ],
+  "2026-11-12": [
+    {
+      "id": "20261112-q1",
+      "type": "number",
+      "title": "Keys are on a standard full-size piano",
+      "prompt": "How many keys are on a standard full-size piano?",
+      "unit": "keys",
+      "answer": 88,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 88 keys."
+    },
+    {
+      "id": "20261112-q2",
+      "type": "number",
+      "title": "Hours are in a day",
+      "prompt": "How many hours are in a day?",
+      "unit": "hours",
+      "answer": 24,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 24 hours."
+    },
+    {
+      "id": "20261112-q3",
+      "type": "number",
+      "title": "Feet long is a blue whale",
+      "prompt": "About how many feet long is a blue whale?",
+      "unit": "feet",
+      "answer": 100,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 100 feet."
+    },
+    {
+      "id": "20261112-q4",
+      "type": "number",
+      "title": "Pounds can an adult blue whale weigh",
+      "prompt": "About how many pounds can an adult blue whale weigh?",
+      "unit": "pounds",
+      "answer": 300000,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 300,000 pounds."
+    },
+    {
+      "id": "20261112-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Eiffel Tower, Paris, France.",
+      "unit": "km",
+      "answer": {
+        "lat": 48.8584,
+        "lng": 2.2945
+      },
+      "hint": "Look for Eiffel Tower in Paris, France.",
+      "explanation": "Eiffel Tower is located at about 48.8584°, 2.2945°."
+    }
+  ],
+  "2026-11-13": [
+    {
+      "id": "20261113-q1",
+      "type": "number",
+      "title": "Players start on the field for one baseball team",
+      "prompt": "How many players start on the field for one baseball team?",
+      "unit": "players",
+      "answer": 9,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 9 players."
+    },
+    {
+      "id": "20261113-q2",
+      "type": "number",
+      "title": "Sides does a dodecagon have",
+      "prompt": "How many sides does a dodecagon have?",
+      "unit": "sides",
+      "answer": 12,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 12 sides."
+    },
+    {
+      "id": "20261113-q3",
+      "type": "number",
+      "title": "Can a cheetah run",
+      "prompt": "About how fast can a cheetah run?",
+      "unit": "miles per hour",
+      "answer": 70,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 70 miles per hour."
+    },
+    {
+      "id": "20261113-q4",
+      "type": "number",
+      "title": "Feet tall is a mature coast redwood, among the world’s tallest trees",
+      "prompt": "About how many feet tall is a mature coast redwood, among the world’s tallest trees?",
+      "unit": "feet",
+      "answer": 380,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 380 feet."
+    },
+    {
+      "id": "20261113-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Statue of Liberty, New York Harbor, USA.",
+      "unit": "km",
+      "answer": {
+        "lat": 40.6892,
+        "lng": -74.0445
+      },
+      "hint": "Look for Statue of Liberty in New York Harbor, USA.",
+      "explanation": "Statue of Liberty is located at about 40.6892°, -74.0445°."
+    }
+  ],
+  "2026-11-14": [
+    {
+      "id": "20261114-q1",
+      "type": "number",
+      "title": "Pawns does each player start with in chess",
+      "prompt": "How many pawns does each player start with in chess?",
+      "unit": "pawns",
+      "answer": 8,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 8 pawns."
+    },
+    {
+      "id": "20261114-q2",
+      "type": "number",
+      "title": "Players start on the ice for one hockey team, including the goalie",
+      "prompt": "How many players start on the ice for one hockey team, including the goalie?",
+      "unit": "players",
+      "answer": 6,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 6 players."
+    },
+    {
+      "id": "20261114-q3",
+      "type": "number",
+      "title": "Is Lake Baikal at its deepest point",
+      "prompt": "About how deep is Lake Baikal at its deepest point?",
+      "unit": "feet",
+      "answer": 5387,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 5,387 feet."
+    },
+    {
+      "id": "20261114-q4",
+      "type": "number",
+      "title": "Is Victoria Falls at high water",
+      "prompt": "About how wide is Victoria Falls at high water?",
+      "unit": "feet",
+      "answer": 5604,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 5,604 feet."
+    },
+    {
+      "id": "20261114-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Meteora monasteries, Greece.",
+      "unit": "km",
+      "answer": {
+        "lat": 39.7217,
+        "lng": 21.6306
+      },
+      "hint": "Look for Meteora monasteries in Greece.",
+      "explanation": "Meteora monasteries is located at about 39.7217°, 21.6306°."
+    }
+  ],
+  "2026-11-15": [
+    {
+      "id": "20261115-q1",
+      "type": "number",
+      "title": "Letters are in the English alphabet",
+      "prompt": "How many letters are in the English alphabet?",
+      "unit": "letters",
+      "answer": 26,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 26 letters."
+    },
+    {
+      "id": "20261115-q2",
+      "type": "number",
+      "title": "Colors are traditionally named in a rainbow",
+      "prompt": "How many colors are traditionally named in a rainbow?",
+      "unit": "colors",
+      "answer": 7,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 7 colors."
+    },
+    {
+      "id": "20261115-q3",
+      "type": "number",
+      "title": "Miles long is the Mississippi River",
+      "prompt": "About how many miles long is the Mississippi River?",
+      "unit": "miles",
+      "answer": 2340,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 2,340 miles."
+    },
+    {
+      "id": "20261115-q4",
+      "type": "number",
+      "title": "Cubic miles of water are in Lake Superior",
+      "prompt": "About how many cubic miles of water are in Lake Superior?",
+      "unit": "cubic miles",
+      "answer": 2900,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 2,900 cubic miles."
+    },
+    {
+      "id": "20261115-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Neuschwanstein Castle, Bavaria, Germany.",
+      "unit": "km",
+      "answer": {
+        "lat": 47.5576,
+        "lng": 10.7498
+      },
+      "hint": "Look for Neuschwanstein Castle in Bavaria, Germany.",
+      "explanation": "Neuschwanstein Castle is located at about 47.5576°, 10.7498°."
+    }
+  ],
+  "2026-11-16": [
+    {
+      "id": "20261116-q1",
+      "type": "number",
+      "title": "Strings does a standard harp have at minimum",
+      "prompt": "How many strings does a standard harp have at minimum?",
+      "unit": "strings",
+      "answer": 22,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 22 strings."
+    },
+    {
+      "id": "20261116-q2",
+      "type": "number",
+      "title": "Corners does a cube have",
+      "prompt": "How many corners does a cube have?",
+      "unit": "corners",
+      "answer": 8,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 8 corners."
+    },
+    {
+      "id": "20261116-q3",
+      "type": "number",
+      "title": "Feet tall is the One World Trade Center spire",
+      "prompt": "About how many feet tall is the One World Trade Center spire?",
+      "unit": "feet",
+      "answer": 1776,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 1,776 feet."
+    },
+    {
+      "id": "20261116-q4",
+      "type": "number",
+      "title": "Feet long is the Titanic",
+      "prompt": "About how many feet long is the Titanic?",
+      "unit": "feet",
+      "answer": 882,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 882 feet."
+    },
+    {
+      "id": "20261116-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Brandenburg Gate, Berlin, Germany.",
+      "unit": "km",
+      "answer": {
+        "lat": 52.5163,
+        "lng": 13.3777
+      },
+      "hint": "Look for Brandenburg Gate in Berlin, Germany.",
+      "explanation": "Brandenburg Gate is located at about 52.5163°, 13.3777°."
+    }
+  ],
+  "2026-11-17": [
+    {
+      "id": "20261117-q1",
+      "type": "number",
+      "title": "Bases are on a baseball diamond",
+      "prompt": "How many bases are on a baseball diamond?",
+      "unit": "bases",
+      "answer": 4,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 4 bases."
+    },
+    {
+      "id": "20261117-q2",
+      "type": "number",
+      "title": "Sides does a rhombus have",
+      "prompt": "How many sides does a rhombus have?",
+      "unit": "sides",
+      "answer": 4,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 4 sides."
+    },
+    {
+      "id": "20261117-q3",
+      "type": "number",
+      "title": "Feet long is a Boeing 747-8",
+      "prompt": "About how many feet long is a Boeing 747-8?",
+      "unit": "feet",
+      "answer": 250,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 250 feet."
+    },
+    {
+      "id": "20261117-q4",
+      "type": "number",
+      "title": "Miles of track are on the U.S. Interstate Highway System",
+      "prompt": "About how many miles of track are on the U.S. Interstate Highway System?",
+      "unit": "miles",
+      "answer": 48000,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 48,000 miles."
+    },
+    {
+      "id": "20261117-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on The Louvre Pyramid, Paris, France.",
+      "unit": "km",
+      "answer": {
+        "lat": 48.8606,
+        "lng": 2.3376
+      },
+      "hint": "Look for The Louvre Pyramid in Paris, France.",
+      "explanation": "The Louvre Pyramid is located at about 48.8606°, 2.3376°."
+    }
+  ],
+  "2026-11-18": [
+    {
+      "id": "20261118-q1",
+      "type": "number",
+      "title": "Strings does a standard acoustic guitar usually have",
+      "prompt": "How many strings does a standard acoustic guitar usually have?",
+      "unit": "strings",
+      "answer": 6,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 6 strings."
+    },
+    {
+      "id": "20261118-q2",
+      "type": "number",
+      "title": "Centimeters are in a meter",
+      "prompt": "How many centimeters are in a meter?",
+      "unit": "centimeters",
+      "answer": 100,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 100 centimeters."
+    },
+    {
+      "id": "20261118-q3",
+      "type": "number",
+      "title": "Miles per hour does the International Space Station travel",
+      "prompt": "About how many miles per hour does the International Space Station travel?",
+      "unit": "miles per hour",
+      "answer": 17500,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 17,500 miles per hour."
+    },
+    {
+      "id": "20261118-q4",
+      "type": "number",
+      "title": "Miles long is the Appalachian Trail",
+      "prompt": "About how many miles long is the Appalachian Trail?",
+      "unit": "miles",
+      "answer": 2198,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 2,198 miles."
+    },
+    {
+      "id": "20261118-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Mount Rushmore, South Dakota, USA.",
+      "unit": "km",
+      "answer": {
+        "lat": 43.8791,
+        "lng": -103.4591
+      },
+      "hint": "Look for Mount Rushmore in South Dakota, USA.",
+      "explanation": "Mount Rushmore is located at about 43.8791°, -103.4591°."
+    }
+  ],
+  "2026-11-19": [
+    {
+      "id": "20261119-q1",
+      "type": "number",
+      "title": "Main pyramids are at Giza",
+      "prompt": "How many main pyramids are at Giza?",
+      "unit": "pyramids",
+      "answer": 3,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 3 pyramids."
+    },
+    {
+      "id": "20261119-q2",
+      "type": "number",
+      "title": "Sides does a kite-shaped quadrilateral have",
+      "prompt": "How many sides does a kite-shaped quadrilateral have?",
+      "unit": "sides",
+      "answer": 4,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 4 sides."
+    },
+    {
+      "id": "20261119-q3",
+      "type": "number",
+      "title": "Miles long is the Great Barrier Reef",
+      "prompt": "About how many miles long is the Great Barrier Reef?",
+      "unit": "miles",
+      "answer": 1430,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 1,430 miles."
+    },
+    {
+      "id": "20261119-q4",
+      "type": "number",
+      "title": "Square miles is Greenland",
+      "prompt": "About how many square miles is Greenland?",
+      "unit": "square miles",
+      "answer": 836000,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 836,000 square miles."
+    },
+    {
+      "id": "20261119-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Golden Gate Bridge, San Francisco, USA.",
+      "unit": "km",
+      "answer": {
+        "lat": 37.8199,
+        "lng": -122.4783
+      },
+      "hint": "Look for Golden Gate Bridge in San Francisco, USA.",
+      "explanation": "Golden Gate Bridge is located at about 37.8199°, -122.4783°."
+    }
+  ],
+  "2026-11-20": [
+    {
+      "id": "20261120-q1",
+      "type": "number",
+      "title": "Rings are in the Olympic symbol",
+      "prompt": "How many rings are in the Olympic symbol?",
+      "unit": "rings",
+      "answer": 5,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 5 rings."
+    },
+    {
+      "id": "20261120-q2",
+      "type": "number",
+      "title": "Fingers are on two human hands",
+      "prompt": "How many fingers are on two human hands?",
+      "unit": "fingers",
+      "answer": 10,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 10 fingers."
+    },
+    {
+      "id": "20261120-q3",
+      "type": "number",
+      "title": "Miles is the average Earth–Moon distance",
+      "prompt": "About how many miles is the average Earth–Moon distance?",
+      "unit": "miles",
+      "answer": 238855,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 238,855 miles."
+    },
+    {
+      "id": "20261120-q4",
+      "type": "number",
+      "title": "Miles across is the Milky Way",
+      "prompt": "About how many miles across is the Milky Way?",
+      "unit": "light-years",
+      "answer": 100000,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 100,000 light-years."
+    },
+    {
+      "id": "20261120-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Niagara Falls, Canada–USA border.",
+      "unit": "km",
+      "answer": {
+        "lat": 43.0828,
+        "lng": -79.0742
+      },
+      "hint": "Look for Niagara Falls in Canada–USA border.",
+      "explanation": "Niagara Falls is located at about 43.0828°, -79.0742°."
+    }
+  ],
+  "2026-11-21": [
+    {
+      "id": "20261121-q1",
+      "type": "number",
+      "title": "Players are on a standard American football team’s offense at once",
+      "prompt": "How many players are on a standard American football team’s offense at once?",
+      "unit": "players",
+      "answer": 11,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 11 players."
+    },
+    {
+      "id": "20261121-q2",
+      "type": "number",
+      "title": "Sides does an equilateral triangle have",
+      "prompt": "How many sides does an equilateral triangle have?",
+      "unit": "sides",
+      "answer": 3,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 3 sides."
+    },
+    {
+      "id": "20261121-q3",
+      "type": "number",
+      "title": "Miles long is the Colorado River",
+      "prompt": "About how many miles long is the Colorado River?",
+      "unit": "miles",
+      "answer": 1450,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 1,450 miles."
+    },
+    {
+      "id": "20261121-q4",
+      "type": "number",
+      "title": "Feet tall is the Eiffel Tower",
+      "prompt": "About how many feet tall is the Eiffel Tower?",
+      "unit": "feet",
+      "answer": 1083,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 1,083 feet."
+    },
+    {
+      "id": "20261121-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on The Parthenon, Athens, Greece.",
+      "unit": "km",
+      "answer": {
+        "lat": 37.9715,
+        "lng": 23.7267
+      },
+      "hint": "Look for The Parthenon in Athens, Greece.",
+      "explanation": "The Parthenon is located at about 37.9715°, 23.7267°."
+    }
+  ],
+  "2026-11-22": [
+    {
+      "id": "20261122-q1",
+      "type": "number",
+      "title": "Strings does a standard ukulele have",
+      "prompt": "How many strings does a standard ukulele have?",
+      "unit": "strings",
+      "answer": 4,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 4 strings."
+    },
+    {
+      "id": "20261122-q2",
+      "type": "number",
+      "title": "Faces does a tetrahedron have",
+      "prompt": "How many faces does a tetrahedron have?",
+      "unit": "faces",
+      "answer": 4,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 4 faces."
+    },
+    {
+      "id": "20261122-q3",
+      "type": "number",
+      "title": "Miles long is the Amazon River",
+      "prompt": "About how many miles long is the Amazon River?",
+      "unit": "miles",
+      "answer": 4000,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 4,000 miles."
+    },
+    {
+      "id": "20261122-q4",
+      "type": "number",
+      "title": "Square miles is the Arctic Ocean",
+      "prompt": "About how many square miles is the Arctic Ocean?",
+      "unit": "square miles",
+      "answer": 5400000,
+      "hint": "Think on the scale of millions.",
+      "explanation": "A commonly cited estimate is about 5,400,000 square miles."
+    },
+    {
+      "id": "20261122-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Petra Monastery, Jordan.",
+      "unit": "km",
+      "answer": {
+        "lat": 30.3285,
+        "lng": 35.4444
+      },
+      "hint": "Look for Petra Monastery in Jordan.",
+      "explanation": "Petra Monastery is located at about 30.3285°, 35.4444°."
+    }
+  ],
+  "2026-11-23": [
+    {
+      "id": "20261123-q1",
+      "type": "number",
+      "title": "Sides does a regular hexagon have",
+      "prompt": "How many sides does a regular hexagon have?",
+      "unit": "sides",
+      "answer": 6,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 6 sides."
+    },
+    {
+      "id": "20261123-q2",
+      "type": "number",
+      "title": "Months are in a year",
+      "prompt": "How many months are in a year?",
+      "unit": "months",
+      "answer": 12,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 12 months."
+    },
+    {
+      "id": "20261123-q3",
+      "type": "number",
+      "title": "Feet deep is the Grand Canyon at its deepest",
+      "prompt": "About how many feet deep is the Grand Canyon at its deepest?",
+      "unit": "feet",
+      "answer": 6000,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 6,000 feet."
+    },
+    {
+      "id": "20261123-q4",
+      "type": "number",
+      "title": "Acres does Yellowstone National Park cover",
+      "prompt": "About how many acres does Yellowstone National Park cover?",
+      "unit": "acres",
+      "answer": 2219790,
+      "hint": "Think on the scale of millions.",
+      "explanation": "A commonly cited estimate is about 2,219,790 acres."
+    },
+    {
+      "id": "20261123-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Hagia Sophia, Istanbul, Türkiye.",
+      "unit": "km",
+      "answer": {
+        "lat": 41.0086,
+        "lng": 28.9802
+      },
+      "hint": "Look for Hagia Sophia in Istanbul, Türkiye.",
+      "explanation": "Hagia Sophia is located at about 41.0086°, 28.9802°."
+    }
+  ],
+  "2026-11-24": [
+    {
+      "id": "20261124-q1",
+      "type": "number",
+      "title": "Holes does a standard golf course have",
+      "prompt": "How many holes does a standard golf course have?",
+      "unit": "holes",
+      "answer": 18,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 18 holes."
+    },
+    {
+      "id": "20261124-q2",
+      "type": "number",
+      "title": "Notes are in a Western chromatic scale",
+      "prompt": "How many notes are in a Western chromatic scale?",
+      "unit": "notes",
+      "answer": 12,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 12 notes."
+    },
+    {
+      "id": "20261124-q3",
+      "type": "number",
+      "title": "Miles per hour is Earth’s orbital speed",
+      "prompt": "About how many miles per hour is Earth’s orbital speed?",
+      "unit": "miles per hour",
+      "answer": 67000,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 67,000 miles per hour."
+    },
+    {
+      "id": "20261124-q4",
+      "type": "number",
+      "title": "Miles across is the observable universe",
+      "prompt": "About how many miles across is the observable universe?",
+      "unit": "light-years",
+      "answer": 92000000000,
+      "hint": "Think on the scale of billions.",
+      "explanation": "A commonly cited estimate is about 92,000,000,000 light-years."
+    },
+    {
+      "id": "20261124-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Borobudur, Indonesia.",
+      "unit": "km",
+      "answer": {
+        "lat": -7.6079,
+        "lng": 110.2038
+      },
+      "hint": "Look for Borobudur in Indonesia.",
+      "explanation": "Borobudur is located at about -7.6079°, 110.2038°."
+    }
+  ],
+  "2026-11-25": [
+    {
+      "id": "20261125-q1",
+      "type": "number",
+      "title": "Oceans are commonly recognized on Earth",
+      "prompt": "How many oceans are commonly recognized on Earth?",
+      "unit": "oceans",
+      "answer": 5,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 5 oceans."
+    },
+    {
+      "id": "20261125-q2",
+      "type": "number",
+      "title": "Months are in a year",
+      "prompt": "How many months are in a year?",
+      "unit": "months",
+      "answer": 12,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 12 months."
+    },
+    {
+      "id": "20261125-q3",
+      "type": "number",
+      "title": "Kilometers wide is Saturn at its equator",
+      "prompt": "About how many kilometers wide is Saturn at its equator?",
+      "unit": "kilometers",
+      "answer": 120536,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 120,536 kilometers."
+    },
+    {
+      "id": "20261125-q4",
+      "type": "number",
+      "title": "Miles across are Saturn’s main rings",
+      "prompt": "About how many miles across are Saturn’s main rings?",
+      "unit": "miles",
+      "answer": 175000,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 175,000 miles."
+    },
+    {
+      "id": "20261125-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Temple of Heaven, Beijing, China.",
+      "unit": "km",
+      "answer": {
+        "lat": 39.8822,
+        "lng": 116.4066
+      },
+      "hint": "Look for Temple of Heaven in Beijing, China.",
+      "explanation": "Temple of Heaven is located at about 39.8822°, 116.4066°."
+    }
+  ],
+  "2026-11-26": [
+    {
+      "id": "20261126-q1",
+      "type": "number",
+      "title": "Sides does an icosagon have",
+      "prompt": "How many sides does an icosagon have?",
+      "unit": "sides",
+      "answer": 20,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 20 sides."
+    },
+    {
+      "id": "20261126-q2",
+      "type": "number",
+      "title": "Vertebrae are in the human spine, including fused bones",
+      "prompt": "How many vertebrae are in the human spine, including fused bones?",
+      "unit": "vertebrae",
+      "answer": 33,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 33 vertebrae."
+    },
+    {
+      "id": "20261126-q3",
+      "type": "number",
+      "title": "Kilometers is one lunar orbit around Earth",
+      "prompt": "About how many kilometers is one lunar orbit around Earth?",
+      "unit": "kilometers",
+      "answer": 2400000,
+      "hint": "Think on the scale of millions.",
+      "explanation": "A commonly cited estimate is about 2,400,000 kilometers."
+    },
+    {
+      "id": "20261126-q4",
+      "type": "number",
+      "title": "Kilometers from Earth is the Sun on average",
+      "prompt": "About how many kilometers from Earth is the Sun on average?",
+      "unit": "kilometers",
+      "answer": 150000000,
+      "hint": "Think on the scale of millions.",
+      "explanation": "A commonly cited estimate is about 150,000,000 kilometers."
+    },
+    {
+      "id": "20261126-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Saint Basil’s Cathedral, Moscow, Russia.",
+      "unit": "km",
+      "answer": {
+        "lat": 55.7525,
+        "lng": 37.6231
+      },
+      "hint": "Look for Saint Basil’s Cathedral in Moscow, Russia.",
+      "explanation": "Saint Basil’s Cathedral is located at about 55.7525°, 37.6231°."
+    }
+  ],
+  "2026-11-27": [
+    {
+      "id": "20261127-q1",
+      "type": "number",
+      "title": "U.S. states border the Pacific Ocean",
+      "prompt": "How many U.S. states border the Pacific Ocean?",
+      "unit": "states",
+      "answer": 5,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 5 states."
+    },
+    {
+      "id": "20261127-q2",
+      "type": "number",
+      "title": "Toes are on two human feet",
+      "prompt": "How many toes are on two human feet?",
+      "unit": "toes",
+      "answer": 10,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 10 toes."
+    },
+    {
+      "id": "20261127-q3",
+      "type": "number",
+      "title": "Kilometers high is Mount Everest",
+      "prompt": "About how many kilometers high is Mount Everest?",
+      "unit": "kilometers",
+      "answer": 8.849,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 8.849 kilometers."
+    },
+    {
+      "id": "20261127-q4",
+      "type": "number",
+      "title": "Miles long is the Appalachian Trail",
+      "prompt": "About how many miles long is the Appalachian Trail?",
+      "unit": "miles",
+      "answer": 2198,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 2,198 miles."
+    },
+    {
+      "id": "20261127-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Mount Etna, Sicily, Italy.",
+      "unit": "km",
+      "answer": {
+        "lat": 37.751,
+        "lng": 14.9934
+      },
+      "hint": "Look for Mount Etna in Sicily, Italy.",
+      "explanation": "Mount Etna is located at about 37.7510°, 14.9934°."
+    }
+  ],
+  "2026-11-28": [
+    {
+      "id": "20261128-q1",
+      "type": "number",
+      "title": "Sides does a regular heptagon have",
+      "prompt": "How many sides does a regular heptagon have?",
+      "unit": "sides",
+      "answer": 7,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 7 sides."
+    },
+    {
+      "id": "20261128-q2",
+      "type": "number",
+      "title": "Days are in a week",
+      "prompt": "How many days are in a week?",
+      "unit": "days",
+      "answer": 7,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 7 days."
+    },
+    {
+      "id": "20261128-q3",
+      "type": "number",
+      "title": "Feet tall is the Space Needle",
+      "prompt": "About how many feet tall is the Space Needle?",
+      "unit": "feet",
+      "answer": 605,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 605 feet."
+    },
+    {
+      "id": "20261128-q4",
+      "type": "number",
+      "title": "Miles long is the coastline of Australia",
+      "prompt": "About how many miles long is the coastline of Australia?",
+      "unit": "miles",
+      "answer": 16000,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 16,000 miles."
+    },
+    {
+      "id": "20261128-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Mont-Saint-Michel, France.",
+      "unit": "km",
+      "answer": {
+        "lat": 48.6361,
+        "lng": -1.5115
+      },
+      "hint": "Look for Mont-Saint-Michel in France.",
+      "explanation": "Mont-Saint-Michel is located at about 48.6361°, -1.5115°."
+    }
+  ],
+  "2026-11-29": [
+    {
+      "id": "20261129-q1",
+      "type": "number",
+      "title": "Fingers are on one hand",
+      "prompt": "How many fingers are on one hand?",
+      "unit": "fingers",
+      "answer": 5,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 5 fingers."
+    },
+    {
+      "id": "20261129-q2",
+      "type": "number",
+      "title": "Sides does a regular dodecagon have",
+      "prompt": "How many sides does a regular dodecagon have?",
+      "unit": "sides",
+      "answer": 12,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 12 sides."
+    },
+    {
+      "id": "20261129-q3",
+      "type": "number",
+      "title": "Kilometers long is the Danube River",
+      "prompt": "About how many kilometers long is the Danube River?",
+      "unit": "kilometers",
+      "answer": 2850,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 2,850 kilometers."
+    },
+    {
+      "id": "20261129-q4",
+      "type": "number",
+      "title": "Square kilometers is the Amazon rainforest",
+      "prompt": "About how many square kilometers is the Amazon rainforest?",
+      "unit": "square kilometers",
+      "answer": 5500000,
+      "hint": "Think on the scale of millions.",
+      "explanation": "A commonly cited estimate is about 5,500,000 square kilometers."
+    },
+    {
+      "id": "20261129-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Stone Forest, Yunnan, China.",
+      "unit": "km",
+      "answer": {
+        "lat": 24.8122,
+        "lng": 103.3214
+      },
+      "hint": "Look for Stone Forest in Yunnan, China.",
+      "explanation": "Stone Forest is located at about 24.8122°, 103.3214°."
+    }
+  ],
+  "2026-11-30": [
+    {
+      "id": "20261130-q1",
+      "type": "number",
+      "title": "Planets in our solar system are gas giants",
+      "prompt": "How many planets in our solar system are gas giants?",
+      "unit": "planets",
+      "answer": 4,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 4 planets."
+    },
+    {
+      "id": "20261130-q2",
+      "type": "number",
+      "title": "Wheels does a unicycle have",
+      "prompt": "How many wheels does a unicycle have?",
+      "unit": "wheel",
+      "answer": 1,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 1 wheel."
+    },
+    {
+      "id": "20261130-q3",
+      "type": "number",
+      "title": "Kilometers high is the Burj Khalifa",
+      "prompt": "About how many kilometers high is the Burj Khalifa?",
+      "unit": "kilometers",
+      "answer": 0.828,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 0.828 kilometers."
+    },
+    {
+      "id": "20261130-q4",
+      "type": "number",
+      "title": "Kilometers long is the Great Wall of China",
+      "prompt": "About how many kilometers long is the Great Wall of China?",
+      "unit": "kilometers",
+      "answer": 21196,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 21,196 kilometers."
+    },
+    {
+      "id": "20261130-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Burj Khalifa, Dubai, UAE.",
+      "unit": "km",
+      "answer": {
+        "lat": 25.1972,
+        "lng": 55.2744
+      },
+      "hint": "Look for Burj Khalifa in Dubai, UAE.",
+      "explanation": "Burj Khalifa is located at about 25.1972°, 55.2744°."
+    }
+  ],
+  "2026-12-01": [
+    {
+      "id": "20261201-q1",
+      "type": "number",
+      "title": "Players from one team are on a baseball field at once",
+      "prompt": "How many players from one team are on a baseball field at once?",
+      "unit": "players",
+      "answer": 9,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 9 players."
+    },
+    {
+      "id": "20261201-q2",
+      "type": "number",
+      "title": "Sides does a regular octagon have",
+      "prompt": "How many sides does a regular octagon have?",
+      "unit": "sides",
+      "answer": 8,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 8 sides."
+    },
+    {
+      "id": "20261201-q3",
+      "type": "number",
+      "title": "Meters tall is Hawa Mahal’s front façade",
+      "prompt": "About how many meters tall is Hawa Mahal’s front façade?",
+      "unit": "meters",
+      "answer": 15,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 15 meters."
+    },
+    {
+      "id": "20261201-q4",
+      "type": "number",
+      "title": "Steps lead up the Potala Palace’s main eastern entrance",
+      "prompt": "About how many steps lead up the Potala Palace’s main eastern entrance?",
+      "unit": "steps",
+      "answer": 365,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 365 steps."
+    },
+    {
+      "id": "20261201-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Hawa Mahal, Jaipur, India.",
+      "unit": "km",
+      "answer": {
+        "lat": 26.9239,
+        "lng": 75.8267
+      },
+      "hint": "Look for Hawa Mahal in Jaipur, India.",
+      "explanation": "Hawa Mahal is located at about 26.9239°, 75.8267°."
+    }
+  ],
+  "2026-12-02": [
+    {
+      "id": "20261202-q1",
+      "type": "number",
+      "title": "Chambers are in the human heart",
+      "prompt": "How many chambers are in the human heart?",
+      "unit": "chambers",
+      "answer": 4,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 4 chambers."
+    },
+    {
+      "id": "20261202-q2",
+      "type": "number",
+      "title": "Strings does a viola have",
+      "prompt": "How many strings does a viola have?",
+      "unit": "strings",
+      "answer": 4,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 4 strings."
+    },
+    {
+      "id": "20261202-q3",
+      "type": "number",
+      "title": "Meters above sea level is Lhasa, Tibet",
+      "prompt": "About how many meters above sea level is Lhasa, Tibet?",
+      "unit": "meters",
+      "answer": 3650,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 3,650 meters."
+    },
+    {
+      "id": "20261202-q4",
+      "type": "number",
+      "title": "Meters tall is the Potala Palace",
+      "prompt": "About how many meters tall is the Potala Palace?",
+      "unit": "meters",
+      "answer": 117,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 117 meters."
+    },
+    {
+      "id": "20261202-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Potala Palace, Lhasa, Tibet.",
+      "unit": "km",
+      "answer": {
+        "lat": 29.6578,
+        "lng": 91.1169
+      },
+      "hint": "Look for Potala Palace in Lhasa, Tibet.",
+      "explanation": "Potala Palace is located at about 29.6578°, 91.1169°."
+    }
+  ],
+  "2026-12-03": [
+    {
+      "id": "20261203-q1",
+      "type": "number",
+      "title": "Sides does a regular nonagon have",
+      "prompt": "How many sides does a regular nonagon have?",
+      "unit": "sides",
+      "answer": 9,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 9 sides."
+    },
+    {
+      "id": "20261203-q2",
+      "type": "number",
+      "title": "Primary colors of light are used in an RGB display",
+      "prompt": "How many primary colors of light are used in an RGB display?",
+      "unit": "colors",
+      "answer": 3,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 3 colors."
+    },
+    {
+      "id": "20261203-q3",
+      "type": "number",
+      "title": "Torii gates line the main path at Fushimi Inari Taisha",
+      "prompt": "About how many torii gates line the main path at Fushimi Inari Taisha?",
+      "unit": "gates",
+      "answer": 10000,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 10,000 gates."
+    },
+    {
+      "id": "20261203-q4",
+      "type": "number",
+      "title": "Kilometers is Japan from north to south across its main islands",
+      "prompt": "About how many kilometers is Japan from north to south across its main islands?",
+      "unit": "kilometers",
+      "answer": 3000,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 3,000 kilometers."
+    },
+    {
+      "id": "20261203-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Fushimi Inari Taisha, Kyoto, Japan.",
+      "unit": "km",
+      "answer": {
+        "lat": 34.9671,
+        "lng": 135.7727
+      },
+      "hint": "Look for Fushimi Inari Taisha in Kyoto, Japan.",
+      "explanation": "Fushimi Inari Taisha is located at about 34.9671°, 135.7727°."
+    }
+  ],
+  "2026-12-04": [
+    {
+      "id": "20261204-q1",
+      "type": "number",
+      "title": "Colors are on a traditional Olympic flag",
+      "prompt": "How many colors are on a traditional Olympic flag?",
+      "unit": "colors",
+      "answer": 6,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 6 colors."
+    },
+    {
+      "id": "20261204-q2",
+      "type": "number",
+      "title": "Sides does a regular pentagon have",
+      "prompt": "How many sides does a regular pentagon have?",
+      "unit": "sides",
+      "answer": 5,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 5 sides."
+    },
+    {
+      "id": "20261204-q3",
+      "type": "number",
+      "title": "Minarets does the Sultan Ahmed Mosque have",
+      "prompt": "About how many minarets does the Sultan Ahmed Mosque have?",
+      "unit": "minarets",
+      "answer": 6,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 6 minarets."
+    },
+    {
+      "id": "20261204-q4",
+      "type": "number",
+      "title": "Square meters is the Hagia Sophia’s main interior floor area",
+      "prompt": "About how many square meters is the Hagia Sophia’s main interior floor area?",
+      "unit": "square meters",
+      "answer": 7500,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 7,500 square meters."
+    },
+    {
+      "id": "20261204-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Sultan Ahmed Mosque, Istanbul, Türkiye.",
+      "unit": "km",
+      "answer": {
+        "lat": 41.0054,
+        "lng": 28.9768
+      },
+      "hint": "Look for Sultan Ahmed Mosque in Istanbul, Türkiye.",
+      "explanation": "Sultan Ahmed Mosque is located at about 41.0054°, 28.9768°."
+    }
+  ],
+  "2026-12-05": [
+    {
+      "id": "20261205-q1",
+      "type": "number",
+      "title": "Recognized dwarf planets are currently listed by NASA",
+      "prompt": "How many recognized dwarf planets are currently listed by NASA?",
+      "unit": "dwarf planets",
+      "answer": 5,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 5 dwarf planets."
+    },
+    {
+      "id": "20261205-q2",
+      "type": "number",
+      "title": "Sides does a rhombus have",
+      "prompt": "How many sides does a rhombus have?",
+      "unit": "sides",
+      "answer": 4,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 4 sides."
+    },
+    {
+      "id": "20261205-q3",
+      "type": "number",
+      "title": "Rooms are in Beijing’s Forbidden City",
+      "prompt": "About how many rooms are in Beijing’s Forbidden City?",
+      "unit": "rooms",
+      "answer": 980,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 980 rooms."
+    },
+    {
+      "id": "20261205-q4",
+      "type": "number",
+      "title": "Square kilometers does Beijing cover",
+      "prompt": "About how many square kilometers does Beijing cover?",
+      "unit": "square kilometers",
+      "answer": 16410,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 16,410 square kilometers."
+    },
+    {
+      "id": "20261205-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Forbidden City, Beijing, China.",
+      "unit": "km",
+      "answer": {
+        "lat": 39.9163,
+        "lng": 116.3972
+      },
+      "hint": "Look for Forbidden City in Beijing, China.",
+      "explanation": "Forbidden City is located at about 39.9163°, 116.3972°."
+    }
+  ],
+  "2026-12-06": [
+    {
+      "id": "20261206-q1",
+      "type": "number",
+      "title": "Main islands make up New Zealand",
+      "prompt": "How many main islands make up New Zealand?",
+      "unit": "islands",
+      "answer": 2,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 2 islands."
+    },
+    {
+      "id": "20261206-q2",
+      "type": "number",
+      "title": "Legs does an insect have",
+      "prompt": "How many legs does an insect have?",
+      "unit": "legs",
+      "answer": 6,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 6 legs."
+    },
+    {
+      "id": "20261206-q3",
+      "type": "number",
+      "title": "Meters above sea level is Lake Louise",
+      "prompt": "About how many meters above sea level is Lake Louise?",
+      "unit": "meters",
+      "answer": 1750,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 1,750 meters."
+    },
+    {
+      "id": "20261206-q4",
+      "type": "number",
+      "title": "Kilometers long is the Continental Divide Trail",
+      "prompt": "About how many kilometers long is the Continental Divide Trail?",
+      "unit": "kilometers",
+      "answer": 5000,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 5,000 kilometers."
+    },
+    {
+      "id": "20261206-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Lake Louise, Alberta, Canada.",
+      "unit": "km",
+      "answer": {
+        "lat": 51.4254,
+        "lng": -116.1773
+      },
+      "hint": "Look for Lake Louise in Alberta, Canada.",
+      "explanation": "Lake Louise is located at about 51.4254°, -116.1773°."
+    }
+  ],
+  "2026-12-07": [
+    {
+      "id": "20261207-q1",
+      "type": "number",
+      "title": "Countries make up the United Kingdom",
+      "prompt": "How many countries make up the United Kingdom?",
+      "unit": "countries",
+      "answer": 4,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 4 countries."
+    },
+    {
+      "id": "20261207-q2",
+      "type": "number",
+      "title": "Sides does a square have",
+      "prompt": "How many sides does a square have?",
+      "unit": "sides",
+      "answer": 4,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 4 sides."
+    },
+    {
+      "id": "20261207-q3",
+      "type": "number",
+      "title": "Meters high is Mont Blanc",
+      "prompt": "About how many meters high is Mont Blanc?",
+      "unit": "meters",
+      "answer": 4806,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 4,806 meters."
+    },
+    {
+      "id": "20261207-q4",
+      "type": "number",
+      "title": "Meters high is the Matterhorn",
+      "prompt": "About how many meters high is the Matterhorn?",
+      "unit": "meters",
+      "answer": 4478,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 4,478 meters."
+    },
+    {
+      "id": "20261207-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Aiguille du Midi, Chamonix, France.",
+      "unit": "km",
+      "answer": {
+        "lat": 45.8797,
+        "lng": 6.887
+      },
+      "hint": "Look for Aiguille du Midi in Chamonix, France.",
+      "explanation": "Aiguille du Midi is located at about 45.8797°, 6.8870°."
+    }
+  ],
+  "2026-12-08": [
+    {
+      "id": "20261208-q1",
+      "type": "number",
+      "title": "Countries share the Amazon rainforest",
+      "prompt": "How many countries share the Amazon rainforest?",
+      "unit": "countries",
+      "answer": 9,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 9 countries."
+    },
+    {
+      "id": "20261208-q2",
+      "type": "number",
+      "title": "Sides does a regular triangle have",
+      "prompt": "How many sides does a regular triangle have?",
+      "unit": "sides",
+      "answer": 3,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 3 sides."
+    },
+    {
+      "id": "20261208-q3",
+      "type": "number",
+      "title": "Meters high is Sugarloaf Mountain",
+      "prompt": "About how many meters high is Sugarloaf Mountain?",
+      "unit": "meters",
+      "answer": 396,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 396 meters."
+    },
+    {
+      "id": "20261208-q4",
+      "type": "number",
+      "title": "Kilometers long is Brazil’s Atlantic coastline",
+      "prompt": "About how many kilometers long is Brazil’s Atlantic coastline?",
+      "unit": "kilometers",
+      "answer": 7400,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 7,400 kilometers."
+    },
+    {
+      "id": "20261208-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Sugarloaf Mountain, Rio de Janeiro, Brazil.",
+      "unit": "km",
+      "answer": {
+        "lat": -22.9486,
+        "lng": -43.1566
+      },
+      "hint": "Look for Sugarloaf Mountain in Rio de Janeiro, Brazil.",
+      "explanation": "Sugarloaf Mountain is located at about -22.9486°, -43.1566°."
+    }
+  ],
+  "2026-12-09": [
+    {
+      "id": "20261209-q1",
+      "type": "number",
+      "title": "Waterfalls make up Iguazú Falls",
+      "prompt": "How many waterfalls make up Iguazú Falls?",
+      "unit": "waterfalls",
+      "answer": 275,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 275 waterfalls."
+    },
+    {
+      "id": "20261209-q2",
+      "type": "number",
+      "title": "Sides does a rectangle have",
+      "prompt": "How many sides does a rectangle have?",
+      "unit": "sides",
+      "answer": 4,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 4 sides."
+    },
+    {
+      "id": "20261209-q3",
+      "type": "number",
+      "title": "Meters high is the tallest drop at Iguazú Falls",
+      "prompt": "About how many meters high is the tallest drop at Iguazú Falls?",
+      "unit": "meters",
+      "answer": 82,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 82 meters."
+    },
+    {
+      "id": "20261209-q4",
+      "type": "number",
+      "title": "Cubic meters of water per second flow over Iguazú Falls on average",
+      "prompt": "About how many cubic meters of water per second flow over Iguazú Falls on average?",
+      "unit": "cubic meters per second",
+      "answer": 1500,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 1,500 cubic meters per second."
+    },
+    {
+      "id": "20261209-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Iguazú Falls, Argentina–Brazil border.",
+      "unit": "km",
+      "answer": {
+        "lat": -25.6953,
+        "lng": -54.4367
+      },
+      "hint": "Look for Iguazú Falls in Argentina–Brazil border.",
+      "explanation": "Iguazú Falls is located at about -25.6953°, -54.4367°."
+    }
+  ],
+  "2026-12-10": [
+    {
+      "id": "20261210-q1",
+      "type": "number",
+      "title": "Official languages does the United Nations have",
+      "prompt": "How many official languages does the United Nations have?",
+      "unit": "languages",
+      "answer": 6,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 6 languages."
+    },
+    {
+      "id": "20261210-q2",
+      "type": "number",
+      "title": "Letters are in the English alphabet",
+      "prompt": "How many letters are in the English alphabet?",
+      "unit": "letters",
+      "answer": 26,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 26 letters."
+    },
+    {
+      "id": "20261210-q3",
+      "type": "number",
+      "title": "Kilometers long is Copacabana Beach",
+      "prompt": "About how many kilometers long is Copacabana Beach?",
+      "unit": "kilometers",
+      "answer": 4,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 4 kilometers."
+    },
+    {
+      "id": "20261210-q4",
+      "type": "number",
+      "title": "People can Maracanã Stadium hold",
+      "prompt": "About how many people can Maracanã Stadium hold?",
+      "unit": "people",
+      "answer": 78838,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 78,838 people."
+    },
+    {
+      "id": "20261210-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Copacabana Beach, Rio de Janeiro, Brazil.",
+      "unit": "km",
+      "answer": {
+        "lat": -22.9711,
+        "lng": -43.1822
+      },
+      "hint": "Look for Copacabana Beach in Rio de Janeiro, Brazil.",
+      "explanation": "Copacabana Beach is located at about -22.9711°, -43.1822°."
+    }
+  ],
+  "2026-12-11": [
+    {
+      "id": "20261211-q1",
+      "type": "number",
+      "title": "Sides does a regular decagon have",
+      "prompt": "How many sides does a regular decagon have?",
+      "unit": "sides",
+      "answer": 10,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 10 sides."
+    },
+    {
+      "id": "20261211-q2",
+      "type": "number",
+      "title": "Colors are on a standard traffic light",
+      "prompt": "How many colors are on a standard traffic light?",
+      "unit": "colors",
+      "answer": 3,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 3 colors."
+    },
+    {
+      "id": "20261211-q3",
+      "type": "number",
+      "title": "Kilometers long is Perito Moreno Glacier",
+      "prompt": "About how many kilometers long is Perito Moreno Glacier?",
+      "unit": "kilometers",
+      "answer": 30,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 30 kilometers."
+    },
+    {
+      "id": "20261211-q4",
+      "type": "number",
+      "title": "Square kilometers is Patagonia",
+      "prompt": "About how many square kilometers is Patagonia?",
+      "unit": "square kilometers",
+      "answer": 1000000,
+      "hint": "Think on the scale of millions.",
+      "explanation": "A commonly cited estimate is about 1,000,000 square kilometers."
+    },
+    {
+      "id": "20261211-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Perito Moreno Glacier, Argentina.",
+      "unit": "km",
+      "answer": {
+        "lat": -50.4951,
+        "lng": -73.1368
+      },
+      "hint": "Look for Perito Moreno Glacier in Argentina.",
+      "explanation": "Perito Moreno Glacier is located at about -50.4951°, -73.1368°."
+    }
+  ],
+  "2026-12-12": [
+    {
+      "id": "20261212-q1",
+      "type": "number",
+      "title": "Countries border Lake Titicaca",
+      "prompt": "How many countries border Lake Titicaca?",
+      "unit": "countries",
+      "answer": 2,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 2 countries."
+    },
+    {
+      "id": "20261212-q2",
+      "type": "number",
+      "title": "Sides does a regular hexagon have",
+      "prompt": "How many sides does a regular hexagon have?",
+      "unit": "sides",
+      "answer": 6,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 6 sides."
+    },
+    {
+      "id": "20261212-q3",
+      "type": "number",
+      "title": "Square kilometers does Salar de Uyuni cover",
+      "prompt": "About how many square kilometers does Salar de Uyuni cover?",
+      "unit": "square kilometers",
+      "answer": 10582,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 10,582 square kilometers."
+    },
+    {
+      "id": "20261212-q4",
+      "type": "number",
+      "title": "Meters deep is Salar de Uyuni’s salt crust in places",
+      "prompt": "About how many meters deep is Salar de Uyuni’s salt crust in places?",
+      "unit": "meters",
+      "answer": 10,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 10 meters."
+    },
+    {
+      "id": "20261212-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Salar de Uyuni, Bolivia.",
+      "unit": "km",
+      "answer": {
+        "lat": -20.1338,
+        "lng": -67.4891
+      },
+      "hint": "Look for Salar de Uyuni in Bolivia.",
+      "explanation": "Salar de Uyuni is located at about -20.1338°, -67.4891°."
+    }
+  ],
+  "2026-12-13": [
+    {
+      "id": "20261213-q1",
+      "type": "number",
+      "title": "Hemispheres are commonly used to divide Earth",
+      "prompt": "How many hemispheres are commonly used to divide Earth?",
+      "unit": "hemispheres",
+      "answer": 4,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 4 hemispheres."
+    },
+    {
+      "id": "20261213-q2",
+      "type": "number",
+      "title": "Letters are in the Spanish alphabet",
+      "prompt": "How many letters are in the Spanish alphabet?",
+      "unit": "letters",
+      "answer": 27,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 27 letters."
+    },
+    {
+      "id": "20261213-q3",
+      "type": "number",
+      "title": "Meters above sea level is Quito",
+      "prompt": "About how many meters above sea level is Quito?",
+      "unit": "meters",
+      "answer": 2850,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 2,850 meters."
+    },
+    {
+      "id": "20261213-q4",
+      "type": "number",
+      "title": "Kilometers long is the Andes mountain range",
+      "prompt": "About how many kilometers long is the Andes mountain range?",
+      "unit": "kilometers",
+      "answer": 7000,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 7,000 kilometers."
+    },
+    {
+      "id": "20261213-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Mitad del Mundo monument, Quito, Ecuador.",
+      "unit": "km",
+      "answer": {
+        "lat": -0.0022,
+        "lng": -78.4558
+      },
+      "hint": "Look for Mitad del Mundo monument in Quito, Ecuador.",
+      "explanation": "Mitad del Mundo monument is located at about -0.0022°, -78.4558°."
+    }
+  ],
+  "2026-12-14": [
+    {
+      "id": "20261214-q1",
+      "type": "number",
+      "title": "Main avenues meet at the Teotihuacan Pyramid of the Sun",
+      "prompt": "How many main avenues meet at the Teotihuacan Pyramid of the Sun?",
+      "unit": "avenue",
+      "answer": 1,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 1 avenue."
+    },
+    {
+      "id": "20261214-q2",
+      "type": "number",
+      "title": "Sides does a regular square-based pyramid have",
+      "prompt": "How many sides does a regular square-based pyramid have?",
+      "unit": "faces",
+      "answer": 5,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 5 faces."
+    },
+    {
+      "id": "20261214-q3",
+      "type": "number",
+      "title": "Meters tall is the Pyramid of the Sun",
+      "prompt": "About how many meters tall is the Pyramid of the Sun?",
+      "unit": "meters",
+      "answer": 65,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 65 meters."
+    },
+    {
+      "id": "20261214-q4",
+      "type": "number",
+      "title": "Square kilometers did the ancient city of Teotihuacan cover",
+      "prompt": "About how many square kilometers did the ancient city of Teotihuacan cover?",
+      "unit": "square kilometers",
+      "answer": 20,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 20 square kilometers."
+    },
+    {
+      "id": "20261214-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Pyramid of the Sun, Teotihuacan, Mexico.",
+      "unit": "km",
+      "answer": {
+        "lat": 19.6925,
+        "lng": -98.8438
+      },
+      "hint": "Look for Pyramid of the Sun in Teotihuacan, Mexico.",
+      "explanation": "Pyramid of the Sun is located at about 19.6925°, -98.8438°."
+    }
+  ],
+  "2026-12-15": [
+    {
+      "id": "20261215-q1",
+      "type": "number",
+      "title": "Temples are in the central ceremonial area of Tikal",
+      "prompt": "How many temples are in the central ceremonial area of Tikal?",
+      "unit": "major temples",
+      "answer": 6,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 6 major temples."
+    },
+    {
+      "id": "20261215-q2",
+      "type": "number",
+      "title": "Letters are in the Greek alphabet",
+      "prompt": "How many letters are in the Greek alphabet?",
+      "unit": "letters",
+      "answer": 24,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 24 letters."
+    },
+    {
+      "id": "20261215-q3",
+      "type": "number",
+      "title": "Meters tall is Tikal Temple IV",
+      "prompt": "About how many meters tall is Tikal Temple IV?",
+      "unit": "meters",
+      "answer": 70,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 70 meters."
+    },
+    {
+      "id": "20261215-q4",
+      "type": "number",
+      "title": "Square kilometers does Tikal National Park cover",
+      "prompt": "About how many square kilometers does Tikal National Park cover?",
+      "unit": "square kilometers",
+      "answer": 576,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 576 square kilometers."
+    },
+    {
+      "id": "20261215-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Tikal Temple IV, Guatemala.",
+      "unit": "km",
+      "answer": {
+        "lat": 17.222,
+        "lng": -89.6237
+      },
+      "hint": "Look for Tikal Temple IV in Guatemala.",
+      "explanation": "Tikal Temple IV is located at about 17.2220°, -89.6237°."
+    }
+  ],
+  "2026-12-16": [
+    {
+      "id": "20261216-q1",
+      "type": "number",
+      "title": "Main pyramids are in the Giza pyramid field",
+      "prompt": "How many main pyramids are in the Giza pyramid field?",
+      "unit": "pyramids",
+      "answer": 3,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 3 pyramids."
+    },
+    {
+      "id": "20261216-q2",
+      "type": "number",
+      "title": "Sides does a regular octagon have",
+      "prompt": "How many sides does a regular octagon have?",
+      "unit": "sides",
+      "answer": 8,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 8 sides."
+    },
+    {
+      "id": "20261216-q3",
+      "type": "number",
+      "title": "Meters tall is the Pyramid of the Magician at Uxmal",
+      "prompt": "About how many meters tall is the Pyramid of the Magician at Uxmal?",
+      "unit": "meters",
+      "answer": 35,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 35 meters."
+    },
+    {
+      "id": "20261216-q4",
+      "type": "number",
+      "title": "Square kilometers does the Uxmal archaeological zone cover",
+      "prompt": "About how many square kilometers does the Uxmal archaeological zone cover?",
+      "unit": "square kilometers",
+      "answer": 2,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 2 square kilometers."
+    },
+    {
+      "id": "20261216-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Pyramid of the Magician, Uxmal, Mexico.",
+      "unit": "km",
+      "answer": {
+        "lat": 20.3605,
+        "lng": -89.7714
+      },
+      "hint": "Look for Pyramid of the Magician in Uxmal, Mexico.",
+      "explanation": "Pyramid of the Magician is located at about 20.3605°, -89.7714°."
+    }
+  ],
+  "2026-12-17": [
+    {
+      "id": "20261217-q1",
+      "type": "number",
+      "title": "Locks are in the Panama Canal’s original lock system",
+      "prompt": "How many locks are in the Panama Canal’s original lock system?",
+      "unit": "lock chambers",
+      "answer": 12,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 12 lock chambers."
+    },
+    {
+      "id": "20261217-q2",
+      "type": "number",
+      "title": "Wheels does a standard car have",
+      "prompt": "How many wheels does a standard car have?",
+      "unit": "wheels",
+      "answer": 4,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 4 wheels."
+    },
+    {
+      "id": "20261217-q3",
+      "type": "number",
+      "title": "Meters wide is a Panama Canal lock chamber",
+      "prompt": "About how many meters wide is a Panama Canal lock chamber?",
+      "unit": "meters",
+      "answer": 33.5,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 33.5 meters."
+    },
+    {
+      "id": "20261217-q4",
+      "type": "number",
+      "title": "Kilometers long is the Panama Canal",
+      "prompt": "About how many kilometers long is the Panama Canal?",
+      "unit": "kilometers",
+      "answer": 82,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 82 kilometers."
+    },
+    {
+      "id": "20261217-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Miraflores Locks, Panama.",
+      "unit": "km",
+      "answer": {
+        "lat": 9.1156,
+        "lng": -79.7001
+      },
+      "hint": "Look for Miraflores Locks in Panama.",
+      "explanation": "Miraflores Locks is located at about 9.1156°, -79.7001°."
+    }
+  ],
+  "2026-12-18": [
+    {
+      "id": "20261218-q1",
+      "type": "number",
+      "title": "Geyser basins are in Yellowstone National Park",
+      "prompt": "How many geyser basins are in Yellowstone National Park?",
+      "unit": "major basins",
+      "answer": 5,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 5 major basins."
+    },
+    {
+      "id": "20261218-q2",
+      "type": "number",
+      "title": "Sides does a regular pentagon have",
+      "prompt": "How many sides does a regular pentagon have?",
+      "unit": "sides",
+      "answer": 5,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 5 sides."
+    },
+    {
+      "id": "20261218-q3",
+      "type": "number",
+      "title": "Feet wide is Old Faithful’s cone",
+      "prompt": "About how many feet wide is Old Faithful’s cone?",
+      "unit": "feet",
+      "answer": 12,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 12 feet."
+    },
+    {
+      "id": "20261218-q4",
+      "type": "number",
+      "title": "Square miles does Yellowstone National Park cover",
+      "prompt": "About how many square miles does Yellowstone National Park cover?",
+      "unit": "square miles",
+      "answer": 3472,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 3,472 square miles."
+    },
+    {
+      "id": "20261218-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Old Faithful, Yellowstone, USA.",
+      "unit": "km",
+      "answer": {
+        "lat": 44.4605,
+        "lng": -110.8281
+      },
+      "hint": "Look for Old Faithful in Yellowstone, USA.",
+      "explanation": "Old Faithful is located at about 44.4605°, -110.8281°."
+    }
+  ],
+  "2026-12-19": [
+    {
+      "id": "20261219-q1",
+      "type": "number",
+      "title": "Rims border the Grand Canyon",
+      "prompt": "How many rims border the Grand Canyon?",
+      "unit": "rims",
+      "answer": 2,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 2 rims."
+    },
+    {
+      "id": "20261219-q2",
+      "type": "number",
+      "title": "Sides does a regular heptagon have",
+      "prompt": "How many sides does a regular heptagon have?",
+      "unit": "sides",
+      "answer": 7,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 7 sides."
+    },
+    {
+      "id": "20261219-q3",
+      "type": "number",
+      "title": "Feet deep is the Grand Canyon at its deepest point",
+      "prompt": "About how many feet deep is the Grand Canyon at its deepest point?",
+      "unit": "feet",
+      "answer": 6000,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 6,000 feet."
+    },
+    {
+      "id": "20261219-q4",
+      "type": "number",
+      "title": "Acres does Grand Canyon National Park cover",
+      "prompt": "About how many acres does Grand Canyon National Park cover?",
+      "unit": "acres",
+      "answer": 1218376,
+      "hint": "Think on the scale of millions.",
+      "explanation": "A commonly cited estimate is about 1,218,376 acres."
+    },
+    {
+      "id": "20261219-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Mather Point, Grand Canyon, USA.",
+      "unit": "km",
+      "answer": {
+        "lat": 36.057,
+        "lng": -112.143
+      },
+      "hint": "Look for Mather Point in Grand Canyon, USA.",
+      "explanation": "Mather Point is located at about 36.0570°, -112.1430°."
+    }
+  ],
+  "2026-12-20": [
+    {
+      "id": "20261220-q1",
+      "type": "number",
+      "title": "Major waterfalls are in Yosemite Valley",
+      "prompt": "How many major waterfalls are in Yosemite Valley?",
+      "unit": "waterfalls",
+      "answer": 3,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 3 waterfalls."
+    },
+    {
+      "id": "20261220-q2",
+      "type": "number",
+      "title": "Sides does a regular nonagon have",
+      "prompt": "How many sides does a regular nonagon have?",
+      "unit": "sides",
+      "answer": 9,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 9 sides."
+    },
+    {
+      "id": "20261220-q3",
+      "type": "number",
+      "title": "Meters tall is Half Dome above the valley floor",
+      "prompt": "About how many meters tall is Half Dome above the valley floor?",
+      "unit": "meters",
+      "answer": 1444,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 1,444 meters."
+    },
+    {
+      "id": "20261220-q4",
+      "type": "number",
+      "title": "Square kilometers does Yosemite National Park cover",
+      "prompt": "About how many square kilometers does Yosemite National Park cover?",
+      "unit": "square kilometers",
+      "answer": 3027,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 3,027 square kilometers."
+    },
+    {
+      "id": "20261220-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Half Dome, Yosemite, USA.",
+      "unit": "km",
+      "answer": {
+        "lat": 37.7459,
+        "lng": -119.5332
+      },
+      "hint": "Look for Half Dome in Yosemite, USA.",
+      "explanation": "Half Dome is located at about 37.7459°, -119.5332°."
+    }
+  ],
+  "2026-12-21": [
+    {
+      "id": "20261221-q1",
+      "type": "number",
+      "title": "Boroughs make up New York City",
+      "prompt": "How many boroughs make up New York City?",
+      "unit": "boroughs",
+      "answer": 5,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 5 boroughs."
+    },
+    {
+      "id": "20261221-q2",
+      "type": "number",
+      "title": "Sides does a regular decagon have",
+      "prompt": "How many sides does a regular decagon have?",
+      "unit": "sides",
+      "answer": 10,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 10 sides."
+    },
+    {
+      "id": "20261221-q3",
+      "type": "number",
+      "title": "Feet tall is the Empire State Building to its antenna",
+      "prompt": "About how many feet tall is the Empire State Building to its antenna?",
+      "unit": "feet",
+      "answer": 1454,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 1,454 feet."
+    },
+    {
+      "id": "20261221-q4",
+      "type": "number",
+      "title": "Miles of subway track are in New York City",
+      "prompt": "About how many miles of subway track are in New York City?",
+      "unit": "miles",
+      "answer": 665,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 665 miles."
+    },
+    {
+      "id": "20261221-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Empire State Building, New York City, USA.",
+      "unit": "km",
+      "answer": {
+        "lat": 40.7484,
+        "lng": -73.9857
+      },
+      "hint": "Look for Empire State Building in New York City, USA.",
+      "explanation": "Empire State Building is located at about 40.7484°, -73.9857°."
+    }
+  ],
+  "2026-12-22": [
+    {
+      "id": "20261222-q1",
+      "type": "number",
+      "title": "Branches are in the U.S. federal government",
+      "prompt": "How many branches are in the U.S. federal government?",
+      "unit": "branches",
+      "answer": 3,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 3 branches."
+    },
+    {
+      "id": "20261222-q2",
+      "type": "number",
+      "title": "Sides does a regular dodecagon have",
+      "prompt": "How many sides does a regular dodecagon have?",
+      "unit": "sides",
+      "answer": 12,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 12 sides."
+    },
+    {
+      "id": "20261222-q3",
+      "type": "number",
+      "title": "Feet long is the Lincoln Memorial’s reflecting pool",
+      "prompt": "About how many feet long is the Lincoln Memorial’s reflecting pool?",
+      "unit": "feet",
+      "answer": 2029,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 2,029 feet."
+    },
+    {
+      "id": "20261222-q4",
+      "type": "number",
+      "title": "Acres does the National Mall cover",
+      "prompt": "About how many acres does the National Mall cover?",
+      "unit": "acres",
+      "answer": 309,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 309 acres."
+    },
+    {
+      "id": "20261222-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Lincoln Memorial, Washington, D.C., USA.",
+      "unit": "km",
+      "answer": {
+        "lat": 38.8893,
+        "lng": -77.0502
+      },
+      "hint": "Look for Lincoln Memorial in Washington, D.C., USA.",
+      "explanation": "Lincoln Memorial is located at about 38.8893°, -77.0502°."
+    }
+  ],
+  "2026-12-23": [
+    {
+      "id": "20261223-q1",
+      "type": "number",
+      "title": "Bells are in Big Ben’s clock tower",
+      "prompt": "How many bells are in Big Ben’s clock tower?",
+      "unit": "quarter bells",
+      "answer": 4,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 4 quarter bells."
+    },
+    {
+      "id": "20261223-q2",
+      "type": "number",
+      "title": "Sides does a regular hexagon have",
+      "prompt": "How many sides does a regular hexagon have?",
+      "unit": "sides",
+      "answer": 6,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 6 sides."
+    },
+    {
+      "id": "20261223-q3",
+      "type": "number",
+      "title": "Meters tall is Elizabeth Tower",
+      "prompt": "About how many meters tall is Elizabeth Tower?",
+      "unit": "meters",
+      "answer": 96,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 96 meters."
+    },
+    {
+      "id": "20261223-q4",
+      "type": "number",
+      "title": "Feet long is the River Thames through London",
+      "prompt": "About how many feet long is the River Thames through London?",
+      "unit": "feet",
+      "answer": 21500,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 21,500 feet."
+    },
+    {
+      "id": "20261223-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Elizabeth Tower (Big Ben), London, England.",
+      "unit": "km",
+      "answer": {
+        "lat": 51.5007,
+        "lng": -0.1246
+      },
+      "hint": "Look for Elizabeth Tower (Big Ben) in London, England.",
+      "explanation": "Elizabeth Tower (Big Ben) is located at about 51.5007°, -0.1246°."
+    }
+  ],
+  "2026-12-24": [
+    {
+      "id": "20261224-q1",
+      "type": "number",
+      "title": "Courtyards are in the Alhambra’s Nasrid Palaces",
+      "prompt": "How many courtyards are in the Alhambra’s Nasrid Palaces?",
+      "unit": "major courtyards",
+      "answer": 4,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 4 major courtyards."
+    },
+    {
+      "id": "20261224-q2",
+      "type": "number",
+      "title": "Sides does a regular octagon have",
+      "prompt": "How many sides does a regular octagon have?",
+      "unit": "sides",
+      "answer": 8,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 8 sides."
+    },
+    {
+      "id": "20261224-q3",
+      "type": "number",
+      "title": "Meters above sea level is the Alhambra",
+      "prompt": "About how many meters above sea level is the Alhambra?",
+      "unit": "meters",
+      "answer": 738,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 738 meters."
+    },
+    {
+      "id": "20261224-q4",
+      "type": "number",
+      "title": "Square meters does the Alhambra complex cover",
+      "prompt": "About how many square meters does the Alhambra complex cover?",
+      "unit": "square meters",
+      "answer": 142000,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 142,000 square meters."
+    },
+    {
+      "id": "20261224-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Alhambra, Granada, Spain.",
+      "unit": "km",
+      "answer": {
+        "lat": 37.1761,
+        "lng": -3.5881
+      },
+      "hint": "Look for Alhambra in Granada, Spain.",
+      "explanation": "Alhambra is located at about 37.1761°, -3.5881°."
+    }
+  ],
+  "2026-12-25": [
+    {
+      "id": "20261225-q1",
+      "type": "number",
+      "title": "Strings does a standard four-string bass guitar have",
+      "prompt": "How many strings does a standard four-string bass guitar have?",
+      "unit": "strings",
+      "answer": 4,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 4 strings."
+    },
+    {
+      "id": "20261225-q2",
+      "type": "number",
+      "title": "Sides does an enneagon have",
+      "prompt": "How many sides does an enneagon have?",
+      "unit": "sides",
+      "answer": 9,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 9 sides."
+    },
+    {
+      "id": "20261225-q3",
+      "type": "number",
+      "title": "Feet above sea level is Aconcagua’s summit",
+      "prompt": "About how many feet above sea level is Aconcagua’s summit?",
+      "unit": "feet",
+      "answer": 22838,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 22,838 feet."
+    },
+    {
+      "id": "20261225-q4",
+      "type": "number",
+      "title": "Miles long is the classic Inca Trail route to Machu Picchu",
+      "prompt": "About how many miles long is the classic Inca Trail route to Machu Picchu?",
+      "unit": "miles",
+      "answer": 26,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 26 miles."
+    },
+    {
+      "id": "20261225-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Leaning Tower of Pisa, Pisa, Italy.",
+      "unit": "km",
+      "answer": {
+        "lat": 43.723,
+        "lng": 10.3966
+      },
+      "hint": "Look for Leaning Tower of Pisa in Pisa, Italy.",
+      "explanation": "Leaning Tower of Pisa is located at about 43.7230°, 10.3966°."
+    }
+  ],
+  "2026-12-26": [
+    {
+      "id": "20261226-q1",
+      "type": "number",
+      "title": "Seconds are in an hour",
+      "prompt": "How many seconds are in an hour?",
+      "unit": "seconds",
+      "answer": 3600,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 3,600 seconds."
+    },
+    {
+      "id": "20261226-q2",
+      "type": "number",
+      "title": "Faces does an icosahedron have",
+      "prompt": "How many faces does an icosahedron have?",
+      "unit": "faces",
+      "answer": 20,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 20 faces."
+    },
+    {
+      "id": "20261226-q3",
+      "type": "number",
+      "title": "Meters tall is the Leaning Tower of Pisa",
+      "prompt": "About how many meters tall is the Leaning Tower of Pisa?",
+      "unit": "meters",
+      "answer": 56,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 56 meters."
+    },
+    {
+      "id": "20261226-q4",
+      "type": "number",
+      "title": "Degrees does the tower lean from vertical",
+      "prompt": "About how many degrees does the tower lean from vertical?",
+      "unit": "degrees",
+      "answer": 4,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 4 degrees."
+    },
+    {
+      "id": "20261226-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Rialto Bridge, Venice, Italy.",
+      "unit": "km",
+      "answer": {
+        "lat": 45.438,
+        "lng": 12.3359
+      },
+      "hint": "Look for Rialto Bridge in Venice, Italy.",
+      "explanation": "Rialto Bridge is located at about 45.4380°, 12.3359°."
+    }
+  ],
+  "2026-12-27": [
+    {
+      "id": "20261227-q1",
+      "type": "number",
+      "title": "Feet are in a mile",
+      "prompt": "How many feet are in a mile?",
+      "unit": "feet",
+      "answer": 5280,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 5,280 feet."
+    },
+    {
+      "id": "20261227-q2",
+      "type": "number",
+      "title": "Pieces are in a standard double-six domino set",
+      "prompt": "How many pieces are in a standard double-six domino set?",
+      "unit": "dominoes",
+      "answer": 28,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 28 dominoes."
+    },
+    {
+      "id": "20261227-q3",
+      "type": "number",
+      "title": "Meters long is Venice’s Grand Canal",
+      "prompt": "About how many meters long is Venice’s Grand Canal?",
+      "unit": "meters",
+      "answer": 3800,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 3,800 meters."
+    },
+    {
+      "id": "20261227-q4",
+      "type": "number",
+      "title": "Bridges cross Venice’s canals",
+      "prompt": "About how many bridges cross Venice’s canals?",
+      "unit": "bridges",
+      "answer": 400,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 400 bridges."
+    },
+    {
+      "id": "20261227-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Wawel Castle, Kraków, Poland.",
+      "unit": "km",
+      "answer": {
+        "lat": 50.0544,
+        "lng": 19.9352
+      },
+      "hint": "Look for Wawel Castle in Kraków, Poland.",
+      "explanation": "Wawel Castle is located at about 50.0544°, 19.9352°."
+    }
+  ],
+  "2026-12-28": [
+    {
+      "id": "20261228-q1",
+      "type": "number",
+      "title": "Temples make up the Abu Simbel complex",
+      "prompt": "How many temples make up the Abu Simbel complex?",
+      "unit": "temples",
+      "answer": 2,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 2 temples."
+    },
+    {
+      "id": "20261228-q2",
+      "type": "number",
+      "title": "Sides does a regular parallelogram have",
+      "prompt": "How many sides does a regular parallelogram have?",
+      "unit": "sides",
+      "answer": 4,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 4 sides."
+    },
+    {
+      "id": "20261228-q3",
+      "type": "number",
+      "title": "Meters tall are the seated statues at Abu Simbel",
+      "prompt": "About how many meters tall are the seated statues at Abu Simbel?",
+      "unit": "meters",
+      "answer": 20,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 20 meters."
+    },
+    {
+      "id": "20261228-q4",
+      "type": "number",
+      "title": "Cubic kilometers of water can Lake Nasser hold",
+      "prompt": "About how many cubic kilometers of water can Lake Nasser hold?",
+      "unit": "cubic kilometers",
+      "answer": 132,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 132 cubic kilometers."
+    },
+    {
+      "id": "20261228-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Great Temple of Ramses II, Abu Simbel, Egypt.",
+      "unit": "km",
+      "answer": {
+        "lat": 22.3372,
+        "lng": 31.6258
+      },
+      "hint": "Look for Great Temple of Ramses II in Abu Simbel, Egypt.",
+      "explanation": "Great Temple of Ramses II is located at about 22.3372°, 31.6258°."
+    }
+  ],
+  "2026-12-29": [
+    {
+      "id": "20261229-q1",
+      "type": "number",
+      "title": "Sides does a stop sign have",
+      "prompt": "How many sides does a stop sign have?",
+      "unit": "sides",
+      "answer": 8,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 8 sides."
+    },
+    {
+      "id": "20261229-q2",
+      "type": "number",
+      "title": "Wheels does a standard bicycle have",
+      "prompt": "How many wheels does a standard bicycle have?",
+      "unit": "wheels",
+      "answer": 2,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 2 wheels."
+    },
+    {
+      "id": "20261229-q3",
+      "type": "number",
+      "title": "Meters across is the Great Blue Hole",
+      "prompt": "About how many meters across is the Great Blue Hole?",
+      "unit": "meters",
+      "answer": 318,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 318 meters."
+    },
+    {
+      "id": "20261229-q4",
+      "type": "number",
+      "title": "Meters deep is the Great Blue Hole",
+      "prompt": "About how many meters deep is the Great Blue Hole?",
+      "unit": "meters",
+      "answer": 124,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 124 meters."
+    },
+    {
+      "id": "20261229-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Great Blue Hole, Belize.",
+      "unit": "km",
+      "answer": {
+        "lat": 17.3156,
+        "lng": -87.5343
+      },
+      "hint": "Look for Great Blue Hole in Belize.",
+      "explanation": "Great Blue Hole is located at about 17.3156°, -87.5343°."
+    }
+  ],
+  "2026-12-30": [
+    {
+      "id": "20261230-q1",
+      "type": "number",
+      "title": "Colors are on the flag of Singapore",
+      "prompt": "How many colors are on the flag of Singapore?",
+      "unit": "colors",
+      "answer": 2,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 2 colors."
+    },
+    {
+      "id": "20261230-q2",
+      "type": "number",
+      "title": "Cents are in a U.S. dollar",
+      "prompt": "How many cents are in a U.S. dollar?",
+      "unit": "cents",
+      "answer": 100,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 100 cents."
+    },
+    {
+      "id": "20261230-q3",
+      "type": "number",
+      "title": "Meters tall is Singapore’s Merlion statue",
+      "prompt": "About how many meters tall is Singapore’s Merlion statue?",
+      "unit": "meters",
+      "answer": 8.6,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 8.6 meters."
+    },
+    {
+      "id": "20261230-q4",
+      "type": "number",
+      "title": "Kilometers of park connectors are in Singapore",
+      "prompt": "About how many kilometers of park connectors are in Singapore?",
+      "unit": "kilometers",
+      "answer": 300,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 300 kilometers."
+    },
+    {
+      "id": "20261230-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Merlion Park, Singapore.",
+      "unit": "km",
+      "answer": {
+        "lat": 1.2868,
+        "lng": 103.8545
+      },
+      "hint": "Look for Merlion Park in Singapore.",
+      "explanation": "Merlion Park is located at about 1.2868°, 103.8545°."
+    }
+  ],
+  "2026-12-31": [
+    {
+      "id": "20261231-q1",
+      "type": "number",
+      "title": "Towers are in Kuala Lumpur’s Petronas Twin Towers",
+      "prompt": "How many towers are in Kuala Lumpur’s Petronas Twin Towers?",
+      "unit": "towers",
+      "answer": 2,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 2 towers."
+    },
+    {
+      "id": "20261231-q2",
+      "type": "number",
+      "title": "Quarters make one U.S. dollar",
+      "prompt": "How many quarters make one U.S. dollar?",
+      "unit": "quarters",
+      "answer": 4,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 4 quarters."
+    },
+    {
+      "id": "20261231-q3",
+      "type": "number",
+      "title": "Meters tall are the Petronas Towers",
+      "prompt": "About how many meters tall are the Petronas Towers?",
+      "unit": "meters",
+      "answer": 452,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 452 meters."
+    },
+    {
+      "id": "20261231-q4",
+      "type": "number",
+      "title": "Floors are in each Petronas Tower",
+      "prompt": "About how many floors are in each Petronas Tower?",
+      "unit": "floors",
+      "answer": 88,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 88 floors."
+    },
+    {
+      "id": "20261231-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Petronas Towers, Kuala Lumpur, Malaysia.",
+      "unit": "km",
+      "answer": {
+        "lat": 3.1579,
+        "lng": 101.7116
+      },
+      "hint": "Look for Petronas Towers in Kuala Lumpur, Malaysia.",
+      "explanation": "Petronas Towers is located at about 3.1579°, 101.7116°."
+    }
+  ],
+  "2027-01-01": [
+    {
+      "id": "20270101-q1",
+      "type": "number",
+      "title": "Principal temples form the Prambanan complex",
+      "prompt": "How many principal temples form the Prambanan complex?",
+      "unit": "temples",
+      "answer": 3,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 3 temples."
+    },
+    {
+      "id": "20270101-q2",
+      "type": "number",
+      "title": "Centimeters are in a meter",
+      "prompt": "How many centimeters are in a meter?",
+      "unit": "centimeters",
+      "answer": 100,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 100 centimeters."
+    },
+    {
+      "id": "20270101-q3",
+      "type": "number",
+      "title": "Meters tall is Prambanan’s central Shiva temple",
+      "prompt": "About how many meters tall is Prambanan’s central Shiva temple?",
+      "unit": "meters",
+      "answer": 47,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 47 meters."
+    },
+    {
+      "id": "20270101-q4",
+      "type": "number",
+      "title": "Relief panels decorate the temple galleries",
+      "prompt": "About how many relief panels decorate the temple galleries?",
+      "unit": "panels",
+      "answer": 42,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 42 panels."
+    },
+    {
+      "id": "20270101-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Prambanan Temple, Java, Indonesia.",
+      "unit": "km",
+      "answer": {
+        "lat": -7.752,
+        "lng": 110.4915
+      },
+      "hint": "Look for Prambanan Temple in Java, Indonesia.",
+      "explanation": "Prambanan Temple is located at about -7.7520°, 110.4915°."
+    }
+  ],
+  "2027-01-02": [
+    {
+      "id": "20270102-q1",
+      "type": "number",
+      "title": "Large Buddha statues are in the Ananda Temple’s central hall",
+      "prompt": "How many large Buddha statues are in the Ananda Temple’s central hall?",
+      "unit": "statues",
+      "answer": 4,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 4 statues."
+    },
+    {
+      "id": "20270102-q2",
+      "type": "number",
+      "title": "Hours are in half a day",
+      "prompt": "How many hours are in half a day?",
+      "unit": "hours",
+      "answer": 12,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 12 hours."
+    },
+    {
+      "id": "20270102-q3",
+      "type": "number",
+      "title": "Meters tall is the Ananda Temple",
+      "prompt": "About how many meters tall is the Ananda Temple?",
+      "unit": "meters",
+      "answer": 51,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 51 meters."
+    },
+    {
+      "id": "20270102-q4",
+      "type": "number",
+      "title": "Square kilometers does the Bagan archaeological zone cover",
+      "prompt": "About how many square kilometers does the Bagan archaeological zone cover?",
+      "unit": "square kilometers",
+      "answer": 104,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 104 square kilometers."
+    },
+    {
+      "id": "20270102-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Ananda Temple, Bagan, Myanmar.",
+      "unit": "km",
+      "answer": {
+        "lat": 21.1717,
+        "lng": 94.8672
+      },
+      "hint": "Look for Ananda Temple in Bagan, Myanmar.",
+      "explanation": "Ananda Temple is located at about 21.1717°, 94.8672°."
+    }
+  ],
+  "2027-01-03": [
+    {
+      "id": "20270103-q1",
+      "type": "number",
+      "title": "Main spires crown the Shwedagon Pagoda",
+      "prompt": "How many main spires crown the Shwedagon Pagoda?",
+      "unit": "spire",
+      "answer": 1,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 1 spire."
+    },
+    {
+      "id": "20270103-q2",
+      "type": "number",
+      "title": "Letters are in the Italian alphabet",
+      "prompt": "How many letters are in the Italian alphabet?",
+      "unit": "letters",
+      "answer": 21,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 21 letters."
+    },
+    {
+      "id": "20270103-q3",
+      "type": "number",
+      "title": "Meters tall is the Shwedagon Pagoda’s stupa",
+      "prompt": "About how many meters tall is the Shwedagon Pagoda’s stupa?",
+      "unit": "meters",
+      "answer": 99,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 99 meters."
+    },
+    {
+      "id": "20270103-q4",
+      "type": "number",
+      "title": "Tonnes of gold cover the Shwedagon Pagoda",
+      "prompt": "About how many tonnes of gold cover the Shwedagon Pagoda?",
+      "unit": "tonnes",
+      "answer": 60,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 60 tonnes."
+    },
+    {
+      "id": "20270103-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Shwedagon Pagoda, Yangon, Myanmar.",
+      "unit": "km",
+      "answer": {
+        "lat": 16.7983,
+        "lng": 96.1497
+      },
+      "hint": "Look for Shwedagon Pagoda in Yangon, Myanmar.",
+      "explanation": "Shwedagon Pagoda is located at about 16.7983°, 96.1497°."
+    }
+  ],
+  "2027-01-04": [
+    {
+      "id": "20270104-q1",
+      "type": "number",
+      "title": "Fingers does the Leshan Giant Buddha have on each hand",
+      "prompt": "How many fingers does the Leshan Giant Buddha have on each hand?",
+      "unit": "fingers",
+      "answer": 5,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 5 fingers."
+    },
+    {
+      "id": "20270104-q2",
+      "type": "number",
+      "title": "Sides does a trapezoid have",
+      "prompt": "How many sides does a trapezoid have?",
+      "unit": "sides",
+      "answer": 4,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 4 sides."
+    },
+    {
+      "id": "20270104-q3",
+      "type": "number",
+      "title": "Meters tall is the Leshan Giant Buddha",
+      "prompt": "About how many meters tall is the Leshan Giant Buddha?",
+      "unit": "meters",
+      "answer": 71,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 71 meters."
+    },
+    {
+      "id": "20270104-q4",
+      "type": "number",
+      "title": "Meters long is the Buddha’s ear",
+      "prompt": "About how many meters long is the Buddha’s ear?",
+      "unit": "meters",
+      "answer": 7,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 7 meters."
+    },
+    {
+      "id": "20270104-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Leshan Giant Buddha, Sichuan, China.",
+      "unit": "km",
+      "answer": {
+        "lat": 29.5443,
+        "lng": 103.7731
+      },
+      "hint": "Look for Leshan Giant Buddha in Sichuan, China.",
+      "explanation": "Leshan Giant Buddha is located at about 29.5443°, 103.7731°."
+    }
+  ],
+  "2027-01-05": [
+    {
+      "id": "20270105-q1",
+      "type": "number",
+      "title": "Colors are prominent in the Zhangye Danxia Rainbow Mountains",
+      "prompt": "How many colors are prominent in the Zhangye Danxia Rainbow Mountains?",
+      "unit": "colors",
+      "answer": 7,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 7 colors."
+    },
+    {
+      "id": "20270105-q2",
+      "type": "number",
+      "title": "Days are in two weeks",
+      "prompt": "How many days are in two weeks?",
+      "unit": "days",
+      "answer": 14,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 14 days."
+    },
+    {
+      "id": "20270105-q3",
+      "type": "number",
+      "title": "Square kilometers does the Zhangye Danxia landform park cover",
+      "prompt": "About how many square kilometers does the Zhangye Danxia landform park cover?",
+      "unit": "square kilometers",
+      "answer": 50,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 50 square kilometers."
+    },
+    {
+      "id": "20270105-q4",
+      "type": "number",
+      "title": "Kilometers long is the Qilian mountain range",
+      "prompt": "About how many kilometers long is the Qilian mountain range?",
+      "unit": "kilometers",
+      "answer": 800,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 800 kilometers."
+    },
+    {
+      "id": "20270105-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Zhangye Danxia, Gansu, China.",
+      "unit": "km",
+      "answer": {
+        "lat": 38.9014,
+        "lng": 100.1372
+      },
+      "hint": "Look for Zhangye Danxia in Gansu, China.",
+      "explanation": "Zhangye Danxia is located at about 38.9014°, 100.1372°."
+    }
+  ],
+  "2027-01-06": [
+    {
+      "id": "20270106-q1",
+      "type": "number",
+      "title": "Decks are served by the Tokyo Skytree’s observation areas",
+      "prompt": "How many decks are served by the Tokyo Skytree’s observation areas?",
+      "unit": "decks",
+      "answer": 2,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 2 decks."
+    },
+    {
+      "id": "20270106-q2",
+      "type": "number",
+      "title": "Sides does a regular pentagon have",
+      "prompt": "How many sides does a regular pentagon have?",
+      "unit": "sides",
+      "answer": 5,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 5 sides."
+    },
+    {
+      "id": "20270106-q3",
+      "type": "number",
+      "title": "Meters tall is the Tokyo Skytree",
+      "prompt": "About how many meters tall is the Tokyo Skytree?",
+      "unit": "meters",
+      "answer": 634,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 634 meters."
+    },
+    {
+      "id": "20270106-q4",
+      "type": "number",
+      "title": "Elevators serve the Tokyo Skytree",
+      "prompt": "About how many elevators serve the Tokyo Skytree?",
+      "unit": "elevators",
+      "answer": 13,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 13 elevators."
+    },
+    {
+      "id": "20270106-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Tokyo Skytree, Tokyo, Japan.",
+      "unit": "km",
+      "answer": {
+        "lat": 35.7101,
+        "lng": 139.8107
+      },
+      "hint": "Look for Tokyo Skytree in Tokyo, Japan.",
+      "explanation": "Tokyo Skytree is located at about 35.7101°, 139.8107°."
+    }
+  ],
+  "2027-01-07": [
+    {
+      "id": "20270107-q1",
+      "type": "number",
+      "title": "Main keeps are in Himeji Castle",
+      "prompt": "How many main keeps are in Himeji Castle?",
+      "unit": "main keep",
+      "answer": 1,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 1 main keep."
+    },
+    {
+      "id": "20270107-q2",
+      "type": "number",
+      "title": "Sides does a regular rhombus have",
+      "prompt": "How many sides does a regular rhombus have?",
+      "unit": "sides",
+      "answer": 4,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 4 sides."
+    },
+    {
+      "id": "20270107-q3",
+      "type": "number",
+      "title": "Meters tall is Himeji Castle’s main keep",
+      "prompt": "About how many meters tall is Himeji Castle’s main keep?",
+      "unit": "meters",
+      "answer": 46,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 46 meters."
+    },
+    {
+      "id": "20270107-q4",
+      "type": "number",
+      "title": "Hectares does the Himeji Castle complex cover",
+      "prompt": "About how many hectares does the Himeji Castle complex cover?",
+      "unit": "hectares",
+      "answer": 23,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 23 hectares."
+    },
+    {
+      "id": "20270107-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Himeji Castle, Japan.",
+      "unit": "km",
+      "answer": {
+        "lat": 34.8394,
+        "lng": 134.6939
+      },
+      "hint": "Look for Himeji Castle in Japan.",
+      "explanation": "Himeji Castle is located at about 34.8394°, 134.6939°."
+    }
+  ],
+  "2027-01-08": [
+    {
+      "id": "20270108-q1",
+      "type": "number",
+      "title": "Stories does the five-story pagoda at Nikkō Tōshō-gū have",
+      "prompt": "How many stories does the five-story pagoda at Nikkō Tōshō-gū have?",
+      "unit": "stories",
+      "answer": 5,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 5 stories."
+    },
+    {
+      "id": "20270108-q2",
+      "type": "number",
+      "title": "Strings does a standard mandolin have",
+      "prompt": "How many strings does a standard mandolin have?",
+      "unit": "strings",
+      "answer": 8,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 8 strings."
+    },
+    {
+      "id": "20270108-q3",
+      "type": "number",
+      "title": "Meters tall is Nikkō’s five-story pagoda",
+      "prompt": "About how many meters tall is Nikkō’s five-story pagoda?",
+      "unit": "meters",
+      "answer": 36,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 36 meters."
+    },
+    {
+      "id": "20270108-q4",
+      "type": "number",
+      "title": "Years old is the current main shrine complex",
+      "prompt": "About how many years old is the current main shrine complex?",
+      "unit": "years",
+      "answer": 400,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 400 years."
+    },
+    {
+      "id": "20270108-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Nikkō Tōshō-gū, Japan.",
+      "unit": "km",
+      "answer": {
+        "lat": 36.758,
+        "lng": 139.5987
+      },
+      "hint": "Look for Nikkō Tōshō-gū in Japan.",
+      "explanation": "Nikkō Tōshō-gū is located at about 36.7580°, 139.5987°."
+    }
+  ],
+  "2027-01-09": [
+    {
+      "id": "20270109-q1",
+      "type": "number",
+      "title": "Hands does the Great Buddha of Kamakura have",
+      "prompt": "How many hands does the Great Buddha of Kamakura have?",
+      "unit": "hands",
+      "answer": 2,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 2 hands."
+    },
+    {
+      "id": "20270109-q2",
+      "type": "number",
+      "title": "Sides does a regular octagon have",
+      "prompt": "How many sides does a regular octagon have?",
+      "unit": "sides",
+      "answer": 8,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 8 sides."
+    },
+    {
+      "id": "20270109-q3",
+      "type": "number",
+      "title": "Meters tall is the Great Buddha of Kamakura",
+      "prompt": "About how many meters tall is the Great Buddha of Kamakura?",
+      "unit": "meters",
+      "answer": 13.35,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 13.35 meters."
+    },
+    {
+      "id": "20270109-q4",
+      "type": "number",
+      "title": "Tonnes does the bronze statue weigh",
+      "prompt": "About how many tonnes does the bronze statue weigh?",
+      "unit": "tonnes",
+      "answer": 121,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 121 tonnes."
+    },
+    {
+      "id": "20270109-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Great Buddha of Kamakura, Japan.",
+      "unit": "km",
+      "answer": {
+        "lat": 35.3167,
+        "lng": 139.5357
+      },
+      "hint": "Look for Great Buddha of Kamakura in Japan.",
+      "explanation": "Great Buddha of Kamakura is located at about 35.3167°, 139.5357°."
+    }
+  ],
+  "2027-01-10": [
+    {
+      "id": "20270110-q1",
+      "type": "number",
+      "title": "Pumpkins are in Yayoi Kusama’s famous Naoshima harbor sculpture",
+      "prompt": "How many pumpkins are in Yayoi Kusama’s famous Naoshima harbor sculpture?",
+      "unit": "pumpkin",
+      "answer": 1,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 1 pumpkin."
+    },
+    {
+      "id": "20270110-q2",
+      "type": "number",
+      "title": "Points does a five-pointed star have",
+      "prompt": "How many points does a five-pointed star have?",
+      "unit": "points",
+      "answer": 5,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 5 points."
+    },
+    {
+      "id": "20270110-q3",
+      "type": "number",
+      "title": "Meters tall is the Naoshima Yellow Pumpkin sculpture",
+      "prompt": "About how many meters tall is the Naoshima Yellow Pumpkin sculpture?",
+      "unit": "meters",
+      "answer": 2,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 2 meters."
+    },
+    {
+      "id": "20270110-q4",
+      "type": "number",
+      "title": "Islands make up Japan’s main archipelago",
+      "prompt": "About how many islands make up Japan’s main archipelago?",
+      "unit": "islands",
+      "answer": 4,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 4 islands."
+    },
+    {
+      "id": "20270110-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Yellow Pumpkin, Naoshima, Japan.",
+      "unit": "km",
+      "answer": {
+        "lat": 34.4601,
+        "lng": 133.9945
+      },
+      "hint": "Look for Yellow Pumpkin in Naoshima, Japan.",
+      "explanation": "Yellow Pumpkin is located at about 34.4601°, 133.9945°."
+    }
+  ],
+  "2027-01-11": [
+    {
+      "id": "20270111-q1",
+      "type": "number",
+      "title": "Levels are in Jewel Changi Airport’s Forest Valley",
+      "prompt": "How many levels are in Jewel Changi Airport’s Forest Valley?",
+      "unit": "levels",
+      "answer": 5,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 5 levels."
+    },
+    {
+      "id": "20270111-q2",
+      "type": "number",
+      "title": "Sides does a regular decagon have",
+      "prompt": "How many sides does a regular decagon have?",
+      "unit": "sides",
+      "answer": 10,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 10 sides."
+    },
+    {
+      "id": "20270111-q3",
+      "type": "number",
+      "title": "Meters tall is Jewel’s indoor Rain Vortex",
+      "prompt": "About how many meters tall is Jewel’s indoor Rain Vortex?",
+      "unit": "meters",
+      "answer": 40,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 40 meters."
+    },
+    {
+      "id": "20270111-q4",
+      "type": "number",
+      "title": "Liters of water per minute can the Rain Vortex move",
+      "prompt": "About how many liters of water per minute can the Rain Vortex move?",
+      "unit": "liters per minute",
+      "answer": 10000,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 10,000 liters per minute."
+    },
+    {
+      "id": "20270111-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Jewel Changi Airport, Singapore.",
+      "unit": "km",
+      "answer": {
+        "lat": 1.3602,
+        "lng": 103.9894
+      },
+      "hint": "Look for Jewel Changi Airport in Singapore.",
+      "explanation": "Jewel Changi Airport is located at about 1.3602°, 103.9894°."
+    }
+  ],
+  "2027-01-12": [
+    {
+      "id": "20270112-q1",
+      "type": "number",
+      "title": "Major islands border Victoria Harbour",
+      "prompt": "How many major islands border Victoria Harbour?",
+      "unit": "islands",
+      "answer": 2,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 2 islands."
+    },
+    {
+      "id": "20270112-q2",
+      "type": "number",
+      "title": "Letters are in the Hebrew alphabet",
+      "prompt": "How many letters are in the Hebrew alphabet?",
+      "unit": "letters",
+      "answer": 22,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 22 letters."
+    },
+    {
+      "id": "20270112-q3",
+      "type": "number",
+      "title": "Kilometers long is Victoria Harbour",
+      "prompt": "About how many kilometers long is Victoria Harbour?",
+      "unit": "kilometers",
+      "answer": 19,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 19 kilometers."
+    },
+    {
+      "id": "20270112-q4",
+      "type": "number",
+      "title": "Meters deep is the harbor’s main navigation channel",
+      "prompt": "About how many meters deep is the harbor’s main navigation channel?",
+      "unit": "meters",
+      "answer": 15,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 15 meters."
+    },
+    {
+      "id": "20270112-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Victoria Harbour, Hong Kong.",
+      "unit": "km",
+      "answer": {
+        "lat": 22.2936,
+        "lng": 114.1681
+      },
+      "hint": "Look for Victoria Harbour in Hong Kong.",
+      "explanation": "Victoria Harbour is located at about 22.2936°, 114.1681°."
+    }
+  ],
+  "2027-01-13": [
+    {
+      "id": "20270113-q1",
+      "type": "number",
+      "title": "Floors are in Taipei 101",
+      "prompt": "How many floors are in Taipei 101?",
+      "unit": "floors",
+      "answer": 101,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 101 floors."
+    },
+    {
+      "id": "20270113-q2",
+      "type": "number",
+      "title": "Meters are in a kilometer",
+      "prompt": "How many meters are in a kilometer?",
+      "unit": "meters",
+      "answer": 1000,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 1,000 meters."
+    },
+    {
+      "id": "20270113-q3",
+      "type": "number",
+      "title": "Meters tall is Taipei 101",
+      "prompt": "About how many meters tall is Taipei 101?",
+      "unit": "meters",
+      "answer": 508,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 508 meters."
+    },
+    {
+      "id": "20270113-q4",
+      "type": "number",
+      "title": "Elevators serve Taipei 101",
+      "prompt": "How many elevators serve Taipei 101?",
+      "unit": "elevators",
+      "answer": 61,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 61 elevators."
+    },
+    {
+      "id": "20270113-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Taipei 101, Taipei, Taiwan.",
+      "unit": "km",
+      "answer": {
+        "lat": 25.0339,
+        "lng": 121.5645
+      },
+      "hint": "Look for Taipei 101 in Taipei, Taiwan.",
+      "explanation": "Taipei 101 is located at about 25.0339°, 121.5645°."
+    }
+  ],
+  "2027-01-14": [
+    {
+      "id": "20270114-q1",
+      "type": "number",
+      "title": "Main gates enter Gyeongbokgung Palace’s walled precinct",
+      "prompt": "How many main gates enter Gyeongbokgung Palace’s walled precinct?",
+      "unit": "gates",
+      "answer": 4,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 4 gates."
+    },
+    {
+      "id": "20270114-q2",
+      "type": "number",
+      "title": "Sides does a regular heptagon have",
+      "prompt": "How many sides does a regular heptagon have?",
+      "unit": "sides",
+      "answer": 7,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 7 sides."
+    },
+    {
+      "id": "20270114-q3",
+      "type": "number",
+      "title": "Square meters does Gyeongbokgung Palace cover",
+      "prompt": "About how many square meters does Gyeongbokgung Palace cover?",
+      "unit": "square meters",
+      "answer": 432703,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 432,703 square meters."
+    },
+    {
+      "id": "20270114-q4",
+      "type": "number",
+      "title": "Buildings stood in the palace complex at its height",
+      "prompt": "About how many buildings stood in the palace complex at its height?",
+      "unit": "buildings",
+      "answer": 500,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 500 buildings."
+    },
+    {
+      "id": "20270114-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Gyeongbokgung Palace, Seoul, South Korea.",
+      "unit": "km",
+      "answer": {
+        "lat": 37.5796,
+        "lng": 126.977
+      },
+      "hint": "Look for Gyeongbokgung Palace in Seoul, South Korea.",
+      "explanation": "Gyeongbokgung Palace is located at about 37.5796°, 126.9770°."
+    }
+  ],
+  "2027-01-15": [
+    {
+      "id": "20270115-q1",
+      "type": "number",
+      "title": "Floors are above ground in the White House residence",
+      "prompt": "How many floors are above ground in the White House residence?",
+      "unit": "floors",
+      "answer": 4,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 4 floors."
+    },
+    {
+      "id": "20270115-q2",
+      "type": "number",
+      "title": "Sides does a regular triangle have",
+      "prompt": "How many sides does a regular triangle have?",
+      "unit": "sides",
+      "answer": 3,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 3 sides."
+    },
+    {
+      "id": "20270115-q3",
+      "type": "number",
+      "title": "Square feet of floor space does the White House have",
+      "prompt": "About how many square feet of floor space does the White House have?",
+      "unit": "square feet",
+      "answer": 55000,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 55,000 square feet."
+    },
+    {
+      "id": "20270115-q4",
+      "type": "number",
+      "title": "Rooms are in the White House",
+      "prompt": "About how many rooms are in the White House?",
+      "unit": "rooms",
+      "answer": 132,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 132 rooms."
+    },
+    {
+      "id": "20270115-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on The White House, Washington, D.C., USA.",
+      "unit": "km",
+      "answer": {
+        "lat": 38.8977,
+        "lng": -77.0365
+      },
+      "hint": "Look for The White House in Washington, D.C., USA.",
+      "explanation": "The White House is located at about 38.8977°, -77.0365°."
+    }
+  ],
+  "2027-01-16": [
+    {
+      "id": "20270116-q1",
+      "type": "number",
+      "title": "U.S. states meet at the Four Corners Monument",
+      "prompt": "How many U.S. states meet at the Four Corners Monument?",
+      "unit": "states",
+      "answer": 4,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 4 states."
+    },
+    {
+      "id": "20270116-q2",
+      "type": "number",
+      "title": "Days are in a fortnight",
+      "prompt": "How many days are in a fortnight?",
+      "unit": "days",
+      "answer": 14,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 14 days."
+    },
+    {
+      "id": "20270116-q3",
+      "type": "number",
+      "title": "Meters above the valley floor do Monument Valley’s buttes rise",
+      "prompt": "About how many meters above the valley floor do Monument Valley’s buttes rise?",
+      "unit": "meters",
+      "answer": 300,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 300 meters."
+    },
+    {
+      "id": "20270116-q4",
+      "type": "number",
+      "title": "Square kilometers does Monument Valley Tribal Park cover",
+      "prompt": "About how many square kilometers does Monument Valley Tribal Park cover?",
+      "unit": "square kilometers",
+      "answer": 371,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 371 square kilometers."
+    },
+    {
+      "id": "20270116-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Monument Valley, Arizona–Utah border, USA.",
+      "unit": "km",
+      "answer": {
+        "lat": 36.983,
+        "lng": -110.0985
+      },
+      "hint": "Look for Monument Valley in Arizona–Utah border, USA.",
+      "explanation": "Monument Valley is located at about 36.9830°, -110.0985°."
+    }
+  ],
+  "2027-01-17": [
+    {
+      "id": "20270117-q1",
+      "type": "number",
+      "title": "Warriors are estimated to be in the Terracotta Army pits",
+      "prompt": "How many warriors are estimated to be in the Terracotta Army pits?",
+      "unit": "warriors",
+      "answer": 8000,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 8,000 warriors."
+    },
+    {
+      "id": "20270117-q2",
+      "type": "number",
+      "title": "Faces does an octahedron have",
+      "prompt": "How many faces does an octahedron have?",
+      "unit": "faces",
+      "answer": 8,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 8 faces."
+    },
+    {
+      "id": "20270117-q3",
+      "type": "number",
+      "title": "Meters tall is the largest Terracotta Army warrior figure",
+      "prompt": "About how many meters tall is the largest Terracotta Army warrior figure?",
+      "unit": "meters",
+      "answer": 1.95,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 1.95 meters."
+    },
+    {
+      "id": "20270117-q4",
+      "type": "number",
+      "title": "Square kilometers does the Mausoleum of the First Qin Emperor cover",
+      "prompt": "About how many square kilometers does the Mausoleum of the First Qin Emperor cover?",
+      "unit": "square kilometers",
+      "answer": 56,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 56 square kilometers."
+    },
+    {
+      "id": "20270117-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Terracotta Army, Xi’an, China.",
+      "unit": "km",
+      "answer": {
+        "lat": 34.384,
+        "lng": 109.2738
+      },
+      "hint": "Look for Terracotta Army in Xi’an, China.",
+      "explanation": "Terracotta Army is located at about 34.3840°, 109.2738°."
+    }
+  ],
+  "2027-01-18": [
+    {
+      "id": "20270118-q1",
+      "type": "number",
+      "title": "Main precincts make up the Karnak temple complex",
+      "prompt": "How many main precincts make up the Karnak temple complex?",
+      "unit": "precincts",
+      "answer": 3,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 3 precincts."
+    },
+    {
+      "id": "20270118-q2",
+      "type": "number",
+      "title": "Sides does a regular dodecagon have",
+      "prompt": "How many sides does a regular dodecagon have?",
+      "unit": "sides",
+      "answer": 12,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 12 sides."
+    },
+    {
+      "id": "20270118-q3",
+      "type": "number",
+      "title": "Square meters does Karnak’s Great Hypostyle Hall cover",
+      "prompt": "About how many square meters does Karnak’s Great Hypostyle Hall cover?",
+      "unit": "square meters",
+      "answer": 5000,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 5,000 square meters."
+    },
+    {
+      "id": "20270118-q4",
+      "type": "number",
+      "title": "Columns stand in the Great Hypostyle Hall",
+      "prompt": "About how many columns stand in the Great Hypostyle Hall?",
+      "unit": "columns",
+      "answer": 134,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 134 columns."
+    },
+    {
+      "id": "20270118-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Karnak Temple, Luxor, Egypt.",
+      "unit": "km",
+      "answer": {
+        "lat": 25.7188,
+        "lng": 32.6573
+      },
+      "hint": "Look for Karnak Temple in Luxor, Egypt.",
+      "explanation": "Karnak Temple is located at about 25.7188°, 32.6573°."
+    }
+  ],
+  "2027-01-19": [
+    {
+      "id": "20270119-q1",
+      "type": "number",
+      "title": "Floors does the Golden Pavilion at Kinkaku-ji have",
+      "prompt": "How many floors does the Golden Pavilion at Kinkaku-ji have?",
+      "unit": "floors",
+      "answer": 3,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 3 floors."
+    },
+    {
+      "id": "20270119-q2",
+      "type": "number",
+      "title": "Sides does a regular nonagon have",
+      "prompt": "How many sides does a regular nonagon have?",
+      "unit": "sides",
+      "answer": 9,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 9 sides."
+    },
+    {
+      "id": "20270119-q3",
+      "type": "number",
+      "title": "Meters tall is the Golden Pavilion",
+      "prompt": "About how many meters tall is the Golden Pavilion?",
+      "unit": "meters",
+      "answer": 12.5,
+      "hint": "Think on the scale of smaller than a thousand.",
+      "explanation": "A commonly cited estimate is about 12.5 meters."
+    },
+    {
+      "id": "20270119-q4",
+      "type": "number",
+      "title": "Square meters is the pond at Kinkaku-ji",
+      "prompt": "About how many square meters is the pond at Kinkaku-ji?",
+      "unit": "square meters",
+      "answer": 6600,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 6,600 square meters."
+    },
+    {
+      "id": "20270119-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Kinkaku-ji, Kyoto, Japan.",
+      "unit": "km",
+      "answer": {
+        "lat": 35.0394,
+        "lng": 135.7292
+      },
+      "hint": "Look for Kinkaku-ji in Kyoto, Japan.",
+      "explanation": "Kinkaku-ji is located at about 35.0394°, 135.7292°."
+    }
+  ],
+  "2027-01-20": [
+    {
+      "id": "20270120-q1",
+      "type": "number",
+      "title": "Chapels are in the Palace of Versailles",
+      "prompt": "How many chapels are in the Palace of Versailles?",
+      "unit": "chapels",
+      "answer": 2,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 2 chapels."
+    },
+    {
+      "id": "20270120-q2",
+      "type": "number",
+      "title": "Sides does a regular pentagon have",
+      "prompt": "How many sides does a regular pentagon have?",
+      "unit": "sides",
+      "answer": 5,
+      "hint": "Choose the closest of the four estimates.",
+      "explanation": "The standard reference count is 5 sides."
+    },
+    {
+      "id": "20270120-q3",
+      "type": "number",
+      "title": "Rooms are in the Palace of Versailles",
+      "prompt": "About how many rooms are in the Palace of Versailles?",
+      "unit": "rooms",
+      "answer": 2300,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 2,300 rooms."
+    },
+    {
+      "id": "20270120-q4",
+      "type": "number",
+      "title": "Square meters does the palace cover",
+      "prompt": "About how many square meters does the palace cover?",
+      "unit": "square meters",
+      "answer": 67000,
+      "hint": "Think on the scale of thousands.",
+      "explanation": "A commonly cited estimate is about 67,000 square meters."
+    },
+    {
+      "id": "20270120-map",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on Palace of Versailles, France.",
+      "unit": "km",
+      "answer": {
+        "lat": 48.8049,
+        "lng": 2.1204
+      },
+      "hint": "Look for Palace of Versailles in France.",
+      "explanation": "Palace of Versailles is located at about 48.8049°, 2.1204°."
+    }
+  ]
+}

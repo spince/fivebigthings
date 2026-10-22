@@ -17,12 +17,12 @@ Open http://localhost:8000. A completed daily round is remembered in that browse
 
 ## What's included
 
-- A date-based daily round, with four rotating estimate questions and a rotating landmark for the final map question.
+- A date-keyed daily calendar with five scheduled questions per day from October 23, 2026 through January 20, 2027. Each round has four number estimates and a final map pin.
 - A drag-to-rotate 3D Earth for the final coordinate guess, with scored pins and a reveal view. The globe uses globe.gl and NASA Blue Marble imagery; without WebGL it falls back to a clickable flat Earth image, then coordinate entry.
 - Free practice rounds, score explanations, distance-based map scoring, and share/copy score actions.
 - A lightweight Flask app with no database or account data. Static files are read into memory at startup, which also makes them available to Fastly Compute's Python runtime.
 
-The questions are a starter set. Review and expand the editorial bank before launch; several estimates depend on how a statistic is defined.
+The calendar is stored in `static/question-calendar.json` and bundled with the app. Numeric estimates include an explanatory note; some geographic and historical measurements vary by source or definition.
 
 The globe renderer is pinned to globe.gl 2.46.2 on jsDelivr, and its image is loaded from NASA's Blue Marble collection. No map API key or paid map account is needed. Before launch, bundle these assets locally so the game does not depend on third-party delivery.
 
@@ -43,4 +43,4 @@ fastly compute deploy
 
 The first deploy creates a Fastly Compute service. Use the service's generated Fastly hostname to review the app, then attach `fivebigthings.app` and provision TLS in Fastly. Only after Fastly confirms the domain and TLS are ready should GoDaddy DNS be pointed at Fastly's provided records. [Fastly Compute setup](https://www.fastly.com/documentation/guides/compute/getting-started-with-compute/)
 
-The round and practice APIs return `Cache-Control: no-store`; daily question selection uses the Compute runtime's current date. Scores exist only in each player's browser and can be shared manually. There is no account-based persistence or payment integration in this version.
+The round and practice APIs return `Cache-Control: no-store`; daily question selection uses the Compute runtime's current date and the published calendar. Scores exist only in each player's browser and can be shared manually. There is no account-based persistence or payment integration in this version.
