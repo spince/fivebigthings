@@ -1543,12 +1543,12 @@
     {
       "id": "20261120-q1",
       "type": "number",
-      "title": "Rings are in the Olympic symbol",
-      "prompt": "How many rings are in the Olympic symbol?",
-      "unit": "rings",
+      "title": "Five Olympic colors",
+      "prompt": "How many colors are used in the Olympic rings?",
+      "unit": "colors",
       "answer": 5,
-      "hint": "Choose the closest of the four estimates.",
-      "explanation": "The standard reference count is 5 rings."
+      "hint": "The symbol uses five distinct colors.",
+      "explanation": "The Olympic symbol has five colored rings."
     },
     {
       "id": "20261120-q2",
@@ -1673,12 +1673,12 @@
     {
       "id": "20261122-q3",
       "type": "number",
-      "title": "Miles long is the Amazon River",
-      "prompt": "About how many miles long is the Amazon River?",
+      "title": "A river across China",
+      "prompt": "About how many miles long is the Yangtze River?",
       "unit": "miles",
-      "answer": 4000,
-      "hint": "Think on the scale of thousands.",
-      "explanation": "A commonly cited estimate is about 4,000 miles."
+      "answer": 3915,
+      "hint": "It is one of the world’s longest rivers.",
+      "explanation": "The Yangtze is commonly measured at about 3,915 miles long."
     },
     {
       "id": "20261122-q4",
@@ -1748,15 +1748,15 @@
     {
       "id": "20261123-map",
       "type": "map",
-      "title": "Pinpoint the place",
-      "prompt": "Drop a pin on Hagia Sophia, Istanbul, Türkiye.",
+      "title": "A tower over the Golden Horn",
+      "prompt": "Drop a pin on Galata Tower, Istanbul, Türkiye.",
       "unit": "km",
       "answer": {
-        "lat": 41.0086,
-        "lng": 28.9802
+        "lat": 41.0256,
+        "lng": 28.9741
       },
-      "hint": "Look for Hagia Sophia in Istanbul, Türkiye.",
-      "explanation": "Hagia Sophia is located at about 41.0086°, 28.9802°."
+      "hint": "Look northwest of the Golden Horn.",
+      "explanation": "Galata Tower stands near 41.0256° N, 28.9741° E."
     }
   ],
   "2026-11-24": [
@@ -1828,12 +1828,12 @@
     {
       "id": "20261125-q2",
       "type": "number",
-      "title": "Months are in a year",
-      "prompt": "How many months are in a year?",
-      "unit": "months",
-      "answer": 12,
-      "hint": "Choose the closest of the four estimates.",
-      "explanation": "The standard reference count is 12 months."
+      "title": "A year in weeks",
+      "prompt": "About how many weeks are in a calendar year?",
+      "unit": "weeks",
+      "answer": 52,
+      "hint": "A year is just over 52 weeks.",
+      "explanation": "A common year contains 52 full weeks plus one day."
     },
     {
       "id": "20261125-q3",
@@ -1958,12 +1958,12 @@
     {
       "id": "20261127-q4",
       "type": "number",
-      "title": "Miles long is the Appalachian Trail",
-      "prompt": "About how many miles long is the Appalachian Trail?",
+      "title": "A trail along the Pacific",
+      "prompt": "About how many miles long is the Pacific Crest Trail?",
       "unit": "miles",
-      "answer": 2198,
-      "hint": "Think on the scale of thousands.",
-      "explanation": "A commonly cited estimate is about 2,198 miles."
+      "answer": 2650,
+      "hint": "Think a little over two and a half thousand miles.",
+      "explanation": "The Pacific Crest Trail is about 2,650 miles long."
     },
     {
       "id": "20261127-map",
@@ -2323,12 +2323,12 @@
     {
       "id": "20261204-q2",
       "type": "number",
-      "title": "Sides does a regular pentagon have",
-      "prompt": "How many sides does a regular pentagon have?",
-      "unit": "sides",
+      "title": "Lines across a pentagon",
+      "prompt": "How many diagonals can be drawn inside a regular pentagon?",
+      "unit": "diagonals",
       "answer": 5,
-      "hint": "Choose the closest of the four estimates.",
-      "explanation": "The standard reference count is 5 sides."
+      "hint": "Count the lines joining non-neighboring corners.",
+      "explanation": "A pentagon has five diagonals."
     },
     {
       "id": "20261204-q3",
@@ -2378,12 +2378,12 @@
     {
       "id": "20261205-q2",
       "type": "number",
-      "title": "Sides does a rhombus have",
-      "prompt": "How many sides does a rhombus have?",
-      "unit": "sides",
-      "answer": 4,
-      "hint": "Choose the closest of the four estimates.",
-      "explanation": "The standard reference count is 4 sides."
+      "title": "A triangular prism",
+      "prompt": "How many faces does a triangular prism have?",
+      "unit": "faces",
+      "answer": 5,
+      "hint": "Count its two triangular ends and three rectangular sides.",
+      "explanation": "A triangular prism has five faces."
     },
     {
       "id": "20261205-q3",
@@ -2488,12 +2488,12 @@
     {
       "id": "20261207-q2",
       "type": "number",
-      "title": "Sides does a square have",
-      "prompt": "How many sides does a square have?",
-      "unit": "sides",
-      "answer": 4,
-      "hint": "Choose the closest of the four estimates.",
-      "explanation": "The standard reference count is 4 sides."
+      "title": "A deck with extras",
+      "prompt": "How many cards are in a standard tarot deck?",
+      "unit": "cards",
+      "answer": 78,
+      "hint": "It has more cards than a standard playing-card deck.",
+      "explanation": "A standard tarot deck contains 78 cards."
     },
     {
       "id": "20261207-q3",
@@ -2653,12 +2653,12 @@
     {
       "id": "20261210-q2",
       "type": "number",
-      "title": "Letters are in the English alphabet",
-      "prompt": "How many letters are in the English alphabet?",
+      "title": "Letters in Arabic",
+      "prompt": "How many letters are in the Arabic alphabet?",
       "unit": "letters",
-      "answer": 26,
-      "hint": "Choose the closest of the four estimates.",
-      "explanation": "The standard reference count is 26 letters."
+      "answer": 28,
+      "hint": "It has a little more than the English alphabet.",
+      "explanation": "The Arabic alphabet has 28 letters."
     },
     {
       "id": "20261210-q3",
@@ -2698,22 +2698,22 @@
     {
       "id": "20261211-q1",
       "type": "number",
-      "title": "Sides does a regular decagon have",
-      "prompt": "How many sides does a regular decagon have?",
-      "unit": "sides",
-      "answer": 10,
-      "hint": "Choose the closest of the four estimates.",
-      "explanation": "The standard reference count is 10 sides."
+      "title": "A year on Venus",
+      "prompt": "About how many Earth days does Venus take to orbit the Sun?",
+      "unit": "days",
+      "answer": 225,
+      "hint": "Its year is shorter than Earth’s.",
+      "explanation": "Venus completes an orbit in about 225 Earth days."
     },
     {
       "id": "20261211-q2",
       "type": "number",
-      "title": "Colors are on a standard traffic light",
-      "prompt": "How many colors are on a standard traffic light?",
-      "unit": "colors",
-      "answer": 3,
-      "hint": "Choose the closest of the four estimates.",
-      "explanation": "The standard reference count is 3 colors."
+      "title": "The human skull",
+      "prompt": "How many bones are in an adult human skull?",
+      "unit": "bones",
+      "answer": 22,
+      "hint": "Count the bones of the skull, including the jaw.",
+      "explanation": "An adult human skull is commonly counted as 22 bones."
     },
     {
       "id": "20261211-q3",
@@ -2763,12 +2763,12 @@
     {
       "id": "20261212-q2",
       "type": "number",
-      "title": "Sides does a regular hexagon have",
-      "prompt": "How many sides does a regular hexagon have?",
-      "unit": "sides",
-      "answer": 6,
-      "hint": "Choose the closest of the four estimates.",
-      "explanation": "The standard reference count is 6 sides."
+      "title": "A bass line",
+      "prompt": "How many strings does a standard bass guitar usually have?",
+      "unit": "strings",
+      "answer": 4,
+      "hint": "The common standard setup has four strings.",
+      "explanation": "A standard bass guitar usually has four strings."
     },
     {
       "id": "20261212-q3",
@@ -2983,12 +2983,12 @@
     {
       "id": "20261216-q2",
       "type": "number",
-      "title": "Sides does a regular octagon have",
-      "prompt": "How many sides does a regular octagon have?",
-      "unit": "sides",
+      "title": "A byte of data",
+      "prompt": "How many bits are in one byte?",
+      "unit": "bits",
       "answer": 8,
-      "hint": "Choose the closest of the four estimates.",
-      "explanation": "The standard reference count is 8 sides."
+      "hint": "It is the standard size of a byte.",
+      "explanation": "One byte contains eight bits."
     },
     {
       "id": "20261216-q3",
@@ -3093,12 +3093,12 @@
     {
       "id": "20261218-q2",
       "type": "number",
-      "title": "Sides does a regular pentagon have",
-      "prompt": "How many sides does a regular pentagon have?",
-      "unit": "sides",
+      "title": "A five-pointed star",
+      "prompt": "How many points are on a standard five-pointed star?",
+      "unit": "points",
       "answer": 5,
-      "hint": "Choose the closest of the four estimates.",
-      "explanation": "The standard reference count is 5 sides."
+      "hint": "The name gives the count.",
+      "explanation": "A standard five-pointed star has five points."
     },
     {
       "id": "20261218-q3",
@@ -3148,12 +3148,12 @@
     {
       "id": "20261219-q2",
       "type": "number",
-      "title": "Sides does a regular heptagon have",
-      "prompt": "How many sides does a regular heptagon have?",
+      "title": "An eleven-sided polygon",
+      "prompt": "How many sides does a regular 11-sided polygon have?",
       "unit": "sides",
-      "answer": 7,
-      "hint": "Choose the closest of the four estimates.",
-      "explanation": "The standard reference count is 7 sides."
+      "answer": 11,
+      "hint": "Its name is hendecagon.",
+      "explanation": "A hendecagon has eleven sides."
     },
     {
       "id": "20261219-q3",
@@ -3203,12 +3203,12 @@
     {
       "id": "20261220-q2",
       "type": "number",
-      "title": "Sides does a regular nonagon have",
-      "prompt": "How many sides does a regular nonagon have?",
-      "unit": "sides",
+      "title": "A full baseball game",
+      "prompt": "How many innings are in a standard professional baseball game?",
+      "unit": "innings",
       "answer": 9,
-      "hint": "Choose the closest of the four estimates.",
-      "explanation": "The standard reference count is 9 sides."
+      "hint": "The usual game length is a single-digit number.",
+      "explanation": "A standard professional baseball game is scheduled for nine innings."
     },
     {
       "id": "20261220-q3",
@@ -3258,22 +3258,22 @@
     {
       "id": "20261221-q2",
       "type": "number",
-      "title": "Sides does a regular decagon have",
-      "prompt": "How many sides does a regular decagon have?",
-      "unit": "sides",
+      "title": "A ten-event contest",
+      "prompt": "How many events are in a decathlon?",
+      "unit": "events",
       "answer": 10,
-      "hint": "Choose the closest of the four estimates.",
-      "explanation": "The standard reference count is 10 sides."
+      "hint": "The name gives a useful clue.",
+      "explanation": "A decathlon consists of ten track-and-field events."
     },
     {
       "id": "20261221-q3",
       "type": "number",
-      "title": "Feet tall is the Empire State Building to its antenna",
-      "prompt": "About how many feet tall is the Empire State Building to its antenna?",
+      "title": "A monument on the Mall",
+      "prompt": "About how many feet tall is the Washington Monument?",
       "unit": "feet",
-      "answer": 1454,
-      "hint": "Think on the scale of thousands.",
-      "explanation": "A commonly cited estimate is about 1,454 feet."
+      "answer": 555,
+      "hint": "It rises a little over five hundred feet.",
+      "explanation": "The Washington Monument is about 555 feet tall."
     },
     {
       "id": "20261221-q4",
@@ -3313,12 +3313,12 @@
     {
       "id": "20261222-q2",
       "type": "number",
-      "title": "Sides does a regular dodecagon have",
-      "prompt": "How many sides does a regular dodecagon have?",
+      "title": "A twenty-sided polygon",
+      "prompt": "How many sides does a regular 20-sided polygon have?",
       "unit": "sides",
-      "answer": 12,
-      "hint": "Choose the closest of the four estimates.",
-      "explanation": "The standard reference count is 12 sides."
+      "answer": 20,
+      "hint": "The name is icosagon.",
+      "explanation": "An icosagon has twenty sides."
     },
     {
       "id": "20261222-q3",
@@ -3368,12 +3368,12 @@
     {
       "id": "20261223-q2",
       "type": "number",
-      "title": "Sides does a regular hexagon have",
-      "prompt": "How many sides does a regular hexagon have?",
-      "unit": "sides",
-      "answer": 6,
-      "hint": "Choose the closest of the four estimates.",
-      "explanation": "The standard reference count is 6 sides."
+      "title": "A ten-legged crustacean",
+      "prompt": "How many legs does a lobster have?",
+      "unit": "legs",
+      "answer": 10,
+      "hint": "It belongs to the decapod group.",
+      "explanation": "Lobsters have ten walking legs, including their claws as the first pair."
     },
     {
       "id": "20261223-q3",
@@ -3423,12 +3423,12 @@
     {
       "id": "20261224-q2",
       "type": "number",
-      "title": "Sides does a regular octagon have",
-      "prompt": "How many sides does a regular octagon have?",
-      "unit": "sides",
+      "title": "Eight arms underwater",
+      "prompt": "How many arms does an octopus have?",
+      "unit": "arms",
       "answer": 8,
-      "hint": "Choose the closest of the four estimates.",
-      "explanation": "The standard reference count is 8 sides."
+      "hint": "The answer is in the animal’s name.",
+      "explanation": "An octopus has eight arms."
     },
     {
       "id": "20261224-q3",
@@ -3863,12 +3863,12 @@
     {
       "id": "20270101-q2",
       "type": "number",
-      "title": "Centimeters are in a meter",
-      "prompt": "How many centimeters are in a meter?",
-      "unit": "centimeters",
-      "answer": 100,
-      "hint": "Choose the closest of the four estimates.",
-      "explanation": "The standard reference count is 100 centimeters."
+      "title": "A familiar length",
+      "prompt": "How many inches are in one foot?",
+      "unit": "inches",
+      "answer": 12,
+      "hint": "There are twelve smaller units in this customary measure.",
+      "explanation": "One foot is twelve inches."
     },
     {
       "id": "20270101-q3",
@@ -4138,12 +4138,12 @@
     {
       "id": "20270106-q2",
       "type": "number",
-      "title": "Sides does a regular pentagon have",
-      "prompt": "How many sides does a regular pentagon have?",
-      "unit": "sides",
-      "answer": 5,
-      "hint": "Choose the closest of the four estimates.",
-      "explanation": "The standard reference count is 5 sides."
+      "title": "Corners of a triangular prism",
+      "prompt": "How many vertices does a triangular prism have?",
+      "unit": "vertices",
+      "answer": 6,
+      "hint": "Each triangular end has three corners.",
+      "explanation": "A triangular prism has six vertices."
     },
     {
       "id": "20270106-q3",
@@ -4303,12 +4303,12 @@
     {
       "id": "20270109-q2",
       "type": "number",
-      "title": "Sides does a regular octagon have",
-      "prompt": "How many sides does a regular octagon have?",
-      "unit": "sides",
+      "title": "An oxygen atom",
+      "prompt": "How many protons are in an oxygen atom?",
+      "unit": "protons",
       "answer": 8,
-      "hint": "Choose the closest of the four estimates.",
-      "explanation": "The standard reference count is 8 sides."
+      "hint": "The atomic number gives this count.",
+      "explanation": "Oxygen’s atomic number is eight, so it has eight protons."
     },
     {
       "id": "20270109-q3",
@@ -4413,12 +4413,12 @@
     {
       "id": "20270111-q2",
       "type": "number",
-      "title": "Sides does a regular decagon have",
-      "prompt": "How many sides does a regular decagon have?",
+      "title": "A fifteen-sided polygon",
+      "prompt": "How many sides does a regular 15-sided polygon have?",
       "unit": "sides",
-      "answer": 10,
-      "hint": "Choose the closest of the four estimates.",
-      "explanation": "The standard reference count is 10 sides."
+      "answer": 15,
+      "hint": "Its name is pentadecagon.",
+      "explanation": "A pentadecagon has fifteen sides."
     },
     {
       "id": "20270111-q3",
@@ -4578,12 +4578,12 @@
     {
       "id": "20270114-q2",
       "type": "number",
-      "title": "Sides does a regular heptagon have",
-      "prompt": "How many sides does a regular heptagon have?",
+      "title": "A thirteen-sided polygon",
+      "prompt": "How many sides does a regular 13-sided polygon have?",
       "unit": "sides",
-      "answer": 7,
-      "hint": "Choose the closest of the four estimates.",
-      "explanation": "The standard reference count is 7 sides."
+      "answer": 13,
+      "hint": "Its name is tridecagon.",
+      "explanation": "A tridecagon has thirteen sides."
     },
     {
       "id": "20270114-q3",
@@ -4633,12 +4633,12 @@
     {
       "id": "20270115-q2",
       "type": "number",
-      "title": "Sides does a regular triangle have",
-      "prompt": "How many sides does a regular triangle have?",
-      "unit": "sides",
+      "title": "A three-part race",
+      "prompt": "How many events are in a standard Olympic triathlon?",
+      "unit": "events",
       "answer": 3,
-      "hint": "Choose the closest of the four estimates.",
-      "explanation": "The standard reference count is 3 sides."
+      "hint": "It combines swimming, cycling, and running.",
+      "explanation": "A triathlon has three disciplines: swimming, cycling, and running."
     },
     {
       "id": "20270115-q3",
@@ -4798,12 +4798,12 @@
     {
       "id": "20270118-q2",
       "type": "number",
-      "title": "Sides does a regular dodecagon have",
-      "prompt": "How many sides does a regular dodecagon have?",
-      "unit": "sides",
+      "title": "A twelve-faced solid",
+      "prompt": "How many faces does a dodecahedron have?",
+      "unit": "faces",
       "answer": 12,
-      "hint": "Choose the closest of the four estimates.",
-      "explanation": "The standard reference count is 12 sides."
+      "hint": "The name hints at the count.",
+      "explanation": "A dodecahedron has twelve faces."
     },
     {
       "id": "20270118-q3",
@@ -4853,12 +4853,12 @@
     {
       "id": "20270119-q2",
       "type": "number",
-      "title": "Sides does a regular nonagon have",
-      "prompt": "How many sides does a regular nonagon have?",
-      "unit": "sides",
+      "title": "The nine muses",
+      "prompt": "How many muses are in Greek mythology?",
+      "unit": "muses",
       "answer": 9,
-      "hint": "Choose the closest of the four estimates.",
-      "explanation": "The standard reference count is 9 sides."
+      "hint": "They were associated with the arts and sciences.",
+      "explanation": "Greek tradition names nine muses."
     },
     {
       "id": "20270119-q3",
@@ -4908,12 +4908,12 @@
     {
       "id": "20270120-q2",
       "type": "number",
-      "title": "Sides does a regular pentagon have",
-      "prompt": "How many sides does a regular pentagon have?",
-      "unit": "sides",
-      "answer": 5,
-      "hint": "Choose the closest of the four estimates.",
-      "explanation": "The standard reference count is 5 sides."
+      "title": "Corners of an icosagon",
+      "prompt": "How many vertices does a regular 20-sided polygon have?",
+      "unit": "vertices",
+      "answer": 20,
+      "hint": "A polygon has one vertex at each corner.",
+      "explanation": "A regular 20-sided polygon has twenty vertices."
     },
     {
       "id": "20270120-q3",
