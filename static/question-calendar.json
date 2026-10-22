@@ -1,5 +1,5 @@
 {
-  "2026-10-23": [
+  "2026-10-22": [
     {
       "id": "20261023-q1",
       "type": "number",
@@ -54,7 +54,7 @@
       "explanation": "Stonehenge is located at about 51.1789°, -1.8262°."
     }
   ],
-  "2026-10-24": [
+  "2026-10-23": [
     {
       "id": "20261024-q1",
       "type": "number",
@@ -109,7 +109,7 @@
       "explanation": "The Colosseum is located at about 41.8902°, 12.4922°."
     }
   ],
-  "2026-10-25": [
+  "2026-10-24": [
     {
       "id": "20261025-q1",
       "type": "number",
@@ -164,7 +164,7 @@
       "explanation": "Christ the Redeemer is located at about -22.9519°, -43.2105°."
     }
   ],
-  "2026-10-26": [
+  "2026-10-25": [
     {
       "id": "20261026-q1",
       "type": "number",
@@ -219,7 +219,7 @@
       "explanation": "Sydney Opera House is located at about -33.8567°, 151.2152°."
     }
   ],
-  "2026-10-27": [
+  "2026-10-26": [
     {
       "id": "20261027-q1",
       "type": "number",
@@ -274,7 +274,7 @@
       "explanation": "Angkor Wat is located at about 13.4125°, 103.8667°."
     }
   ],
-  "2026-10-28": [
+  "2026-10-27": [
     {
       "id": "20261028-q1",
       "type": "number",
@@ -329,7 +329,7 @@
       "explanation": "The Acropolis is located at about 37.9715°, 23.7257°."
     }
   ],
-  "2026-10-29": [
+  "2026-10-28": [
     {
       "id": "20261029-q1",
       "type": "number",
@@ -384,7 +384,7 @@
       "explanation": "Petra Treasury is located at about 30.3285°, 35.4444°."
     }
   ],
-  "2026-10-30": [
+  "2026-10-29": [
     {
       "id": "20261030-q1",
       "type": "number",
@@ -439,7 +439,7 @@
       "explanation": "Hagia Sophia is located at about 41.0086°, 28.9802°."
     }
   ],
-  "2026-10-31": [
+  "2026-10-30": [
     {
       "id": "20261031-q1",
       "type": "number",
@@ -494,7 +494,7 @@
       "explanation": "Mutianyu section of the Great Wall is located at about 40.4319°, 116.5704°."
     }
   ],
-  "2026-11-01": [
+  "2026-10-31": [
     {
       "id": "20261101-q1",
       "type": "number",
@@ -549,7 +549,7 @@
       "explanation": "Chichén Itzá is located at about 20.6843°, -88.5678°."
     }
   ],
-  "2026-11-02": [
+  "2026-11-01": [
     {
       "id": "20261102-q1",
       "type": "number",
@@ -604,7 +604,7 @@
       "explanation": "Moai at Ahu Tongariki is located at about -27.1259°, -109.2767°."
     }
   ],
-  "2026-11-03": [
+  "2026-11-02": [
     {
       "id": "20261103-q1",
       "type": "number",
@@ -659,7 +659,7 @@
       "explanation": "Sagrada Família is located at about 41.4036°, 2.1744°."
     }
   ],
-  "2026-11-04": [
+  "2026-11-03": [
     {
       "id": "20261104-q1",
       "type": "number",
@@ -714,7 +714,7 @@
       "explanation": "Mount Fuji is located at about 35.3606°, 138.7274°."
     }
   ],
-  "2026-11-05": [
+  "2026-11-04": [
     {
       "id": "20261105-q1",
       "type": "number",
@@ -769,7 +769,7 @@
       "explanation": "Kiyomizu-dera is located at about 34.9949°, 135.7850°."
     }
   ],
-  "2026-11-06": [
+  "2026-11-05": [
     {
       "id": "20261106-q1",
       "type": "number",
@@ -824,7 +824,7 @@
       "explanation": "Mount Kilimanjaro is located at about -3.0674°, 37.3556°."
     }
   ],
-  "2026-11-07": [
+  "2026-11-06": [
     {
       "id": "20261107-q1",
       "type": "number",
@@ -879,7 +879,7 @@
       "explanation": "Victoria Falls is located at about -17.9243°, 25.8572°."
     }
   ],
-  "2026-11-08": [
+  "2026-11-07": [
     {
       "id": "20261108-q1",
       "type": "number",
@@ -934,7 +934,7 @@
       "explanation": "Table Mountain is located at about -33.9628°, 18.4098°."
     }
   ],
-  "2026-11-09": [
+  "2026-11-08": [
     {
       "id": "20261109-q1",
       "type": "number",
@@ -989,7 +989,7 @@
       "explanation": "Lalibela rock-hewn churches is located at about 12.0319°, 39.0475°."
     }
   ],
-  "2026-11-10": [
+  "2026-11-09": [
     {
       "id": "20261110-q1",
       "type": "number",
@@ -1044,7 +1044,7 @@
       "explanation": "Taj Mahal is located at about 27.1751°, 78.0421°."
     }
   ],
-  "2026-11-11": [
+  "2026-11-10": [
     {
       "id": "20261111-q1",
       "type": "number",
@@ -1099,7 +1099,7 @@
       "explanation": "Machu Picchu is located at about -13.1631°, -72.5450°."
     }
   ],
-  "2026-11-12": [
+  "2026-11-11": [
     {
       "id": "20261112-q1",
       "type": "number",
@@ -1154,7 +1154,7 @@
       "explanation": "Eiffel Tower is located at about 48.8584°, 2.2945°."
     }
   ],
-  "2026-11-13": [
+  "2026-11-12": [
     {
       "id": "20261113-q1",
       "type": "number",
@@ -1209,7 +1209,7 @@
       "explanation": "Statue of Liberty is located at about 40.6892°, -74.0445°."
     }
   ],
-  "2026-11-14": [
+  "2026-11-13": [
     {
       "id": "20261114-q1",
       "type": "number",
@@ -1264,7 +1264,7 @@
       "explanation": "Meteora monasteries is located at about 39.7217°, 21.6306°."
     }
   ],
-  "2026-11-15": [
+  "2026-11-14": [
     {
       "id": "20261115-q1",
       "type": "number",
@@ -1319,7 +1319,7 @@
       "explanation": "Neuschwanstein Castle is located at about 47.5576°, 10.7498°."
     }
   ],
-  "2026-11-16": [
+  "2026-11-15": [
     {
       "id": "20261116-q1",
       "type": "number",
@@ -1374,7 +1374,7 @@
       "explanation": "Brandenburg Gate is located at about 52.5163°, 13.3777°."
     }
   ],
-  "2026-11-17": [
+  "2026-11-16": [
     {
       "id": "20261117-q1",
       "type": "number",
@@ -1429,7 +1429,7 @@
       "explanation": "The Louvre Pyramid is located at about 48.8606°, 2.3376°."
     }
   ],
-  "2026-11-18": [
+  "2026-11-17": [
     {
       "id": "20261118-q1",
       "type": "number",
@@ -1484,7 +1484,7 @@
       "explanation": "Mount Rushmore is located at about 43.8791°, -103.4591°."
     }
   ],
-  "2026-11-19": [
+  "2026-11-18": [
     {
       "id": "20261119-q1",
       "type": "number",
@@ -1539,7 +1539,7 @@
       "explanation": "Golden Gate Bridge is located at about 37.8199°, -122.4783°."
     }
   ],
-  "2026-11-20": [
+  "2026-11-19": [
     {
       "id": "20261120-q1",
       "type": "number",
@@ -1594,7 +1594,7 @@
       "explanation": "Niagara Falls is located at about 43.0828°, -79.0742°."
     }
   ],
-  "2026-11-21": [
+  "2026-11-20": [
     {
       "id": "20261121-q1",
       "type": "number",
@@ -1649,7 +1649,7 @@
       "explanation": "The Parthenon is located at about 37.9715°, 23.7267°."
     }
   ],
-  "2026-11-22": [
+  "2026-11-21": [
     {
       "id": "20261122-q1",
       "type": "number",
@@ -1704,7 +1704,7 @@
       "explanation": "Petra Monastery is located at about 30.3285°, 35.4444°."
     }
   ],
-  "2026-11-23": [
+  "2026-11-22": [
     {
       "id": "20261123-q1",
       "type": "number",
@@ -1759,7 +1759,7 @@
       "explanation": "Galata Tower stands near 41.0256° N, 28.9741° E."
     }
   ],
-  "2026-11-24": [
+  "2026-11-23": [
     {
       "id": "20261124-q1",
       "type": "number",
@@ -1814,7 +1814,7 @@
       "explanation": "Borobudur is located at about -7.6079°, 110.2038°."
     }
   ],
-  "2026-11-25": [
+  "2026-11-24": [
     {
       "id": "20261125-q1",
       "type": "number",
@@ -1869,7 +1869,7 @@
       "explanation": "Temple of Heaven is located at about 39.8822°, 116.4066°."
     }
   ],
-  "2026-11-26": [
+  "2026-11-25": [
     {
       "id": "20261126-q1",
       "type": "number",
@@ -1924,7 +1924,7 @@
       "explanation": "Saint Basil’s Cathedral is located at about 55.7525°, 37.6231°."
     }
   ],
-  "2026-11-27": [
+  "2026-11-26": [
     {
       "id": "20261127-q1",
       "type": "number",
@@ -1979,7 +1979,7 @@
       "explanation": "Mount Etna is located at about 37.7510°, 14.9934°."
     }
   ],
-  "2026-11-28": [
+  "2026-11-27": [
     {
       "id": "20261128-q1",
       "type": "number",
@@ -2034,7 +2034,7 @@
       "explanation": "Mont-Saint-Michel is located at about 48.6361°, -1.5115°."
     }
   ],
-  "2026-11-29": [
+  "2026-11-28": [
     {
       "id": "20261129-q1",
       "type": "number",
@@ -2089,7 +2089,7 @@
       "explanation": "Stone Forest is located at about 24.8122°, 103.3214°."
     }
   ],
-  "2026-11-30": [
+  "2026-11-29": [
     {
       "id": "20261130-q1",
       "type": "number",
@@ -2144,7 +2144,7 @@
       "explanation": "Burj Khalifa is located at about 25.1972°, 55.2744°."
     }
   ],
-  "2026-12-01": [
+  "2026-11-30": [
     {
       "id": "20261201-q1",
       "type": "number",
@@ -2199,7 +2199,7 @@
       "explanation": "Hawa Mahal is located at about 26.9239°, 75.8267°."
     }
   ],
-  "2026-12-02": [
+  "2026-12-01": [
     {
       "id": "20261202-q1",
       "type": "number",
@@ -2254,7 +2254,7 @@
       "explanation": "Potala Palace is located at about 29.6578°, 91.1169°."
     }
   ],
-  "2026-12-03": [
+  "2026-12-02": [
     {
       "id": "20261203-q1",
       "type": "number",
@@ -2309,7 +2309,7 @@
       "explanation": "Fushimi Inari Taisha is located at about 34.9671°, 135.7727°."
     }
   ],
-  "2026-12-04": [
+  "2026-12-03": [
     {
       "id": "20261204-q1",
       "type": "number",
@@ -2364,7 +2364,7 @@
       "explanation": "Sultan Ahmed Mosque is located at about 41.0054°, 28.9768°."
     }
   ],
-  "2026-12-05": [
+  "2026-12-04": [
     {
       "id": "20261205-q1",
       "type": "number",
@@ -2419,7 +2419,7 @@
       "explanation": "Forbidden City is located at about 39.9163°, 116.3972°."
     }
   ],
-  "2026-12-06": [
+  "2026-12-05": [
     {
       "id": "20261206-q1",
       "type": "number",
@@ -2474,7 +2474,7 @@
       "explanation": "Lake Louise is located at about 51.4254°, -116.1773°."
     }
   ],
-  "2026-12-07": [
+  "2026-12-06": [
     {
       "id": "20261207-q1",
       "type": "number",
@@ -2529,7 +2529,7 @@
       "explanation": "Aiguille du Midi is located at about 45.8797°, 6.8870°."
     }
   ],
-  "2026-12-08": [
+  "2026-12-07": [
     {
       "id": "20261208-q1",
       "type": "number",
@@ -2584,7 +2584,7 @@
       "explanation": "Sugarloaf Mountain is located at about -22.9486°, -43.1566°."
     }
   ],
-  "2026-12-09": [
+  "2026-12-08": [
     {
       "id": "20261209-q1",
       "type": "number",
@@ -2639,7 +2639,7 @@
       "explanation": "Iguazú Falls is located at about -25.6953°, -54.4367°."
     }
   ],
-  "2026-12-10": [
+  "2026-12-09": [
     {
       "id": "20261210-q1",
       "type": "number",
@@ -2694,7 +2694,7 @@
       "explanation": "Copacabana Beach is located at about -22.9711°, -43.1822°."
     }
   ],
-  "2026-12-11": [
+  "2026-12-10": [
     {
       "id": "20261211-q1",
       "type": "number",
@@ -2749,7 +2749,7 @@
       "explanation": "Perito Moreno Glacier is located at about -50.4951°, -73.1368°."
     }
   ],
-  "2026-12-12": [
+  "2026-12-11": [
     {
       "id": "20261212-q1",
       "type": "number",
@@ -2804,7 +2804,7 @@
       "explanation": "Salar de Uyuni is located at about -20.1338°, -67.4891°."
     }
   ],
-  "2026-12-13": [
+  "2026-12-12": [
     {
       "id": "20261213-q1",
       "type": "number",
@@ -2859,7 +2859,7 @@
       "explanation": "Mitad del Mundo monument is located at about -0.0022°, -78.4558°."
     }
   ],
-  "2026-12-14": [
+  "2026-12-13": [
     {
       "id": "20261214-q1",
       "type": "number",
@@ -2914,7 +2914,7 @@
       "explanation": "Pyramid of the Sun is located at about 19.6925°, -98.8438°."
     }
   ],
-  "2026-12-15": [
+  "2026-12-14": [
     {
       "id": "20261215-q1",
       "type": "number",
@@ -2969,7 +2969,7 @@
       "explanation": "Tikal Temple IV is located at about 17.2220°, -89.6237°."
     }
   ],
-  "2026-12-16": [
+  "2026-12-15": [
     {
       "id": "20261216-q1",
       "type": "number",
@@ -3024,7 +3024,7 @@
       "explanation": "Pyramid of the Magician is located at about 20.3605°, -89.7714°."
     }
   ],
-  "2026-12-17": [
+  "2026-12-16": [
     {
       "id": "20261217-q1",
       "type": "number",
@@ -3079,7 +3079,7 @@
       "explanation": "Miraflores Locks is located at about 9.1156°, -79.7001°."
     }
   ],
-  "2026-12-18": [
+  "2026-12-17": [
     {
       "id": "20261218-q1",
       "type": "number",
@@ -3134,7 +3134,7 @@
       "explanation": "Old Faithful is located at about 44.4605°, -110.8281°."
     }
   ],
-  "2026-12-19": [
+  "2026-12-18": [
     {
       "id": "20261219-q1",
       "type": "number",
@@ -3189,7 +3189,7 @@
       "explanation": "Mather Point is located at about 36.0570°, -112.1430°."
     }
   ],
-  "2026-12-20": [
+  "2026-12-19": [
     {
       "id": "20261220-q1",
       "type": "number",
@@ -3244,7 +3244,7 @@
       "explanation": "Half Dome is located at about 37.7459°, -119.5332°."
     }
   ],
-  "2026-12-21": [
+  "2026-12-20": [
     {
       "id": "20261221-q1",
       "type": "number",
@@ -3299,7 +3299,7 @@
       "explanation": "Empire State Building is located at about 40.7484°, -73.9857°."
     }
   ],
-  "2026-12-22": [
+  "2026-12-21": [
     {
       "id": "20261222-q1",
       "type": "number",
@@ -3354,7 +3354,7 @@
       "explanation": "Lincoln Memorial is located at about 38.8893°, -77.0502°."
     }
   ],
-  "2026-12-23": [
+  "2026-12-22": [
     {
       "id": "20261223-q1",
       "type": "number",
@@ -3409,7 +3409,7 @@
       "explanation": "Elizabeth Tower (Big Ben) is located at about 51.5007°, -0.1246°."
     }
   ],
-  "2026-12-24": [
+  "2026-12-23": [
     {
       "id": "20261224-q1",
       "type": "number",
@@ -3464,7 +3464,7 @@
       "explanation": "Alhambra is located at about 37.1761°, -3.5881°."
     }
   ],
-  "2026-12-25": [
+  "2026-12-24": [
     {
       "id": "20261225-q1",
       "type": "number",
@@ -3519,7 +3519,7 @@
       "explanation": "Leaning Tower of Pisa is located at about 43.7230°, 10.3966°."
     }
   ],
-  "2026-12-26": [
+  "2026-12-25": [
     {
       "id": "20261226-q1",
       "type": "number",
@@ -3574,7 +3574,7 @@
       "explanation": "Rialto Bridge is located at about 45.4380°, 12.3359°."
     }
   ],
-  "2026-12-27": [
+  "2026-12-26": [
     {
       "id": "20261227-q1",
       "type": "number",
@@ -3629,7 +3629,7 @@
       "explanation": "Wawel Castle is located at about 50.0544°, 19.9352°."
     }
   ],
-  "2026-12-28": [
+  "2026-12-27": [
     {
       "id": "20261228-q1",
       "type": "number",
@@ -3684,7 +3684,7 @@
       "explanation": "Great Temple of Ramses II is located at about 22.3372°, 31.6258°."
     }
   ],
-  "2026-12-29": [
+  "2026-12-28": [
     {
       "id": "20261229-q1",
       "type": "number",
@@ -3739,7 +3739,7 @@
       "explanation": "Great Blue Hole is located at about 17.3156°, -87.5343°."
     }
   ],
-  "2026-12-30": [
+  "2026-12-29": [
     {
       "id": "20261230-q1",
       "type": "number",
@@ -3794,7 +3794,7 @@
       "explanation": "Merlion Park is located at about 1.2868°, 103.8545°."
     }
   ],
-  "2026-12-31": [
+  "2026-12-30": [
     {
       "id": "20261231-q1",
       "type": "number",
@@ -3849,7 +3849,7 @@
       "explanation": "Petronas Towers is located at about 3.1579°, 101.7116°."
     }
   ],
-  "2027-01-01": [
+  "2026-12-31": [
     {
       "id": "20270101-q1",
       "type": "number",
@@ -3904,7 +3904,7 @@
       "explanation": "Prambanan Temple is located at about -7.7520°, 110.4915°."
     }
   ],
-  "2027-01-02": [
+  "2027-01-01": [
     {
       "id": "20270102-q1",
       "type": "number",
@@ -3959,7 +3959,7 @@
       "explanation": "Ananda Temple is located at about 21.1717°, 94.8672°."
     }
   ],
-  "2027-01-03": [
+  "2027-01-02": [
     {
       "id": "20270103-q1",
       "type": "number",
@@ -4014,7 +4014,7 @@
       "explanation": "Shwedagon Pagoda is located at about 16.7983°, 96.1497°."
     }
   ],
-  "2027-01-04": [
+  "2027-01-03": [
     {
       "id": "20270104-q1",
       "type": "number",
@@ -4069,7 +4069,7 @@
       "explanation": "Leshan Giant Buddha is located at about 29.5443°, 103.7731°."
     }
   ],
-  "2027-01-05": [
+  "2027-01-04": [
     {
       "id": "20270105-q1",
       "type": "number",
@@ -4124,7 +4124,7 @@
       "explanation": "Zhangye Danxia is located at about 38.9014°, 100.1372°."
     }
   ],
-  "2027-01-06": [
+  "2027-01-05": [
     {
       "id": "20270106-q1",
       "type": "number",
@@ -4179,7 +4179,7 @@
       "explanation": "Tokyo Skytree is located at about 35.7101°, 139.8107°."
     }
   ],
-  "2027-01-07": [
+  "2027-01-06": [
     {
       "id": "20270107-q1",
       "type": "number",
@@ -4234,7 +4234,7 @@
       "explanation": "Himeji Castle is located at about 34.8394°, 134.6939°."
     }
   ],
-  "2027-01-08": [
+  "2027-01-07": [
     {
       "id": "20270108-q1",
       "type": "number",
@@ -4289,7 +4289,7 @@
       "explanation": "Nikkō Tōshō-gū is located at about 36.7580°, 139.5987°."
     }
   ],
-  "2027-01-09": [
+  "2027-01-08": [
     {
       "id": "20270109-q1",
       "type": "number",
@@ -4344,7 +4344,7 @@
       "explanation": "Great Buddha of Kamakura is located at about 35.3167°, 139.5357°."
     }
   ],
-  "2027-01-10": [
+  "2027-01-09": [
     {
       "id": "20270110-q1",
       "type": "number",
@@ -4399,7 +4399,7 @@
       "explanation": "Yellow Pumpkin is located at about 34.4601°, 133.9945°."
     }
   ],
-  "2027-01-11": [
+  "2027-01-10": [
     {
       "id": "20270111-q1",
       "type": "number",
@@ -4454,7 +4454,7 @@
       "explanation": "Jewel Changi Airport is located at about 1.3602°, 103.9894°."
     }
   ],
-  "2027-01-12": [
+  "2027-01-11": [
     {
       "id": "20270112-q1",
       "type": "number",
@@ -4509,7 +4509,7 @@
       "explanation": "Victoria Harbour is located at about 22.2936°, 114.1681°."
     }
   ],
-  "2027-01-13": [
+  "2027-01-12": [
     {
       "id": "20270113-q1",
       "type": "number",
@@ -4564,7 +4564,7 @@
       "explanation": "Taipei 101 is located at about 25.0339°, 121.5645°."
     }
   ],
-  "2027-01-14": [
+  "2027-01-13": [
     {
       "id": "20270114-q1",
       "type": "number",
@@ -4619,7 +4619,7 @@
       "explanation": "Gyeongbokgung Palace is located at about 37.5796°, 126.9770°."
     }
   ],
-  "2027-01-15": [
+  "2027-01-14": [
     {
       "id": "20270115-q1",
       "type": "number",
@@ -4674,7 +4674,7 @@
       "explanation": "The White House is located at about 38.8977°, -77.0365°."
     }
   ],
-  "2027-01-16": [
+  "2027-01-15": [
     {
       "id": "20270116-q1",
       "type": "number",
@@ -4729,7 +4729,7 @@
       "explanation": "Monument Valley is located at about 36.9830°, -110.0985°."
     }
   ],
-  "2027-01-17": [
+  "2027-01-16": [
     {
       "id": "20270117-q1",
       "type": "number",
@@ -4784,7 +4784,7 @@
       "explanation": "Terracotta Army is located at about 34.3840°, 109.2738°."
     }
   ],
-  "2027-01-18": [
+  "2027-01-17": [
     {
       "id": "20270118-q1",
       "type": "number",
@@ -4839,7 +4839,7 @@
       "explanation": "Karnak Temple is located at about 25.7188°, 32.6573°."
     }
   ],
-  "2027-01-19": [
+  "2027-01-18": [
     {
       "id": "20270119-q1",
       "type": "number",
@@ -4894,7 +4894,7 @@
       "explanation": "Kinkaku-ji is located at about 35.0394°, 135.7292°."
     }
   ],
-  "2027-01-20": [
+  "2027-01-19": [
     {
       "id": "20270120-q1",
       "type": "number",

@@ -17,7 +17,7 @@ Open http://localhost:8000. A completed daily round is remembered in that browse
 
 ## What's included
 
-- A date-keyed daily calendar with five scheduled questions per day from October 23, 2026 through January 20, 2027. Each round has four number estimates and a final map pin.
+- A date-keyed daily calendar with five scheduled questions per day from October 22, 2026 through January 19, 2027. Each round has four number estimates and a final map pin.
 - A drag-to-rotate 3D Earth for the final coordinate guess, with scored pins and a reveal view. The globe uses globe.gl and NASA Blue Marble imagery; without WebGL it falls back to a clickable flat Earth image, then coordinate entry.
 - Free practice rounds, score explanations, distance-based map scoring, and share/copy score actions.
 - A lightweight Flask app with no database or account data. Static files are read into memory at startup, which also makes them available to Fastly Compute's Python runtime.

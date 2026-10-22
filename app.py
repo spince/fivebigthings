@@ -51,7 +51,7 @@ def daily():
     day = date.today().isoformat()
     questions = QUESTION_CALENDAR.get(day)
     if questions is None:
-        return jsonify({"error": "Today's round is not scheduled yet."}), 503
+        return jsonify({"error": "Today's round is not scheduled yet.", "date": day}), 503
     return jsonify({"date": day, "questions": questions})
 
 @app.get("/api/practice")
