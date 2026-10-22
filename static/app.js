@@ -152,10 +152,15 @@ function showResults(){
   }
 }
 async function shareScore(score,breakdown=state.questions.map((q,i)=>({title:q.title,points:state.answers[i]?.points||0,maxPoints:state.answers[i]?.maxPoints||maxPoints(i)})),mode=state.mode){
-  const round=mode==='daily'?"today's round":'a practice round';
-  const details=breakdown.map((item,index)=>`${index+1}. ${item.title}: ${item.points}/${item.maxPoints}`).join('\n');
-  const text=`I scored ${score}/1,000 in Five Big Things (${round})!\n${details}\nPlay: ${location.origin}`;
-  try{if(navigator.share)await navigator.share({title:'Five Big Things',text,url:location.origin});else{await navigator.clipboard.writeText(text);$('#share-button').textContent='Copied to clipboard ✓';}}catch(e){if(e.name!=='AbortError')alert('Could not share just now.');}
+  const shareDate=new Intl.DateTimeFormat('en-US',{month:'long',day:'numeric'}).format(new Date());
+  const marks=breakdown.map(item=>{
+    const result=Math.round(100*item.points/item.maxPoints);
+    const emoji=result>=90?'🎯':result>=75?'🔥':result>=50?'🙂':'🤔';
+    return `${result}${emoji}`;
+  }).join(' ');
+  const round=mode==='daily'?'':' · Practice';
+  const text=`${location.origin} ${shareDate}${round}\n${marks}\nFinal score: ${score}/1,000`;
+  try{if(navigator.share)await navigator.share({text});else{await navigator.clipboard.writeText(text);$('#share-button').textContent='Copied to clipboard ✓';}}catch(e){if(e.name!=='AbortError')alert('Could not share just now.');}
 }
 async function loadMode(mode){
   state.mode=mode;state.index=0;state.answers=[];$('#result-panel').classList.add('hidden');
