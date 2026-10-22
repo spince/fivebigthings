@@ -160,7 +160,18 @@ async function shareScore(score,breakdown=state.questions.map((q,i)=>({title:q.t
   }).join(' ');
   const round=mode==='daily'?'':' · Practice';
   const text=`${location.origin} ${shareDate}${round}\n${marks}\nFinal score: ${score}/1,000`;
-  try{if(navigator.share)await navigator.share({text});else{await navigator.clipboard.writeText(text);$('#share-button').textContent='Copied to clipboard ✓';}}catch(e){if(e.name!=='AbortError')alert('Could not share just now.');}
+  const button=$('#share-button');
+  // Keep a copy of the full score text available in case a native share target
+  // chooses to include only the link. The Web Share API leaves target behavior
+  // up to the platform, so this gives every device the same pasteable result.
+  const copied=navigator.clipboard?.writeText(text).then(()=>true).catch(()=>false);
+  try{
+    if(navigator.share){
+      await navigator.share({title:'Five Big Things score',text});
+      if(await copied)button.textContent='Score text copied too ✓';
+    }else if(await copied){button.textContent='Copied to clipboard ✓';}
+    else{throw new Error('Clipboard unavailable');}
+  }catch(e){if(e.name!=='AbortError')alert('Could not share just now.');}
 }
 async function loadMode(mode){
   state.mode=mode;state.index=0;state.answers=[];$('#result-panel').classList.add('hidden');
