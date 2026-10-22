@@ -1,0 +1,12 @@
+[project]
+name = "five-big-things"
+version = "0.1.0"
+description = "A daily game of curious estimates"
+requires-python = ">=3.12"
+dependencies = [
+  "fastly-compute>=0.1.3,<0.2",
+  "Flask>=3.0,<4",
+]
+
+[tool.fastly-compute]
+entry = "main"

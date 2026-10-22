@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f5f4ef"><meta name="description" content="Five curious questions. One fresh round every day.">
+  <title>Five Big Things — a little perspective, daily</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css?v=2">
+  <link rel="stylesheet" href="/static/globe.css?v=1">
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="/"><span class="brand-mark">5</span><span>five big things</span></a><nav><button class="nav-link active" data-mode="daily">Today</button><button class="nav-link" data-mode="practice">Practice</button></nav><div class="account-area"><span class="account-label">A fresh round every day</span></div></header>
+  <main>
+    <section class="intro"><div class="eyebrow"><span class="live-dot"></span><span id="date-label">TODAY'S EDITION</span></div><h1>A little perspective.<br><span>Five big things.</span></h1><p>Five questions about our wonderfully weird world.<br>Best guesses only. No homework required.</p></section>
+    <section class="game-shell">
+      <div class="game-top"><div class="round-label"><span id="mode-label">DAILY ROUND</span><span class="separator">/</span><span id="progress-label">QUESTION 01 OF 05</span></div><div class="progress-track"><div id="progress-fill"></div></div></div>
+      <div id="question-area"></div>
+      <div class="game-actions"><div class="points-note"><span class="spark">✳</span> <span id="points-note">Round total: <b>1,000 points</b></span></div><button id="submit-button" class="button button-primary">Lock in guess <span>↗</span></button></div>
+      <div id="answer-feedback" class="answer-feedback hidden"></div>
+      <div class="keyboard-hint">A good guess is a brave guess.</div>
+    </section>
+    <section id="result-panel" class="result-panel hidden"></section>
+    <section class="below-grid"><article class="note-card"><span class="card-icon">✳</span><div><h3>Curiosity, not trivia night</h3><p>Every answer comes with the little story behind the number.</p></div></article><article class="note-card"><span class="card-icon green">↗</span><div><h3>Your score, your call</h3><p>Share today's result with friends, or keep it to yourself.</p></div></article><article class="note-card practice-card"><span class="card-icon">∞</span><div><h3>Keep the curiosity going</h3><p>Practice rounds are free. Play as many as you like.</p><button class="text-button" id="practice-cta">Try a practice round ↗</button></div></article></section>
+    <footer><a class="brand footer-brand" href="/"><span class="brand-mark">5</span><span>five big things</span></a><span>Made for the joy of wondering.</span><span id="footer-date"></span></footer>
+  </main>
+  <script defer src="https://cdn.jsdelivr.net/npm/globe.gl@2.46.2/dist/globe.gl.min.js"></script>
+  <script defer src="/static/app.js?v=4"></script>
+</body>
+</html>

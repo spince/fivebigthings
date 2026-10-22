@@ -1,0 +1,11 @@
+# This file describes a Fastly Compute package. To learn more visit:
+# https://www.fastly.com/documentation/reference/compute/fastly-toml
+
+authors = []
+description = "A daily game of curious estimates"
+language = "python"
+manifest_version = 3
+name = "five-big-things"
+service_id = "MhuBrviXWOcu8guO9rYyi9"
+
+[local_server]

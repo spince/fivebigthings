@@ -1,0 +1,20 @@
+.globe-shell{height:326px;position:relative;overflow:hidden;border:1px solid #263a43;border-radius:9px;background:radial-gradient(ellipse at 50% 48%,#1b3340 0%,#0c1a21 64%,#091319 100%);isolation:isolate}
+.globe-canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none}
+.globe-canvas canvas{display:block;outline:none}
+.globe-prompt{position:absolute;z-index:2;top:12px;left:12px;padding:8px 11px;display:flex;align-items:center;gap:8px;border:1px solid #ffffff1a;border-radius:20px;background:#091319c9;backdrop-filter:blur(8px);color:#d9e2db;font-size:10px;pointer-events:none}
+.globe-live-dot{height:6px;width:6px;flex:0 0 6px;border-radius:50%;background:#caeb8b;box-shadow:0 0 0 3px #caeb8b26}
+.globe-credit{position:absolute;z-index:2;right:11px;bottom:8px;color:#a9b7b2;font-size:9px;text-shadow:0 1px 3px #000;pointer-events:auto}
+.globe-credit a{color:#dce7dd;text-decoration:underline;text-underline-offset:2px}
+.flat-map{position:absolute;inset:0;overflow:hidden;cursor:crosshair;background:#10212a}
+.flat-map img{display:block;width:100%;height:100%;object-fit:contain;user-select:none;pointer-events:none}
+.flat-pin{position:absolute;z-index:1;width:14px;height:14px;border:3px solid #fff;border-radius:50%;background:#caeb8b;box-shadow:0 0 0 7px #caeb8b38,0 2px 8px #0009;transform:translate(-50%,-50%)}
+.flat-pin.target-pin{width:18px;height:18px;background:#fff;border-color:#caeb8b;box-shadow:0 0 0 8px #caeb8b38,0 2px 8px #0009}
+.coordinate-entry{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:20px;background:#10212a;color:#edf3eb;text-align:center}
+.coordinate-entry.hidden{display:none!important}
+.coordinate-title{font:600 16px var(--display)}
+.coordinate-copy{font-size:11px;color:#bbc8c2}
+.coordinate-fields{display:flex;gap:10px;width:min(100%,340px)}
+.coordinate-fields label{display:grid;gap:5px;text-align:left;flex:1;color:#bbc8c2;font:10px var(--mono)}
+.coordinate-fields input{width:100%;border:1px solid #ffffff30;border-radius:7px;background:#0b171d;color:white;padding:10px;font:14px var(--sans)}
+.coordinate-entry .button{padding:10px 14px}
+@media(max-width:620px){.globe-shell{height:270px}.globe-prompt{top:9px;left:9px;padding:7px 9px;font-size:9px}.globe-credit{font-size:8px}}
