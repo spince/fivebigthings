@@ -43,7 +43,7 @@ GET /api/junior          -> { date, questions: [...] }   (as built in PR #1: ONE
                              A date-seeded rotating junior calendar is planned — issue #6)
 GET /api/junior-practice -> { questions: [...] }
 ```
-Question = existing shape + 
+Question = existing shape +
 ```json
 "junior": {
   "emoji": "🦒",
