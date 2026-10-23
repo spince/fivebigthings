@@ -1,8 +1,9 @@
 # fivebigthings.app — backlog & enhancement plan
 As of 2026-10-23. GitHub: spince/fivebigthings.
-**Backlog is now tracked as GitHub Issues #2–#18** (created 2026-10-23 from this doc):
+**Backlog is now tracked as GitHub Issues #2–#21** (created 2026-10-23 from this doc):
 NOW #2 ship PR #1 · #3 PNG icons · #4 content runway — NEXT #5 native v1 · #6 junior pipeline ·
-#7 globe deck · #8 calendar tooling · #9 CI tests · #17 Faces mode · #18 globe photo steps —
+#7 globe deck · #8 calendar tooling · #9 CI tests · #17 Faces mode · #18 globe photo steps ·
+#20 focus planning · #21 meal planning —
 LATER #10 accounts · #11 server scoring · #12 friends/leaderboards · #13 streaks · #14 a11y ·
 #15 Android/i18n — FRAMEWORK #16 Phase 0 pilot. This doc stays the narrative version.
 
@@ -49,6 +50,12 @@ LATER #10 accounts · #11 server scoring · #12 friends/leaderboards · #13 stre
    face→name, and typed fill-in-the-blank as the mastery gate. Human-supplied
    labels only, private by default. Globe gains photo steps too (issue #18:
    landmark → country/pin, flags, skylines; Wikimedia Commons photos with credit).
+3c. **Family/team planning + meal planning** (issues #20, #21; specs:
+   focus-planning.md, meal-planning.md): the five-slot discipline pointed
+   at planning — capture 5–7, rank, cut to five; Five for the Week vs Five
+   for Today with a drift callout; and Dinner Draft (everyone submits five
+   dinners, combined + ranked, parents assign to days from the calendar).
+   Pilot the rituals manually before building; both want accounts (#10).
 4. **Calendar authoring tooling**: a small validator + preview for
    `question-calendar.json` (schema check, duplicate-id detection, date-gap
    report, answer-sanity lint) — the file is 170KB hand-edited JSON; one bad
