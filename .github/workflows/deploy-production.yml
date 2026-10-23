@@ -1,0 +1,42 @@
+name: Deploy to production
+
+# Manual only. The job is bound to the GitHub "production" environment;
+# configure required reviewers on it (Settings > Environments > production)
+# so a human approves every production deploy. Deploys the service_id that
+# is committed in fastly.toml.
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "Branch, tag, or SHA to deploy"
+        required: true
+        default: "main"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: deploy-production
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://fivebigthings.app
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install uv
+        run: pip install uv
+      - name: Build and deploy to production
+        uses: fastly/compute-actions@v5
+        env:
+          FASTLY_API_TOKEN: ${{ secrets.FASTLY_API_TOKEN }}
