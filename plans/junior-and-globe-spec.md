@@ -1,5 +1,5 @@
 # Five Big Things — /junior and /globe spec
-Drafted 2026-10-23 from Spencer's brief. Working prototypes (junior.html/js, globe.html/js, sample data) were built with this spec and live in the project workspace; the production implementation shipped in PR #1.
+Drafted 2026-10-23 from Spencer's brief. Working prototypes (junior.html/js, globe.html/js, sample data) were built with this spec and live in the project workspace; the production implementation is in PR #1, pending merge and deployment.
 
 Both modes reuse what already works: same design tokens, same 5-question /
 1,000-point shape, same client-side scoring style, same Globe.gl + flat-map +
@@ -39,7 +39,8 @@ Q5 map pin), same scoring formulas, friendlier everything else:
 
 **API**
 ```
-GET /api/junior          -> { date, questions: [...] }   (daily, date-seeded like /api/daily)
+GET /api/junior          -> { date, questions: [...] }   (as built in PR #1: ONE fixed daily set.
+                             A date-seeded rotating junior calendar is planned — issue #6)
 GET /api/junior-practice -> { questions: [...] }
 ```
 Question = existing shape + 
@@ -60,7 +61,12 @@ Prototype sample round: `junior-sample.json` (prototype data, now `static/junior
 
 ## /globe — country trainer
 
-One session = **one country**, five steps, **200 points each = 1,000**.
+One session = **one country**, five steps. **Scoring is the house ladder —
+the same as the main game and MapTap: the round totals 1,000 and difficulty
+climbs with the multipliers, steps worth up to 100 / 100 / 200 / 300 / 300
+(×1 ×1 ×2 ×3 ×3).** The easy continent pick is ×1; the hardest step — pinning a
+bare city name — is ×3. Choice steps award their step max or 0; pin steps award
+a distance-decayed share of their step max.
 Not a daily — a trainer: "New country" button deals another, endless play.
 (A date-seeded "country of the day" is a trivial later add: seed by date like Daily.)
 

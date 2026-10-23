@@ -1,6 +1,6 @@
 # Five Big Things — iOS / iPadOS App Plan
-> **Status (2026-10-23):** Option C (PWA) shipped in PR #1, together with
-> /junior and /globe. Option A (native SwiftUI) is next — see backlog issue #5
+> **Status (2026-10-23):** Option C (PWA) is implemented in PR #1,
+> together with /junior and /globe — pending merge and Fastly deployment. Option A (native SwiftUI) is next — see backlog issue #5
 > and [backlog.md](backlog.md). This document is the original checked analysis.
 
 Checked live 2026-10-23 from https://fivebigthings.app

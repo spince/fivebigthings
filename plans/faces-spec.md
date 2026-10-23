@@ -30,8 +30,12 @@ then recognition, then recall, spaced until it sticks.
    day, mixed formats, missed people resurface in 2 days, mastered = one typed
    recall correct on two different days (the framework spacing engine, §5).
 
-Scoring: keep the house style — 200 per step, 1,000 a round — with typed recall
-worth double recognition inside a mixed round (recall is the real skill).
+Scoring: the house ladder, same as the main game and MapTap — every round
+totals 1,000, and the questions get harder as the multipliers climb:
+100 / 100 / 200 / 300 / 300 (×1 ×1 ×2 ×3 ×3). Recognition questions sit in the
+early, low-multiplier slots; typed recall — the real skill — sits in the late
+×3 slots, so recall is worth more by position, never by a separate bonus that
+would break the 1,000 cap.
 
 ## Data model (extends the question schema)
 ```

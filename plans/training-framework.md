@@ -24,7 +24,7 @@ A fixed slot template makes authoring fast and the habit predictable:
 | 4 | **Know the Company** — product, customer, strategy, history | Company bank (§3C) |
 | 5 | **Wildcard** — values in action, culture, a miss from *your* past questions | Rotation + spacing engine |
 
-Same scoring DNA as the consumer game (1,000 points, streaks, shareable result),
+Same scoring DNA as the consumer game (rounds total 1,000 on the ×1 ×1 ×2 ×3 ×3 ladder — later slots harder and worth more, MapTap-style; streaks, shareable result),
 but the scoreboard defaults to **teams, not individuals** (§7).
 
 ## 3. The three content paths
