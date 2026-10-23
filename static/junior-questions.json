@@ -1,0 +1,224 @@
+{
+  "daily": [
+    {
+      "answer": 8,
+      "explanation": "Spiders have 8 legs — that's how you know they're not insects. Insects only have 6!",
+      "hint": "Count the legs in pairs.",
+      "id": "jr-spider",
+      "junior": {
+        "comparison": "Same number of legs as two dogs put together.",
+        "emoji": "🕷️",
+        "hint2": "More legs than an insect. Insects have 6.",
+        "range": {
+          "high": 12,
+          "low": 4
+        },
+        "readAloud": "How many legs does a spider have?",
+        "superHint": "It's the number after 7."
+      },
+      "prompt": "How many legs does a spider have?",
+      "title": "Creepy crawly counting",
+      "type": "number",
+      "unit": "legs"
+    },
+    {
+      "answer": 7,
+      "explanation": "Seven colors: Red, Orange, Yellow, Green, Blue, Indigo, Violet — ROY G. BIV helps you remember.",
+      "hint": "Try the name ROY G. BIV.",
+      "id": "jr-rainbow",
+      "junior": {
+        "comparison": "Same as the number of days in a week.",
+        "emoji": "🌈",
+        "hint2": "A man named ROY G. BIV knows the answer.",
+        "range": {
+          "high": 10,
+          "low": 3
+        },
+        "readAloud": "How many colors are in a rainbow?",
+        "superHint": "One color for every letter in ROYGBIV."
+      },
+      "prompt": "How many colors are in a rainbow?",
+      "title": "Colors in the sky",
+      "type": "number",
+      "unit": "colors"
+    },
+    {
+      "answer": 18,
+      "explanation": "A big giraffe is about 18 feet tall — its legs alone are 6 feet, taller than most grown-ups!",
+      "hint": "Think on the scale of a house.",
+      "id": "jr-giraffe",
+      "junior": {
+        "comparison": "About as tall as 3 grown-ups stacked on top of each other.",
+        "emoji": "🦒",
+        "hint2": "Taller than your front door. A LOT taller.",
+        "range": {
+          "high": 25,
+          "low": 10
+        },
+        "readAloud": "How many feet tall is a grown-up giraffe?",
+        "superHint": "It's between 10 and 25 feet."
+      },
+      "prompt": "How many feet tall is a grown-up giraffe?",
+      "title": "Tall, tall, tall",
+      "type": "number",
+      "unit": "feet"
+    },
+    {
+      "answer": 32,
+      "explanation": "Grown-ups usually have 32 teeth — including 4 wisdom teeth that show up last.",
+      "hint": "More than kids have. Kids have 20 baby teeth.",
+      "id": "jr-teeth",
+      "junior": {
+        "comparison": "About as many teeth as there are days in a long month, plus one.",
+        "emoji": "🦷",
+        "hint2": "You have 20 baby teeth. Grown-ups get more than that.",
+        "range": {
+          "high": 40,
+          "low": 20
+        },
+        "readAloud": "How many teeth do grown-ups usually have?",
+        "superHint": "It's between 20 and 40."
+      },
+      "prompt": "How many teeth do grown-ups usually have?",
+      "title": "Say cheese",
+      "type": "number",
+      "unit": "teeth"
+    },
+    {
+      "answer": {
+        "lat": -25.27,
+        "lng": 133.77
+      },
+      "explanation": "Kangaroos live in Australia — the big island country in Oceania. There are more kangaroos there than people!",
+      "hint": "Look for the big island country below Asia.",
+      "id": "jr-kangaroo",
+      "junior": {
+        "comparison": "Australia is almost as big as the whole United States.",
+        "emoji": "🦘",
+        "hint2": "It's a country that is also a whole continent.",
+        "range": null,
+        "readAloud": "Drop a pin on the country where kangaroos live in the wild.",
+        "superHint": "Look below Asia, in the bottom right of the map. The country is Australia.",
+        "mapZoom": {
+          "origin": "78% 78%",
+          "label": "Oceania"
+        }
+      },
+      "prompt": "Drop a pin on the country where kangaroos live in the wild.",
+      "title": "Pinpoint the place",
+      "type": "map",
+      "unit": "km"
+    }
+  ],
+  "practice": [
+    {
+      "id": "jr-mars",
+      "type": "number",
+      "title": "The red planet",
+      "prompt": "How many moons does Mars have?",
+      "unit": "moons",
+      "answer": 2,
+      "hint": "Their names mean fear and panic in Greek.",
+      "explanation": "Mars has 2 small moons, Phobos and Deimos.",
+      "junior": {
+        "emoji": "🔴",
+        "readAloud": "How many moons does Mars have?",
+        "hint2": "Fewer than you can count on one hand — way fewer.",
+        "superHint": "It's less than 3.",
+        "comparison": "Same as the number of wheels on a bicycle.",
+        "range": {
+          "low": 0,
+          "high": 5
+        }
+      }
+    },
+    {
+      "id": "jr-guitar",
+      "type": "number",
+      "title": "Strum along",
+      "prompt": "How many strings does a guitar have?",
+      "unit": "strings",
+      "answer": 6,
+      "hint": "Count them in the picture in your head — most guitars agree.",
+      "explanation": "A standard guitar has 6 strings, from low E to high E.",
+      "junior": {
+        "emoji": "🎸",
+        "readAloud": "How many strings does a guitar have?",
+        "hint2": "More than a hand of fingers.",
+        "superHint": "It's the number after 5.",
+        "comparison": "Same as the number of legs on an insect.",
+        "range": {
+          "low": 3,
+          "high": 10
+        }
+      }
+    },
+    {
+      "id": "jr-whale",
+      "type": "number",
+      "title": "The biggest animal ever",
+      "prompt": "How many feet long is a blue whale?",
+      "unit": "feet",
+      "answer": 80,
+      "hint": "Think in school buses.",
+      "explanation": "Blue whales reach about 80 feet — the largest animal known to have ever lived.",
+      "junior": {
+        "emoji": "🐋",
+        "readAloud": "How many feet long is a blue whale?",
+        "hint2": "Longer than two school buses parked end to end.",
+        "superHint": "It's between 50 and 110 feet.",
+        "comparison": "About as long as 13 grown-ups lying head to toe.",
+        "range": {
+          "low": 50,
+          "high": 110
+        }
+      }
+    },
+    {
+      "id": "jr-soccer",
+      "type": "number",
+      "title": "On the field",
+      "prompt": "How many players does one soccer team have on the field?",
+      "unit": "players",
+      "answer": 11,
+      "hint": "Don't forget the goalie!",
+      "explanation": "Each soccer team fields 11 players, including the goalkeeper.",
+      "junior": {
+        "emoji": "⚽",
+        "readAloud": "How many players does one soccer team have on the field at one time?",
+        "hint2": "More than a basketball team (5), less than two basketball teams plus a referee.",
+        "superHint": "It's between 5 and 20.",
+        "comparison": "Two basketball teams' worth of players, plus one goalie.",
+        "range": {
+          "low": 5,
+          "high": 20
+        }
+      }
+    },
+    {
+      "id": "jr-panda",
+      "type": "map",
+      "title": "Pinpoint the place",
+      "prompt": "Drop a pin on the country where giant pandas live in the wild.",
+      "unit": "km",
+      "answer": {
+        "lat": 35.0,
+        "lng": 105.0
+      },
+      "hint": "Look for the big country in eastern Asia.",
+      "explanation": "Giant pandas live wild only in the mountains of central China.",
+      "junior": {
+        "emoji": "🐼",
+        "readAloud": "Drop a pin on the country where giant pandas live in the wild.",
+        "hint2": "It's a huge country in Asia — the one with the Great Wall.",
+        "superHint": "The country is China, in the upper right part of the map.",
+        "comparison": "China is about the same size as the whole United States.",
+        "range": null,
+        "mapZoom": {
+          "origin": "72% 30%",
+          "label": "East Asia"
+        }
+      }
+    }
+  ]
+}

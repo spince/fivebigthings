@@ -15,6 +15,7 @@ ASSETS = {
 app = Flask(__name__, static_folder=None)
 
 QUESTION_CALENDAR = json.loads(ASSETS["static/question-calendar.json"])
+JUNIOR_QUESTIONS = json.loads(ASSETS["static/junior-questions.json"])
 
 PRACTICE_QUESTIONS = [
     {"id":"moon","type":"number","title":"The long way to the Moon","prompt":"About how many miles away is the Moon on average?","unit":"miles","answer":238855,"hint":"A little under a quarter million miles.","explanation":"The average Earth–Moon distance is about 238,855 miles."},
@@ -42,7 +43,7 @@ def static_asset(asset_path):
 def prevent_api_caching(response):
     if request.path.startswith("/api/"):
         response.headers["Cache-Control"] = "no-store"
-    elif request.path == "/":
+    elif request.path in {"/", "/junior", "/globe", "/sw.js", "/manifest.webmanifest", "/offline.html"}:
         response.headers["Cache-Control"] = "no-cache"
     return response
 
@@ -57,6 +58,45 @@ def daily():
 @app.get("/api/practice")
 def practice():
     return jsonify({"questions": PRACTICE_QUESTIONS})
+
+@app.get("/junior")
+def junior():
+    return Response(ASSETS["static/junior.html"], mimetype="text/html")
+
+
+@app.get("/globe")
+def globe():
+    return Response(ASSETS["static/globe.html"], mimetype="text/html")
+
+
+@app.get("/sw.js")
+def service_worker():
+    # Served from the root so its scope is the whole origin; static files are
+    # loaded into ASSETS at startup, so the bytes live under static/sw.js.
+    response = Response(ASSETS["static/sw.js"], mimetype="application/javascript")
+    response.headers["Service-Worker-Allowed"] = "/"
+    return response
+
+
+@app.get("/manifest.webmanifest")
+def manifest():
+    return Response(ASSETS["static/manifest.webmanifest"], mimetype="application/manifest+json")
+
+
+@app.get("/offline.html")
+def offline():
+    return Response(ASSETS["static/offline.html"], mimetype="text/html")
+
+
+@app.get("/api/junior")
+def junior_daily():
+    return jsonify({"date": date.today().isoformat(), "questions": JUNIOR_QUESTIONS["daily"]})
+
+
+@app.get("/api/junior-practice")
+def junior_practice():
+    return jsonify({"questions": JUNIOR_QUESTIONS["practice"]})
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", "8000")), debug=os.environ.get("DEBUG") == "1")
