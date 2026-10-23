@@ -26,6 +26,11 @@ The calendar is stored in `static/question-calendar.json` and bundled with the a
 
 The globe renderer is pinned to globe.gl 2.46.2 on jsDelivr, and its image is loaded from NASA's Blue Marble collection. No map API key or paid map account is needed. Before launch, bundle these assets locally so the game does not depend on third-party delivery.
 
+## Plans & design docs
+
+The backlog, the iOS/native plan, the /junior + /globe spec, the corporate
+training framework, and the Faces design note live in [`plans/`](plans/).
+
 ## Fastly Compute deployment
 
 This project includes a Fastly Compute Python entry point. Fastly's Python SDK builds Flask into WebAssembly and is currently beta; it needs Python 3.12+ and `uv`. The local app supports Python 3.9+, but the Compute build does not. [Fastly's Python guide](https://www.fastly.com/documentation/guides/compute/developer-guides/python/)
