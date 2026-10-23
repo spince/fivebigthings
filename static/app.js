@@ -186,4 +186,5 @@ async function loadMode(mode){
 document.querySelectorAll('.nav-link').forEach(b=>b.onclick=()=>loadMode(b.dataset.mode));
 $('#practice-cta').onclick=()=>loadMode('practice');
 $('#footer-date').textContent=dateText();
-loadMode('daily');
+const startMode = new URLSearchParams(location.search).get('mode');
+loadMode(startMode === 'practice' ? 'practice' : 'daily');

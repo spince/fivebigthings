@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f5f4ef">
+<title>Five Big Things Junior — five big things, just for kids</title>
+<style>
+:root{--paper:#f5f4ef;--ink:#20241f;--muted:#898c82;--line:#e7e5dc;--green:#234b3c;--lime:#caeb8b;--mono:'DM Mono',monospace;--sans:'DM Sans',-apple-system,sans-serif;--display:'Space Grotesk',-apple-system,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+.topbar{height:76px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 max(5.5vw,24px)}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:600;font-size:17px}
+.brand-mark{display:grid;place-items:center;width:30px;height:30px;border-radius:8px;background:var(--green);color:var(--lime);font-size:16px}
+.junior-badge{background:var(--lime);color:var(--green);font:600 11px var(--mono);letter-spacing:.08em;padding:6px 12px;border-radius:20px}
+main{max-width:960px;margin:0 auto;padding:40px 24px}
+.intro{text-align:center}.intro h1{font:500 clamp(34px,5vw,50px)/1.08 var(--display);letter-spacing:-.05em;margin:10px 0 8px}
+.intro p{font-size:16px;color:#777b71;margin:0}
+.game-shell{width:min(100%,680px);margin:30px auto 0;background:#fff;border:1px solid #edede7;border-radius:14px;box-shadow:0 11px 35px #2e382012;padding:26px 28px 22px}
+.progress-track{height:5px;border-radius:4px;background:#eeeee9;margin-top:12px;overflow:hidden}.progress-track div{height:100%;background:#aacb6e;width:20%;transition:width .3s}
+.round-label{font:11px var(--mono);letter-spacing:.08em;color:#888c80;display:flex;gap:9px}
+.emoji-big{font-size:52px;text-align:center;margin:8px 0 2px}
+.question-prompt{font:600 26px/1.35 var(--display);letter-spacing:-.03em;text-align:center;margin:6px 0 18px}
+.compare-card{display:flex;gap:10px;align-items:center;background:#f3f5eb;border-radius:10px;padding:12px 15px;font-size:15px;line-height:1.5;color:#3d4a3a;margin-bottom:18px}
+.choice-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.choice-card{display:flex;align-items:center;gap:12px;border:2px solid #e4e6de;background:#fbfbf8;border-radius:10px;padding:18px;font-size:19px;font-weight:600;cursor:pointer;text-align:left}
+.choice-card.selected{border-color:var(--green);background:#eef3e4}
+.choice-card.dimmed{opacity:.32;pointer-events:none}
+.choice-marker{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--green);color:var(--lime);font-size:14px;flex:none}
+.answer-input-wrap{display:flex;align-items:center;border:2px solid #e4e6de;background:#fbfbf8;border-radius:10px;padding:0 16px;height:64px}
+.answer-input-wrap input{width:100%;font:600 22px var(--display);border:0;outline:0;background:transparent;color:var(--ink)}
+.input-unit{font:12px var(--mono);color:#999d91}
+.helpers{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.helper-btn{border:1.5px solid #d8d8ce;background:#fff;border-radius:24px;padding:10px 16px;font-size:14px;font-weight:600;cursor:pointer}
+.helper-btn:disabled{opacity:.4;cursor:default}
+.helper-btn.used{background:var(--lime);border-color:var(--lime);color:var(--green)}
+.hint-box{margin-top:12px;font-size:15px;line-height:1.55;color:#4a5546;background:#fbfbf3;border:1px dashed #cfd6bd;border-radius:10px;padding:12px 15px}
+.range-line{margin-top:12px}.range-track{position:relative;height:10px;border-radius:5px;background:#eeeee9}
+.range-band{position:absolute;top:0;height:100%;background:#aacb6e;border-radius:5px}
+.range-labels{display:flex;justify-content:space-between;font:11px var(--mono);color:#888c80;margin-top:6px}
+.game-actions{border-top:1px solid #f0f0eb;margin-top:20px;padding-top:16px;display:flex;align-items:center;justify-content:space-between}
+.button{border:0;border-radius:9px;padding:15px 20px;font-size:15px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:10px}
+.button-primary{background:var(--green);color:#fff;min-width:180px;justify-content:center}
+.button-light{background:var(--lime);color:var(--green)}
+.points-note{font-size:13px;color:#969a8e}
+.answer-feedback{border-radius:10px;background:#f3f5eb;padding:15px 17px;margin-top:14px;font-size:15px;line-height:1.6;color:#44503f}
+.answer-feedback strong{color:#31503c}
+.hidden{display:none!important}
+.flat-map{position:relative;border:1px solid #e7e9e1;border-radius:10px;overflow:hidden;background:#edf1e8;cursor:crosshair}
+.flat-map img{width:100%;display:block;transition:transform .8s}
+.flat-pin{position:absolute;width:18px;height:18px;border-radius:50%;transform:translate(-50%,-50%);border:3px solid #fff;pointer-events:none}
+.guess-pin{background:#7fb069}.target-pin{background:#e4572e}
+.result-panel{width:min(100%,680px);margin:16px auto 0;background:var(--green);color:#fff;border-radius:13px;padding:26px 28px}
+.result-panel h2{font:500 30px var(--display);margin:6px 0}
+.result-line{display:flex;justify-content:space-between;font-size:14px;color:#d0ddcf;padding:5px 0;border-top:1px solid #ffffff1f}
+.stars{font-size:26px;letter-spacing:4px}
+footer{text-align:center;font-size:12px;color:var(--muted);margin:28px 0 6px}
+@media(max-width:560px){.choice-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <span class="brand"><span class="brand-mark">5</span><span>five big things</span></span>
+  <span><a class="junior-badge" style="text-decoration:none" href="/">Today</a> <a class="junior-badge" style="text-decoration:none" href="/globe">Globe</a> <span class="junior-badge">★ JUNIOR</span></span>
+</header>
+<main>
+  <section class="intro">
+    <h1>Five big things, <span style="color:var(--green)">just for kids.</span></h1>
+    <p>Best guesses only. Helpers are free — use them all!</p>
+  </section>
+
+  <section class="game-shell">
+    <div class="round-label"><span id="mode-label">JUNIOR ROUND</span><span>/</span><span id="progress-label">QUESTION 01 OF 05</span></div>
+    <div class="progress-track"><div id="progress-fill"></div></div>
+    <div id="question-area"></div>
+    <div class="game-actions">
+      <div class="points-note" id="points-note"></div>
+      <button id="submit-button" class="button button-primary">Lock in guess ↗</button>
+    </div>
+    <div id="answer-feedback" class="answer-feedback hidden"></div>
+  </section>
+
+  <section id="result-panel" class="result-panel hidden"></section>
+  <footer><a href="/junior" style="color:inherit">Today's Junior round</a> · <a href="/junior?mode=practice" style="color:inherit">Practice round</a></footer>
+</main>
+<script src="/static/junior-data.js?v=1"></script>
+<script src="/static/junior.js?v=1"></script>
+</body>
+</html>

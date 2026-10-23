@@ -6,11 +6,18 @@
   <title>Five Big Things — a little perspective, daily</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/static/style.css?v=2">
+  <link rel="stylesheet" href="/static/style.css?v=3">
   <link rel="stylesheet" href="/static/globe.css?v=1">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="/static/icons/favicon.svg">
+  <link rel="apple-touch-icon" href="/static/icons/apple-touch-icon.svg">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Five Big Things">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
 </head>
 <body>
-  <header class="topbar"><a class="brand" href="/"><span class="brand-mark">5</span><span>five big things</span></a><nav><button class="nav-link active" data-mode="daily">Today</button><button class="nav-link" data-mode="practice">Practice</button></nav><div class="account-area"><span class="account-label">A fresh round every day</span></div></header>
+  <header class="topbar"><a class="brand" href="/"><span class="brand-mark">5</span><span>five big things</span></a><nav><button class="nav-link active" data-mode="daily">Today</button><button class="nav-link" data-mode="practice">Practice</button><a class="nav-link" href="/junior">Junior</a><a class="nav-link" href="/globe">Globe</a></nav><div class="account-area"><span class="account-label">A fresh round every day</span></div></header>
   <main>
     <section class="intro"><div class="eyebrow"><span class="live-dot"></span><span id="date-label">TODAY'S EDITION</span></div><h1>A little perspective.<br><span>Five big things.</span></h1><p>Five questions about our wonderfully weird world.<br>Best guesses only. No homework required.</p></section>
     <section class="game-shell">
@@ -25,6 +32,7 @@
     <footer><a class="brand footer-brand" href="/"><span class="brand-mark">5</span><span>five big things</span></a><span>Made for the joy of wondering.</span><span id="footer-date"></span></footer>
   </main>
   <script defer src="https://cdn.jsdelivr.net/npm/globe.gl@2.46.2/dist/globe.gl.min.js"></script>
-  <script defer src="/static/app.js?v=5"></script>
+  <script defer src="/static/app.js?v=6"></script>
+  <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js',{scope:'/'}).catch(function(e){console.warn('SW registration failed',e);});});}</script>
 </body>
 </html>
