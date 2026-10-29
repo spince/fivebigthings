@@ -22,7 +22,7 @@ on `main` without a pull request and green checks**, and every merge to
 Local checks before pushing:
 
 ```sh
-pip install -r requirements-dev.txt prek
+pip install -r requirements.txt -r requirements-dev.txt prek
 prek run --all-files
 python -m pytest -q
 ```

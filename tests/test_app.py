@@ -12,7 +12,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from app import app  # noqa: E402
+import app as app_module  # noqa: E402
+
+app = app_module.app
 
 client = app.test_client()
 
@@ -41,7 +43,13 @@ def test_manifest_is_valid_and_icons_exist():
         assert (ROOT / icon["src"].lstrip("/")).exists(), icon["src"]
 
 
-def test_daily_api_shape_and_no_store():
+def test_daily_api_shape_and_no_store(monkeypatch):
+    class ScheduledDate(date):
+        @classmethod
+        def today(cls):
+            return cls(2026, 10, 22)
+
+    monkeypatch.setattr(app_module, "date", ScheduledDate)
     resp = client.get("/api/daily")
     assert resp.status_code == 200
     assert resp.headers.get("Cache-Control") == "no-store"
