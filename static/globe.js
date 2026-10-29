@@ -1,5 +1,6 @@
 // Five Big Things Globe — country trainer prototype
-// One country, 5 steps x 200 pts = 1,000. See JUNIOR_AND_GLOBE_SPEC.md.
+// One country, 5 steps on the house ladder: 100/100/200/300/300 = 1,000
+// (MapTap-style weights: later steps are harder and worth more).
 // Steps 1-3: globe zoomed to the country (the scaffold).
 // Step 4: full globe, pin the country. Step 5: full globe, MapTap-style —
 // only the city name is shown. No hints, no zoom, no help of any kind.
@@ -9,6 +10,7 @@ const CONTINENTS = ['Africa', 'Asia', 'Europe', 'North America', 'South America'
 const STEP_NAMES = ['WHAT CONTINENT?', 'WHAT IS ITS CAPITAL?', 'WHERE IS THE CAPITAL?', 'FIND THE COUNTRY', 'FIND THE CITY'];
 const PIN_SCALES = { 3: 500, 5: 700 }; // step 4 scale is per-country (countryScale)
 
+const STEP_MAX = [100, 100, 200, 300, 300];
 const state = { country: null, step: 0, results: [], choiceValue: null, click: null, locked: false };
 let globe = null, globeObserver = null;
 
@@ -31,7 +33,7 @@ function haversineKm(a, b) {
   const h = Math.sin(r(a.lat - b.lat) / 2) ** 2 + Math.cos(r(b.lat)) * Math.cos(r(a.lat)) * Math.sin(r(a.lng - b.lng) / 2) ** 2;
   return 6371 * 2 * Math.atan2(Math.sqrt(h), Math.sqrt(1 - h));
 }
-const pinPoints = (km, scale) => Math.max(0, Math.round(200 * Math.exp(-km / scale)));
+const pinPoints = (km, scale, max) => Math.max(0, Math.round(max * Math.exp(-km / scale)));
 
 /* ---------- choice builders ---------- */
 function continentChoices(c) {
@@ -177,7 +179,7 @@ function renderStep() {
       ${globeMarkup('Drag to turn the globe · tap to place your pin')}`;
     wireGlobe(s, true);
   }
-  $('#points-note').innerHTML = s === 4 ? 'Final step: <b>200 points</b> — earned the hard way' : `This step: <b>200 points</b>`;
+  $('#points-note').innerHTML = s === 4 ? `Final step: <b>${STEP_MAX[s]} points</b> — earned the hard way` : `This step: <b>${STEP_MAX[s]} points</b>`;
 }
 function wireChoices() {
   document.querySelectorAll('.choice-card').forEach((b) => b.onclick = () => {
@@ -192,7 +194,7 @@ function submitStep() {
   if (s === 0 || s === 1) {
     if (state.choiceValue === null) { nudge(s === 0 ? 'Pick a continent first.' : 'Pick a capital first.'); return; }
     const correct = s === 0 ? c.continent : c.capital.name;
-    pts = state.choiceValue === correct ? 200 : 0;
+    pts = state.choiceValue === correct ? STEP_MAX[s] : 0;
     feedback = pts ? `That's right — <strong>${correct}</strong>.` :
       `Not quite — it's <strong>${correct}</strong>. ${s === 0 ? `Keep the view in mind for the next steps.` : `You'll hunt for ${c.capital.name} on the globe next.`}`;
   } else {
@@ -200,9 +202,9 @@ function submitStep() {
     const target = s === 2 ? c.capital : s === 3 ? c.center : c.secondCity;
     const scale = s === 2 ? PIN_SCALES[3] : s === 3 ? countryScale(c) : PIN_SCALES[5];
     const km = haversineKm(state.click, target);
-    pts = pinPoints(km, scale);
+    pts = pinPoints(km, scale, STEP_MAX[s]);
     const what = s === 2 ? c.capital.name : s === 3 ? c.country : c.secondCity.name;
-    feedback = `You were <strong>${Math.round(km).toLocaleString()} km</strong> from ${what}. <strong>${pts} of 200 points.</strong>`;
+    feedback = `You were <strong>${Math.round(km).toLocaleString()} km</strong> from ${what}. <strong>${pts} of ${STEP_MAX[s]} points.</strong>`;
     if (s === 4) feedback += `<br>${c.secondCity.name} — ${c.secondCity.note}.`;
     revealPins(state.click, target);
   }
@@ -231,7 +233,7 @@ function showResults() {
     <div class="result-kicker">COUNTRY COMPLETE — ${c.country.toUpperCase()}</div>
     <div class="result-main"><h2>${total >= 800 ? 'Globe master.' : total >= 500 ? 'Well travelled.' : 'A good first trip.'}</h2>
     <div class="result-score">${total}<span style="font:12px 'DM Mono',monospace;color:#c8d5c2"> / 1,000</span></div></div>
-    <div class="result-list">${state.results.map((r) => `<div class="result-line"><span>${r.step.charAt(0) + r.step.slice(1).toLowerCase()}</span><b>${r.points} / 200</b></div>`).join('')}</div>
+    <div class="result-list">${state.results.map((r, i) => `<div class="result-line"><span>${r.step.charAt(0) + r.step.slice(1).toLowerCase()}</span><b>${r.points} / ${STEP_MAX[i]}</b></div>`).join('')}</div>
     <p style="font-size:12.5px;line-height:1.6;color:#d0ddcf;margin:16px 0 0">🌍 ${c.fact}</p>
     <div class="result-actions"><button class="button button-light" id="new-country">New country ↗</button></div>`;
   $('#new-country').onclick = newSession;
