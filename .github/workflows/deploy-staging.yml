@@ -1,0 +1,60 @@
+name: Deploy to staging
+
+# Every merge to main deploys to the staging Fastly service, so what is
+# reviewed in staging is always exactly what is on main. The job is bound to
+# the GitHub "staging" environment (Settings > Environments), which holds:
+#   secret FASTLY_API_TOKEN          - Fastly API token with deploy rights
+#   var    FASTLY_STAGING_SERVICE_ID - the staging Compute service id
+# Until both are set, the deploy step reports what is missing and skips
+# (the run stays green) so CI history is meaningful from day one.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-staging
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: deploy-staging
+    runs-on: ubuntu-latest
+    environment:
+      name: staging
+      url: https://staging.fivebigthings.app
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check deploy configuration
+        id: cfg
+        env:
+          FASTLY_API_TOKEN: ${{ secrets.FASTLY_API_TOKEN }}
+          STAGING_ID: ${{ vars.FASTLY_STAGING_SERVICE_ID }}
+        run: |
+          if [ -n "$FASTLY_API_TOKEN" ] && [ -n "$STAGING_ID" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Staging deploy skipped - set the FASTLY_API_TOKEN secret and FASTLY_STAGING_SERVICE_ID variable on the 'staging' environment."
+          fi
+      - uses: actions/setup-python@v5
+        if: steps.cfg.outputs.ready == 'true'
+        with:
+          python-version: "3.12"
+      - name: Install uv
+        if: steps.cfg.outputs.ready == 'true'
+        run: pip install uv
+      - name: Point fastly.toml at the staging service
+        if: steps.cfg.outputs.ready == 'true'
+        env:
+          STAGING_ID: ${{ vars.FASTLY_STAGING_SERVICE_ID }}
+        run: sed -i "s/^service_id = .*/service_id = \"$STAGING_ID\"/" fastly.toml
+      - name: Build and deploy to staging
+        if: steps.cfg.outputs.ready == 'true'
+        uses: fastly/compute-actions@v5
+        env:
+          FASTLY_API_TOKEN: ${{ secrets.FASTLY_API_TOKEN }}
