@@ -65,11 +65,11 @@ jobs:
       - name: Set up Fastly CLI
         uses: fastly/compute-actions/setup@v5
         with:
-        # Pinned: "latest" resolution is an unauthenticated GitHub API
-        # call that gets rate-limited on shared runner IPs (run #2).
-        # The token input authenticates that lookup.
-        cli_version: v17.2.0
-        token: ${{ secrets.GITHUB_TOKEN }}
+          # Pinned: "latest" resolution is an unauthenticated GitHub API
+          # call that gets rate-limited on shared runner IPs (run #2).
+          # The token input authenticates that lookup.
+          cli_version: v17.2.0
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and deploy to production
         run: fastly compute deploy --non-interactive
         env:
