@@ -58,9 +58,9 @@ jobs:
       - name: Set up Fastly CLI
         if: steps.cfg.outputs.ready == 'true'
         uses: fastly/compute-actions/setup@v5
-          with:
+      with:
           cli_version: v17.2.0
-        token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and deploy to staging
         if: steps.cfg.outputs.ready == 'true'
         run: fastly compute deploy --non-interactive
