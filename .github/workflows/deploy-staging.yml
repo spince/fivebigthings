@@ -53,8 +53,13 @@ jobs:
         env:
           STAGING_ID: ${{ vars.FASTLY_STAGING_SERVICE_ID }}
         run: sed -i "s/^service_id = .*/service_id = \"$STAGING_ID\"/" fastly.toml
+      # CLI directly, not the full compute-actions action: its build
+      # step's post-job artifact upload fails the run (see production).
+      - name: Set up Fastly CLI
+        if: steps.cfg.outputs.ready == 'true'
+        uses: fastly/compute-actions/setup@v5
       - name: Build and deploy to staging
         if: steps.cfg.outputs.ready == 'true'
-        uses: fastly/compute-actions@v5
+        run: fastly compute deploy --non-interactive
         env:
           FASTLY_API_TOKEN: ${{ secrets.FASTLY_API_TOKEN }}

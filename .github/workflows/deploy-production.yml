@@ -10,6 +10,13 @@ name: Deploy to production
 # out that SHA, so what gets deployed is exactly the revision that was
 # dispatched and approved — never a newer commit that landed on the ref
 # while the run waited for approval.
+#
+# Build/deploy runs the Fastly CLI directly (installed by the
+# compute-actions setup step) instead of the full compute-actions
+# action: that action's build step uploads the package as a GitHub
+# artifact in a post step, and GitHub rejects the "five-big-things.tar"
+# artifact name, failing the run after a successful deploy
+# (production run #1, 2026-11-19).
 
 on:
   workflow_dispatch:
@@ -55,7 +62,9 @@ jobs:
           python-version: "3.12"
       - name: Install uv
         run: pip install uv
+      - name: Set up Fastly CLI
+        uses: fastly/compute-actions/setup@v5
       - name: Build and deploy to production
-        uses: fastly/compute-actions@v5
+        run: fastly compute deploy --non-interactive
         env:
           FASTLY_API_TOKEN: ${{ secrets.FASTLY_API_TOKEN }}
