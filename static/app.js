@@ -62,6 +62,7 @@ function renderQuestion() {
       state.choiceValue=Number(button.dataset.value);
       document.querySelectorAll('.choice-card').forEach(card=>card.classList.toggle('selected',card===button));
       $('#hint-text').textContent=`Selected: ${button.dataset.label}`;
+    });
   }else $('#answer-input').focus();
 }
 function mapMarkup(){
