@@ -71,6 +71,8 @@ jobs:
           cli_version: v17.2.0
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and deploy to production
-        run: fastly compute deploy --non-interactive
+        run: |
+          fastly compute build
+          fastly compute deploy --non-interactive
         env:
           FASTLY_API_TOKEN: ${{ secrets.FASTLY_API_TOKEN }}
