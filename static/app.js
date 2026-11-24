@@ -1,6 +1,6 @@
 const $ = (s) => document.querySelector(s);
 const state = {mode:'daily', questions:[], index:0, answers:[], revealHint:false, click:null, choiceValue:null};
-const localKey = 'fivebigthings-daily-v2';
+const localKey = 'fivebigthings-daily-v3';
 const earthTexture = 'https://assets.science.nasa.gov/content/dam/science/esd/eo/images/bmng/bmng-base/january/world.200401.3x5400x2700.jpg';
 let globe = null;
 let globeResizeObserver = null;
