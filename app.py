@@ -1,7 +1,7 @@
 import os
 import json
 import mimetypes
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 from flask import Flask, Response, jsonify, request
@@ -47,12 +47,39 @@ def prevent_api_caching(response):
         response.headers["Cache-Control"] = "no-cache"
     return response
 
+def requested_day():
+    """Resolve which day's round to serve.
+
+    The client passes its local calendar date as ?date=YYYY-MM-DD so the
+    daily round rolls over at the player's local midnight, not UTC
+    midnight. Real timezones run UTC-12 to UTC+14, so a genuine local date
+    is always within one day of the server's UTC date; anything further
+    out is a moved clock, and it is rejected rather than served so future
+    rounds can't be peeked at by changing the device date.
+    Returns (day, None) on success or (None, error_response).
+    """
+    raw = request.args.get("date")
+    if raw is None:
+        return date.today(), None
+    try:
+        day = date.fromisoformat(raw)
+    except ValueError:
+        return None, (jsonify({"error": "Invalid date."}), 400)
+    today = date.today()
+    if day < today - timedelta(days=1) or day > today + timedelta(days=1):
+        return None, (jsonify({"error": "Date out of range."}), 400)
+    return day, None
+
+
 @app.get("/api/daily")
 def daily():
-    day = date.today().isoformat()
+    day, error = requested_day()
+    if error is not None:
+        return error
+    day = day.isoformat()
     questions = QUESTION_CALENDAR.get(day)
     if questions is None:
-        return jsonify({"error": "Today's round is not scheduled yet.", "date": day}), 503
+        return jsonify({"error": "That round is not scheduled yet.", "date": day}), 503
     return jsonify({"date": day, "questions": questions})
 
 @app.get("/api/practice")
@@ -90,7 +117,10 @@ def offline():
 
 @app.get("/api/junior")
 def junior_daily():
-    return jsonify({"date": date.today().isoformat(), "questions": JUNIOR_QUESTIONS["daily"]})
+    day, error = requested_day()
+    if error is not None:
+        return error
+    return jsonify({"date": day.isoformat(), "questions": JUNIOR_QUESTIONS["daily"]})
 
 
 @app.get("/api/junior-practice")

@@ -179,18 +179,24 @@ function showResults() {
     <div style="font:600 34px var(--display);color:var(--lime);margin:8px 0">${total} <span style="font-size:13px;color:#c8d5c2">/ 1,000 points</span></div>
     ${state.questions.map((q, i) => `<div class="result-line"><span>${q.junior.emoji} ${q.title}</span><b>${state.answers[i].points} / ${state.answers[i].maxPoints}</b></div>`).join('')}
     <button class="button button-light" style="margin-top:18px" onclick="location.reload()">Play again ↗</button>`;
-  if (juniorMode === 'daily') { try { localStorage.setItem('fivebigthings-junior-v1', JSON.stringify({ date: new Date().toISOString().slice(0, 10), score: total })); } catch (e) {} }
+  if (juniorMode === 'daily') { try { localStorage.setItem('fivebigthings-junior-v1', JSON.stringify({ date: servedDate || localDateText(), score: total })); } catch (e) {} }
   panel.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
 // Load from the API; fall back to the bundled daily set if it is unreachable
 // (e.g. offline, where the service worker may still have the shell cached).
 const juniorMode = new URLSearchParams(location.search).get('mode') === 'practice' ? 'practice' : 'daily';
+// The player's local calendar date (YYYY-MM-DD) in their own timezone —
+// NOT toISOString(), which is the UTC date (see app.js).
+function localDateText(d = new Date()) { return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; }
+let servedDate = null;
 async function loadQuestions() {
   try {
-    const res = await fetch(juniorMode === 'practice' ? '/api/junior-practice' : '/api/junior');
+    const res = await fetch(juniorMode === 'practice' ? '/api/junior-practice' : '/api/junior?date=' + localDateText());
     if (!res.ok) throw new Error('junior api ' + res.status);
-    state.questions = (await res.json()).questions;
+    const payload = await res.json();
+    state.questions = payload.questions;
+    if (payload.date) servedDate = payload.date;
   } catch (e) { state.questions = JUNIOR_SAMPLE.questions; }
   $('#mode-label').textContent = juniorMode === 'practice' ? 'JUNIOR PRACTICE' : 'JUNIOR ROUND';
   renderQuestion();
