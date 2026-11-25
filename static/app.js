@@ -1,11 +1,15 @@
 const $ = (s) => document.querySelector(s);
 const state = {mode:'daily', questions:[], index:0, answers:[], revealHint:false, click:null, choiceValue:null};
-const localKey = 'fivebigthings-daily-v2';
+const localKey = 'fivebigthings-daily-v3';
 const earthTexture = 'https://assets.science.nasa.gov/content/dam/science/esd/eo/images/bmng/bmng-base/january/world.200401.3x5400x2700.jpg';
 let globe = null;
 let globeResizeObserver = null;
 
 function dateText() { return new Intl.DateTimeFormat('en-US',{weekday:'long',month:'long',day:'numeric'}).format(new Date()); }
+// The player's local calendar date (YYYY-MM-DD) in their own timezone —
+// NOT toISOString(), which is the UTC date and rolls the day over hours
+// early or late depending on where the player lives.
+function localDateText(d=new Date()) { return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; }
 async function api(path) {
   const response = await fetch(path);
   const data = await response.json().catch(()=>({}));
@@ -147,7 +151,7 @@ function showResults(){
   panel.scrollIntoView({behavior:'smooth',block:'center'});$('#share-button').onclick=()=>shareScore(total,breakdown,state.mode);
   if($('#again-button'))$('#again-button').onclick=()=>loadMode('practice');
   if(state.mode==='daily'){
-    localStorage.setItem(localKey,JSON.stringify({date:new Date().toISOString().slice(0,10),score:total,breakdown}));
+    localStorage.setItem(localKey,JSON.stringify({date:state.date||localDateText(),score:total,breakdown}));
   }
 }
 async function shareScore(score,breakdown=state.questions.map((q,i)=>({title:q.title,points:state.answers[i]?.points||0,maxPoints:state.answers[i]?.maxPoints||maxPoints(i)})),mode=state.mode){
@@ -176,9 +180,9 @@ async function loadMode(mode){
   state.mode=mode;state.index=0;state.answers=[];$('#result-panel').classList.add('hidden');
   document.querySelectorAll('.nav-link').forEach(b=>b.classList.toggle('active',b.dataset.mode===mode));
   if(mode==='daily'){
-    const today=new Date().toISOString().slice(0,10);const saved=JSON.parse(localStorage.getItem(localKey)||'null');
+    const today=localDateText();const saved=JSON.parse(localStorage.getItem(localKey)||'null');
     if(saved?.date===today){state.questions=[];$('#question-area').innerHTML=`<div style="padding:30px 0;text-align:center"><div class="question-title">TODAY'S ROUND IS IN THE BOOKS</div><h2 class="question-prompt" style="margin:16px auto">You scored ${saved.score} out of 1,000.</h2><p style="font-size:12px;color:#85897e">Come back tomorrow for five fresh questions, or head to practice.</p><button class="button button-primary" style="margin:20px auto 0" id="resume-share">Share today's score ↗</button></div>`;$('#resume-share').onclick=()=>shareScore(saved.score,saved.breakdown,'daily');$('#progress-label').textContent='ROUND COMPLETE';$('#progress-fill').style.width='100%';return;}
-    const data=await api('/api/daily');state.questions=data.questions;$('#date-label').textContent=new Date(data.date+'T12:00:00').toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'}).toUpperCase();
+    const data=await api('/api/daily?date='+today);state.questions=data.questions;state.date=data.date;$('#date-label').textContent=new Date(data.date+'T12:00:00').toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'}).toUpperCase();
   }else{const data=await api('/api/practice');state.questions=data.questions;$('#date-label').textContent='NO SCOREBOARD · ALL FOR FUN';}
   renderQuestion();$('#submit-button').onclick=submitAnswer;
 }

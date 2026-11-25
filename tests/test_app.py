@@ -58,6 +58,50 @@ def test_daily_api_shape_and_no_store(monkeypatch):
     assert len(payload["questions"]) == 5
 
 
+def _pin_today(monkeypatch, year=2026, month=10, day=22):
+    class PinnedDate(date):
+        @classmethod
+        def today(cls):
+            return cls(year, month, day)
+
+    monkeypatch.setattr(app_module, "date", PinnedDate)
+
+
+def test_daily_serves_client_local_date_within_one_day(monkeypatch):
+    _pin_today(monkeypatch, day=15, month=11)  # server (UTC) day: 2026-11-15
+    for client_day in ["2026-11-14", "2026-11-15", "2026-11-16"]:
+        resp = client.get(f"/api/daily?date={client_day}")
+        assert resp.status_code == 200, client_day
+        payload = resp.get_json()
+        assert payload["date"] == client_day
+        assert len(payload["questions"]) == 5
+
+
+def test_daily_rejects_dates_outside_the_timezone_window(monkeypatch):
+    _pin_today(monkeypatch, day=15, month=11)
+    # All of these are real scheduled rounds — they must still be refused,
+    # so a moved device clock cannot peek at future questions.
+    for client_day in ["2026-11-13", "2026-11-17", "2026-12-25", "2027-01-19"]:
+        resp = client.get(f"/api/daily?date={client_day}")
+        assert resp.status_code == 400, client_day
+
+
+def test_daily_rejects_malformed_date(monkeypatch):
+    _pin_today(monkeypatch)
+    for bad in ["banana", "2026-13-01", "10/22/2026", ""]:
+        resp = client.get(f"/api/daily?date={bad}")
+        assert resp.status_code == 400, bad
+
+
+def test_junior_echoes_client_local_date(monkeypatch):
+    _pin_today(monkeypatch, day=15, month=11)
+    resp = client.get("/api/junior?date=2026-11-14")
+    assert resp.status_code == 200
+    assert resp.get_json()["date"] == "2026-11-14"
+    resp = client.get("/api/junior?date=2026-12-25")
+    assert resp.status_code == 400
+
+
 def test_practice_and_junior_apis_return_five():
     for path in ["/api/practice", "/api/junior", "/api/junior-practice"]:
         resp = client.get(path)
