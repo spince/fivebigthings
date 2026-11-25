@@ -1,5 +1,5 @@
 const $ = (s) => document.querySelector(s);
-const state = {mode:'daily', questions:[], index:0, answers:[], revealHint:false, click:null, choiceValue:null};
+const state = {mode:'daily', questions:[], index:0, answers:[], click:null, choiceValue:null};
 const localKey = 'fivebigthings-daily-v3';
 const earthTexture = 'https://assets.science.nasa.gov/content/dam/science/esd/eo/images/bmng/bmng-base/january/world.200401.3x5400x2700.jpg';
 let globe = null;
@@ -48,18 +48,17 @@ function choiceMarkup(q) {
 }
 function renderQuestion() {
   const q=questionList()[state.index]; if(!q)return;
-  state.click=null; state.choiceValue=null; state.revealHint=false; state.locked=false; globe=null;
+  state.click=null; state.choiceValue=null; state.locked=false; globe=null;
   if(globeResizeObserver){globeResizeObserver.disconnect();globeResizeObserver=null;}
   $('#mode-label').textContent=state.mode==='daily'?'DAILY ROUND':'PRACTICE';
   $('#progress-label').textContent=`QUESTION ${String(state.index+1).padStart(2,'0')} OF ${String(state.questions.length).padStart(2,'0')}`;
   $('#progress-fill').style.width=`${((state.index+1)/state.questions.length)*100}%`;
   const title=`<div class="question-heading"><span class="question-title">${q.title}</span><span class="q-number">${String(state.index+1).padStart(2,'0')} / 05</span></div><h2 class="question-prompt">${q.prompt}</h2>`;
   const answer=q.type==='map'?mapMarkup():state.index<2?choiceMarkup(q):`<label class="answer-input-wrap"><input id="answer-input" type="number" inputmode="decimal" autocomplete="off" placeholder="Your best guess" step="any" aria-label="Your best guess"><span class="input-unit">${q.unit}</span></label>`;
-  $('#question-area').innerHTML=title+answer+`<div class="hint-row"><span id="hint-text">Take a guess before you peek.</span><button class="hint-button" id="hint-button">Need a nudge?</button></div>`;
+  $('#question-area').innerHTML=title+answer+`<div class="hint-row"><span id="hint-text"></span></div>`;
   $('#answer-feedback').classList.add('hidden');
   $('#submit-button').textContent=state.index===state.questions.length-1?'See my score ↗':'Lock in guess ↗';
   $('#points-note').innerHTML=`Question ${state.index+1}: up to <b>${maxPoints(state.index)} points</b>`;
-  $('#hint-button').onclick=()=>{state.revealHint=true;$('#hint-text').textContent=q.hint;$('#hint-button').textContent='Hint revealed';};
   if(q.type==='map') wireMap();
   else if(state.index<2){
     document.querySelectorAll('.choice-card').forEach(button=>button.onclick=()=>{
