@@ -18,11 +18,11 @@ QUESTION_CALENDAR = json.loads(ASSETS["static/question-calendar.json"])
 JUNIOR_QUESTIONS = json.loads(ASSETS["static/junior-questions.json"])
 
 PRACTICE_QUESTIONS = [
-    {"id":"moon","type":"number","title":"The long way to the Moon","prompt":"About how many miles away is the Moon on average?","unit":"miles","answer":238855,"hint":"A little under a quarter million miles.","explanation":"The average Earth–Moon distance is about 238,855 miles."},
-    {"id":"everest","type":"number","title":"Above the clouds","prompt":"How many feet tall is Mount Everest?","unit":"feet","answer":29032,"hint":"Just over 29,000 feet.","explanation":"Mount Everest is about 29,032 feet above sea level."},
-    {"id":"speedlight","type":"number","title":"Speed of light","prompt":"About how many miles per second does light travel in a vacuum?","unit":"miles per second","answer":186282,"hint":"Around 186 thousand.","explanation":"Light travels about 186,282 miles per second in a vacuum."},
-    {"id":"amazon","type":"percent","title":"A river basin","prompt":"About what percentage of the world's known species are found in the Amazon rainforest?","unit":"%","answer":10,"hint":"Roughly one in ten.","explanation":"The Amazon is home to an estimated 10% of known species."},
-    {"id":"practice-coordinates","type":"map","title":"Pinpoint the place","prompt":"Drop a pin near the Great Pyramid of Giza, Egypt.","unit":"km","answer":{"lat":29.9792,"lng":31.1342},"hint":"Look in northern Egypt, just west of the Nile Delta.","explanation":"The Great Pyramid is at about 29.979° N, 31.134° E."},
+    {"id":"moon","type":"number","title":"The long way to the Moon","prompt":"About how many miles away is the Moon on average?","unit":"miles","answer":238855,"explanation":"The average Earth–Moon distance is about 238,855 miles."},
+    {"id":"everest","type":"number","title":"Above the clouds","prompt":"How many feet tall is Mount Everest?","unit":"feet","answer":29032,"explanation":"Mount Everest is about 29,032 feet above sea level."},
+    {"id":"speedlight","type":"number","title":"Speed of light","prompt":"About how many miles per second does light travel in a vacuum?","unit":"miles per second","answer":186282,"explanation":"Light travels about 186,282 miles per second in a vacuum."},
+    {"id":"amazon","type":"percent","title":"A river basin","prompt":"About what percentage of the world's known species are found in the Amazon rainforest?","unit":"%","answer":10,"explanation":"The Amazon is home to an estimated 10% of known species."},
+    {"id":"practice-coordinates","type":"map","title":"Pinpoint the place","prompt":"Drop a pin near the Great Pyramid of Giza, Egypt.","unit":"km","answer":{"lat":29.9792,"lng":31.1342},"explanation":"The Great Pyramid is at about 29.979° N, 31.134° E."},
 ]
 
 @app.get("/")
