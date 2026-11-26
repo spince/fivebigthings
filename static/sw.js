@@ -5,7 +5,7 @@
 // - /api/daily and /api/junior: network-first, NEVER serve a stale day's round
 // - /api/practice and /api/junior-practice: network-first, cache fallback OK
 // Bump VERSION whenever the shell changes to retire old caches.
-const VERSION = 'fbt-v5';
+const VERSION = 'fbt-v6';
 const SHELL_CACHE = `${VERSION}-shell`;
 const RUNTIME_CACHE = `${VERSION}-runtime`;
 
