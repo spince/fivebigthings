@@ -35,6 +35,47 @@ function haversineKm(a, b) {
 }
 const pinPoints = (km, scale, max) => Math.max(0, Math.round(max * Math.exp(-km / scale)));
 
+/* ---------- borders: "find the country" scores the border, not the center ---------- */
+// A pin anywhere inside the country earns full points; outside, points fall
+// off with distance to the nearest border. GLOBE_BORDERS (globe-borders.js) is
+// Natural Earth 1:110m — simplified coastlines can sit tens of km off the real
+// ones, so a pin this close to the line still counts as inside.
+const BORDER_GRACE_KM = 15;
+function inRing(pt, ring) { // ray casting; ring = [[lng, lat], ...]
+  let inside = false;
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+    const [xi, yi] = ring[i], [xj, yj] = ring[j];
+    if ((yi > pt.lat) !== (yj > pt.lat) && pt.lng < (xj - xi) * (pt.lat - yi) / (yj - yi) + xi) inside = !inside;
+  }
+  return inside;
+}
+function inCountry(pt, polys) {
+  return polys.some(([outer, ...holes]) => inRing(pt, outer) && !holes.some((h) => inRing(pt, h)));
+}
+function kmToBorder(pt, polys) {
+  // Local equirectangular projection around the pin: accurate enough for scoring.
+  const kx = 111.32 * Math.cos(pt.lat * Math.PI / 180), ky = 110.57;
+  const proj = ([lng, lat]) => [((lng - pt.lng + 540) % 360 - 180) * kx, (lat - pt.lat) * ky];
+  let best = Infinity;
+  for (const poly of polys) for (const ring of poly) {
+    for (let i = 1; i < ring.length; i++) {
+      const [ax, ay] = proj(ring[i - 1]), [bx, by] = proj(ring[i]);
+      const dx = bx - ax, dy = by - ay, len2 = dx * dx + dy * dy;
+      const t = len2 ? Math.max(0, Math.min(1, -(ax * dx + ay * dy) / len2)) : 0;
+      best = Math.min(best, Math.hypot(ax + t * dx, ay + t * dy));
+    }
+  }
+  return best;
+}
+// km from the country (0 = inside it); falls back to the center if a deck entry has no borders.
+function kmFromCountry(pt, c) {
+  const polys = typeof GLOBE_BORDERS !== 'undefined' && GLOBE_BORDERS[c.id];
+  if (!polys) return haversineKm(pt, c.center);
+  if (inCountry(pt, polys)) return 0;
+  const km = kmToBorder(pt, polys);
+  return km <= BORDER_GRACE_KM ? 0 : km;
+}
+
 /* ---------- choice builders ---------- */
 function continentChoices(c) {
   return shuffle([c.continent, ...shuffle(CONTINENTS.filter((x) => x !== c.continent)).slice(0, 3)]);
@@ -207,10 +248,13 @@ function submitStep() {
     if (!state.click) { nudge('Tap the globe to place your pin first.'); return; }
     const target = s === 2 ? c.capital : s === 3 ? c.center : c.secondCity;
     const scale = s === 2 ? PIN_SCALES[3] : s === 3 ? countryScale(c) : PIN_SCALES[5];
-    const km = haversineKm(state.click, target);
+    const km = s === 3 ? kmFromCountry(state.click, c) : haversineKm(state.click, target);
     pts = pinPoints(km, scale, STEP_MAX[s]);
     const what = s === 2 ? c.capital.name : s === 3 ? c.country : c.secondCity.name;
-    feedback = `You were <strong>${Math.round(km).toLocaleString()} km</strong> from ${what}. <strong>${pts} of ${STEP_MAX[s]} points.</strong>`;
+    const score = `<strong>${pts} of ${STEP_MAX[s]} points.</strong>`;
+    feedback = s !== 3 ? `You were <strong>${Math.round(km).toLocaleString()} km</strong> from ${what}. ${score}`
+      : km === 0 ? `Your pin is inside <strong>${c.country}</strong>. ${score}`
+      : `You were <strong>${Math.round(km).toLocaleString()} km</strong> outside ${c.country}. ${score}`;
     if (s === 4) feedback += `<br>${c.secondCity.name} — ${c.secondCity.note}.`;
     revealPins(state.click, target);
   }
