@@ -176,6 +176,7 @@ function renderReview() {
 async function loadMode(mode) {
   state.mode = mode;
   state.entered = [];
+  review = null;
   session.reset([]);
   $('#result-panel').classList.add('hidden');
   document.querySelectorAll('.nav-link').forEach((b) => b.classList.toggle('active', b.dataset.mode === mode));
@@ -183,6 +184,16 @@ async function loadMode(mode) {
     const today = localDateText();
     const saved = JSON.parse(localStorage.getItem(localKey) || 'null');
     if (saved?.date === today) {
+      // Clear whatever the last screen left behind (a review, or the
+      // round just finished): its mounted view, feedback and button.
+      review = null;
+      if (view && view.destroy) view.destroy();
+      view = null;
+      $('#answer-feedback').classList.add('hidden');
+      $('#mode-label').textContent = 'DAILY ROUND';
+      $('#points-note').innerHTML = 'Round total: <b>1,000 points</b>';
+      $('#submit-button').textContent = 'Practice round ↗';
+      $('#submit-button').onclick = () => loadMode('practice');
       $('#question-area').innerHTML = `<div style="padding:30px 0;text-align:center"><div class="question-title">TODAY'S ROUND IS IN THE BOOKS</div><h2 class="question-prompt" style="margin:16px auto">You scored ${saved.score} out of 1,000.</h2><p style="font-size:12px;color:#85897e">Come back tomorrow for five fresh questions, or head to practice.</p><button class="button button-primary" style="margin:20px auto 0" id="resume-share">Share today's score ↗</button>${saved.answers && saved.questions ? '<button class="button button-outline" style="margin:10px auto 0" id="resume-review">Review my answers ↺</button>' : ''}</div>`;
       $('#resume-share').onclick = () => shareScore(saved.score, saved.breakdown, 'daily');
       if ($('#resume-review')) $('#resume-review').onclick = () => startReview(saved);

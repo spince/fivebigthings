@@ -146,14 +146,19 @@ function imperializeQuestion(q) {
   const meters = Number(q.answer) * METERS_PER[from];
   const to = from === 'centimeters' ? 'inches' : (meters / METERS_PER.feet >= 50000 ? 'miles' : 'feet');
   const answer = roundSig(meters / METERS_PER[to]);
-  const swapUnit = (text) => text ? text.replace(new RegExp(`\\b${from}\\b`, 'g'), to) : text;
+  // Swap the unit word in the title and prompt, keeping its case
+  // ("Kilometers wide is Saturn" -> "Miles wide is Saturn").
+  const swapUnit = (text) => text ? text.replace(new RegExp(`\\b${from}\\b`, 'gi'), (w) => w[0] === w[0].toUpperCase() ? to[0].toUpperCase() + to.slice(1) : to) : text;
+  // In the explanation, convert only the answer's own figure; any other
+  // metric numbers stay true as written. If the figure isn't there,
+  // keep the text and add the converted answer.
   let explanation = q.explanation;
+  const newFigure = `${answer.toLocaleString('en-US')} ${to}`;
   if (explanation) {
     const oldFigure = `${Number(q.answer).toLocaleString('en-US')} ${from}`;
-    const newFigure = `${answer.toLocaleString('en-US')} ${to}`;
-    explanation = swapUnit(explanation.split(oldFigure).join(newFigure));
+    explanation = explanation.includes(oldFigure) ? explanation.split(oldFigure).join(newFigure) : `${explanation} That's about ${newFigure}.`;
   }
-  return { ...q, answer, unit: to, prompt: swapUnit(q.prompt), explanation };
+  return { ...q, answer, unit: to, title: swapUnit(q.title), prompt: swapUnit(q.prompt), explanation };
 }
 
 if (typeof module !== 'undefined' && module.exports) module.exports = { multiplierFor, maxPointsFor, haversineKm, inPolygons, kmToPolygons, kmOutside, scoreNumberGuess, scorePinGuess, scoreQuestion, defaultChoices, createSession, imperializeQuestion };

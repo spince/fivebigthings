@@ -98,6 +98,12 @@ test('imperializeQuestion asks in feet/miles/inches (Spencer rule)', () => {
   assert.equal(everestKm.unit, 'feet'); // km-authored Everest still lands in feet
   const orbit = imperializeQuestion({ type: 'number', answer: 2400000, unit: 'kilometers', prompt: 'How many kilometers?', explanation: '' });
   assert.equal(orbit.unit, 'miles');
+  // the title converts too, keeping its capital letter
+  const saturn = imperializeQuestion({ type: 'number', answer: 120536, unit: 'kilometers', title: 'Kilometers wide is Saturn', prompt: 'About how many kilometers wide is Saturn?', explanation: 'About 120,536 kilometers, roughly 9 times Earth (12,742 kilometers).' });
+  assert.equal(saturn.title, 'Miles wide is Saturn');
+  assert.ok(saturn.explanation.includes('74,898 miles') && saturn.explanation.includes('12,742 kilometers')); // other figures stay true
+  const noFigure = imperializeQuestion({ type: 'number', answer: 8849, unit: 'meters', prompt: 'How many meters?', explanation: 'It is the tallest mountain above sea level.' });
+  assert.equal(noFigure.explanation, "It is the tallest mountain above sea level. That's about 29,032 feet.");
   assert.ok(Math.abs(orbit.answer - 1491290) / 1491290 < 0.001);
   const ruler = imperializeQuestion({ type: 'number', answer: 30, unit: 'centimeters', prompt: 'How many centimeters?', explanation: '' });
   assert.equal(ruler.unit, 'inches');
