@@ -147,8 +147,10 @@ function mountMap(root, {
   }
   function createGlobe() {
     try {
+      const w = canvasEl.clientWidth, h = canvasEl.clientHeight;
+      if (w === 0 || h === 0) { enableFlat(); return; }
       globe = window.Globe()(canvasEl)
-        .width(canvasEl.clientWidth).height(canvasEl.clientHeight)
+        .width(w).height(h)
         .globeImageUrl(texture)
         .backgroundColor('rgba(0,0,0,0)')
         .showAtmosphere(true).atmosphereColor('#a8c8d8').atmosphereAltitude(0.16)
@@ -187,14 +189,24 @@ function mountMap(root, {
   if (flatOnly) enableFlat();
   else {
     const webgl = (() => { try { const t = document.createElement('canvas'); return !!(window.WebGLRenderingContext && (t.getContext('webgl') || t.getContext('experimental-webgl'))); } catch (e) { return false; } })();
-    if (!webgl || typeof window.Globe !== 'function') enableFlat();
+    if (!webgl || typeof window.Globe !== 'function') { enableFlat(); }
     else {
+      // Skip the CORS image probe — it fails on Safari iOS for cross-origin
+      // CDN assets (NASA) and incorrectly forces the flat fallback even when
+      // WebGL is available. globe.gl handles texture load errors internally.
+      // Also defer past the current frame so the canvas has non-zero layout
+      // dimensions before we query clientWidth/clientHeight (MB-068).
       setInstruction('Loading Earth imagery…');
-      const probe = new Image();
-      probe.crossOrigin = 'anonymous';
-      probe.onload = () => createGlobe();
-      probe.onerror = () => enableFlat();
-      probe.src = texture;
+      requestAnimationFrame(() => {
+        if (!canvasEl.isConnected) return;
+        // If the canvas still has no width the element isn't painted yet —
+        // give the browser one more frame (covers iOS WKWebView layout lag).
+        if (canvasEl.clientWidth === 0) {
+          requestAnimationFrame(() => { if (canvasEl.isConnected) createGlobe(); else enableFlat(); });
+        } else {
+          createGlobe();
+        }
+      });
     }
   }
 
