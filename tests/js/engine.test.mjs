@@ -35,6 +35,12 @@ test('pin scoring: <=22 km is (near) full marks, distance decays', () => {
   assert.equal(scorePinGuess({ lat: 0, lng: 0 }, { lat: 0, lng: 179 }).base, 50); // 19,904 km — inside the antipode window
   assert.equal(scorePinGuess({ lat: 0, lng: 0 }, { lat: 0, lng: 180 }).base, 50); // the exact antipode
   assert.ok(isAntipode(20015) && !isAntipode(19000));
+  // On Q5's x3 slot the session rounds the base first, then scales:
+  // 1,000 km -> 90 x 3 = 270, the antipode -> 50 x 3 = 150.
+  const q5 = (pin) => { const s = createSession({ questions: [0, 1, 2, 3, 4].map(() => ({ type: 'map', answer: { lat: 0, lng: 0 } })) }); for (let i = 0; i < 4; i++) { s.submit({ lat: 0, lng: 0 }); s.advance(); } return s.submit(pin); };
+  assert.equal(q5({ lat: 8.9932, lng: 0 }).points, 270);
+  assert.equal(q5({ lat: 0, lng: 180 }).points, 150);
+  assert.equal(q5({ lat: 0, lng: 0 }).points, 300);
   assert.equal(scorePinGuess(paris, null), null);
   assert.ok(Math.abs(haversineKm(paris, { lat: 51.5074, lng: -0.1278 }) - 343) < 5);
 });
