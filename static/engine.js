@@ -25,10 +25,25 @@ function scoreNumberGuess(answer, guess) {
   const err = Math.abs(n - answer) / Math.max(answer, 1);
   return { base: Math.max(0, Math.round(100 * Math.exp(-2.1 * err))), distanceKm: null };
 }
+// Pin decay (recalibrated 2026-11-26, legacy #27): the old 900 km
+// constant scored a 1,000 km miss at 33 and anything past ~4,000 km
+// at zero — near misses felt like total misses. At 10,000 km the
+// curve reads: 22 km → 100 (the scoring law's full-marks zone),
+// 1,000 km → 90, 5,000 km → 61, 10,000 km → 37. The tail is cut
+// hard at 15,000 km (0 points) — with one cheeky exception, Spencer's
+// call: a pin within 250 km of the exact antipode scores 50,
+// because nailing the precise opposite of the answer is its own
+// kind of achievement. ("You were so bad it is impressive.")
+const PIN_CUTOFF_KM = 15000;
+const ANTIPODE_WINDOW_KM = 250;
+const MAX_PIN_KM = 6371 * Math.PI; // ~20,015 km, the farthest a pin can be
+function isAntipode(distanceKm) { return distanceKm >= MAX_PIN_KM - ANTIPODE_WINDOW_KM; }
 function scorePinGuess(answer, pin) {
   if (!pin) return null;
   const km = haversineKm(answer, pin);
-  return { base: Math.max(0, Math.round(100 * Math.exp(-km / 900))), distanceKm: km };
+  if (isAntipode(km)) return { base: 50, distanceKm: km };
+  if (km > PIN_CUTOFF_KM) return { base: 0, distanceKm: km };
+  return { base: Math.max(0, Math.round(100 * Math.exp(-km / 10000))), distanceKm: km };
 }
 // Geo: is a point inside a country outline, and how far outside is it?
 // polys = [polygon, ...], polygon = [outer ring, ...holes], ring = [[lng, lat], ...]
@@ -161,4 +176,4 @@ function imperializeQuestion(q) {
   return { ...q, answer, unit: to, title: swapUnit(q.title), prompt: swapUnit(q.prompt), explanation };
 }
 
-if (typeof module !== 'undefined' && module.exports) module.exports = { multiplierFor, maxPointsFor, haversineKm, inPolygons, kmToPolygons, kmOutside, scoreNumberGuess, scorePinGuess, scoreQuestion, defaultChoices, createSession, imperializeQuestion };
+if (typeof module !== 'undefined' && module.exports) module.exports = { multiplierFor, maxPointsFor, haversineKm, inPolygons, kmToPolygons, kmOutside, scoreNumberGuess, scorePinGuess, scoreQuestion, defaultChoices, createSession, imperializeQuestion, isAntipode };

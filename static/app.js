@@ -72,7 +72,7 @@ function submitAnswer() {
   state.entered[session.index] = entered;
   const feedback = $('#answer-feedback'); feedback.classList.remove('hidden');
   let reveal;
-  if (q.type === 'map') reveal = `You were ${Math.round(entry.distanceKm).toLocaleString()} km away.`;
+  if (q.type === 'map') reveal = mapReveal(entry.distanceKm);
   else {
     reveal = `The answer: <strong>${q.answer.toLocaleString()} ${q.unit}</strong>.`;
     if (entered) reveal += ` Your ${entered.amount.toLocaleString()} ${entered.unit} = ${Math.round(value).toLocaleString()} ${q.unit}.`;
@@ -128,6 +128,15 @@ async function shareScore(score, breakdown = session.questions.map((q, i) => ({ 
   } catch (e) { if (e.name !== 'AbortError') alert('Could not share just now.'); }
 }
 
+// Map feedback copy, shared by the live round and the review. The
+// antipode line is Spencer's joke for a maximally wrong pin.
+function mapReveal(distanceKm) {
+  const km = Math.round(distanceKm).toLocaleString();
+  return isAntipode(distanceKm)
+    ? `You were ${km} km away — practically the exact antipode. You were so bad it is impressive.`
+    : `You were ${km} km away.`;
+}
+
 // ---------- review: click through today's round, answers pre-filled ----------
 let review = null;
 function startReview(saved) {
@@ -147,7 +156,7 @@ function renderReview() {
   $('#question-area').innerHTML = title + `<div id="answer-area"></div><div class="hint-row"><span id="hint-text"></span>${i > 0 ? '<button class="hint-button" id="review-back" type="button">← Back</button>' : ''}</div>`;
   const feedback = $('#answer-feedback'); feedback.classList.remove('hidden');
   let reveal;
-  if (q.type === 'map') reveal = `You were ${Math.round(a.distanceKm).toLocaleString()} km away.`;
+  if (q.type === 'map') reveal = mapReveal(a.distanceKm);
   else {
     reveal = `The answer: <strong>${q.answer.toLocaleString()} ${q.unit}</strong>.`;
     if (a.entered) reveal += ` Your ${a.entered.amount.toLocaleString()} ${a.entered.unit} = ${Math.round(a.value).toLocaleString()} ${q.unit}.`;
