@@ -77,7 +77,9 @@ function wireGlobe(step, interactive) {
         .width(canvas.clientWidth).height(canvas.clientHeight)
         .globeImageUrl(EARTH).backgroundColor('rgba(0,0,0,0)')
         .showAtmosphere(true).atmosphereColor('#a8c8d8').atmosphereAltitude(0.16)
-        .rendererConfig({ antialias: true, alpha: true, powerPreference: 'low-power' })
+        // NOTE: no .rendererConfig() — it was removed from globe.gl in
+        // 2.46.x, and calling it throws, which used to drop every
+        // visitor into the flat-map fallback (issue: un-zoomed globe).
         .enablePointerInteraction(interactive)
         .pointOfView(view, 900)
         .onGlobeClick(({ lat, lng }) => { if (interactive) setGuess({ lat, lng }); });
@@ -103,7 +105,11 @@ function enableFlat(step, interactive) {
   const map = $('#flat-map'); if (!map) return;
   map.classList.remove('hidden');
   const note = $('#globe-instruction'); if (note) note.textContent = interactive ? 'Tap the world map to place your pin' : 'Study the view — the country is in this region';
-  if (!interactive) return;
+  if (!interactive) {
+    // No WebGL: still show where the country is, like the zoomed view does.
+    flatPin('.target-pin', state.country.center);
+    return;
+  }
   map.addEventListener('click', (e) => {
     if (state.locked) return;
     const r = flatRect(map);
