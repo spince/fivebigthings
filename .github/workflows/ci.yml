@@ -27,6 +27,9 @@ jobs:
       - name: Syntax-check JavaScript
         run: |
           for f in static/*.js; do node --check "$f"; done
+      - name: Run JavaScript unit tests
+        run: |
+          for f in tests/js/*.test.mjs; do node --test "$f"; done
 
   checks:
     name: prek
