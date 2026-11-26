@@ -169,15 +169,20 @@ async function shareScore() {
     return `${pct}${emoji}`;
   }).join(' ');
   const text = `${location.origin}/globe · Country trainer: ${c.country}\n${marks}\nFinal score: ${total}/1,000`;
-  const button = $('#share-button') || $('#submit-button');
+  // Resolve the button lazily (Copilot review, PR #47): from the last
+  // step, shareScore() runs BEFORE showResults() swaps in the results
+  // panel — a button captured up front is the hidden play-panel one by
+  // the time the async copy lands, and the confirmation would update
+  // a button nobody can see.
+  const liveButton = () => $('#share-button') || $('#submit-button');
   // Same belt-and-braces as the main game: always copy the text, so a
   // share target that keeps only the link still leaves the score pastable.
   const copied = navigator.clipboard?.writeText(text).then(() => true).catch(() => false);
   try {
     if (navigator.share) {
       await navigator.share({ title: 'Five Big Things Globe score', text });
-      if (await copied && button) button.textContent = 'Score text copied too ✓';
-    } else if (await copied) { if (button) button.textContent = 'Copied to clipboard ✓'; }
+      if (await copied) { const b = liveButton(); if (b) b.textContent = 'Score text copied too ✓'; }
+    } else if (await copied) { const b = liveButton(); if (b) b.textContent = 'Copied to clipboard ✓'; }
     else { throw new Error('Clipboard unavailable'); }
   } catch (e) { if (e.name !== 'AbortError') alert('Could not share just now.'); }
 }
