@@ -85,7 +85,8 @@ function createGlobe(canvas){
       .globeImageUrl(earthTexture)
       .backgroundColor('rgba(0,0,0,0)')
       .showAtmosphere(true).atmosphereColor('#a8c8d8').atmosphereAltitude(0.16)
-      .rendererConfig({antialias:true,alpha:true,powerPreference:'low-power'})
+      // no .rendererConfig() — removed in globe.gl 2.46.x; calling it
+      // throws and used to force the flat-map fallback on every map question
       .enablePointerInteraction(true)
       .onGlobeClick(({lat,lng})=>setGuess({lat,lng}));
     globe.pointAltitude('altitude').pointRadius('radius').pointColor('color').pointsMerge(false).pointsData([]);
