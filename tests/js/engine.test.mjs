@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
 const require = createRequire(import.meta.url);
-const { multiplierFor, maxPointsFor, haversineKm, scoreNumberGuess, scorePinGuess, defaultChoices, createSession, imperializeQuestion } = require('../../static/engine.js');
+const { multiplierFor, maxPointsFor, haversineKm, scoreNumberGuess, scorePinGuess, defaultChoices, createSession, imperializeQuestion, isAntipode } = require('../../static/engine.js');
 
 test('the ladder is x1 x1 x2 x3 x3 = 100/100/200/300/300', () => {
   assert.deepEqual([0, 1, 2, 3, 4].map(multiplierFor), [1, 1, 2, 3, 3]);
@@ -28,6 +28,13 @@ test('pin scoring: <=22 km is (near) full marks, distance decays', () => {
   assert.equal(scorePinGuess(paris, { lat: 48.8566 + 8.9932, lng: 2.3522 }).base, 90);
   assert.equal(scorePinGuess(paris, { lat: 48.8566 + 44.9661, lng: 2.3522 }).base, 61);
   assert.equal(scorePinGuess({ lat: 0, lng: 0 }, { lat: 89.9321, lng: 0 }).base, 37);
+  // The tail: hard cutoff past 15,000 km — except the antipode.
+  assert.equal(scorePinGuess({ lat: 0, lng: 0 }, { lat: 0, lng: 134.7 }).base, 22); // ~14,979 km, still on the curve
+  assert.equal(scorePinGuess({ lat: 0, lng: 0 }, { lat: 0, lng: 143.9 }).base, 0); // ~16,001 km, cut off
+  assert.equal(scorePinGuess({ lat: 0, lng: 0 }, { lat: 0, lng: 177 }).base, 0); // 19,681 km — dead zone, not antipode enough
+  assert.equal(scorePinGuess({ lat: 0, lng: 0 }, { lat: 0, lng: 179 }).base, 50); // 19,904 km — inside the antipode window
+  assert.equal(scorePinGuess({ lat: 0, lng: 0 }, { lat: 0, lng: 180 }).base, 50); // the exact antipode
+  assert.ok(isAntipode(20015) && !isAntipode(19000));
   assert.equal(scorePinGuess(paris, null), null);
   assert.ok(Math.abs(haversineKm(paris, { lat: 51.5074, lng: -0.1278 }) - 343) < 5);
 });
