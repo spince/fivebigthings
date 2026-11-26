@@ -1,5 +1,5 @@
 const $ = (s) => document.querySelector(s);
-const state = {mode:'daily', questions:[], index:0, answers:[], click:null, choiceValue:null};
+const state = {mode:'daily', questions:[], index:0, answers:[], click:null, choiceValue:null, unitChoice:null};
 const localKey = 'fivebigthings-daily-v3';
 const earthTexture = 'https://assets.science.nasa.gov/content/dam/science/esd/eo/images/bmng/bmng-base/january/world.200401.3x5400x2700.jpg';
 let globe = null;
@@ -48,13 +48,13 @@ function choiceMarkup(q) {
 }
 function renderQuestion() {
   const q=questionList()[state.index]; if(!q)return;
-  state.click=null; state.choiceValue=null; state.locked=false; globe=null;
+  state.click=null; state.choiceValue=null; state.unitChoice=null; state.locked=false; globe=null;
   if(globeResizeObserver){globeResizeObserver.disconnect();globeResizeObserver=null;}
   $('#mode-label').textContent=state.mode==='daily'?'DAILY ROUND':'PRACTICE';
   $('#progress-label').textContent=`QUESTION ${String(state.index+1).padStart(2,'0')} OF ${String(state.questions.length).padStart(2,'0')}`;
   $('#progress-fill').style.width=`${((state.index+1)/state.questions.length)*100}%`;
   const title=`<div class="question-heading"><span class="question-title">${q.title}</span><span class="q-number">${String(state.index+1).padStart(2,'0')} / 05</span></div><h2 class="question-prompt">${q.prompt}</h2>`;
-  const answer=q.type==='map'?mapMarkup():state.index<2?choiceMarkup(q):`<label class="answer-input-wrap"><input id="answer-input" type="number" inputmode="decimal" autocomplete="off" placeholder="Your best guess" step="any" aria-label="Your best guess"><span class="input-unit">${q.unit}</span></label>`;
+  const answer=q.type==='map'?mapMarkup():state.index<2?choiceMarkup(q):inputMarkup(q);
   $('#question-area').innerHTML=title+answer+`<div class="hint-row"><span id="hint-text"></span></div>`;
   $('#answer-feedback').classList.add('hidden');
   $('#submit-button').textContent=state.index===state.questions.length-1?'See my score ↗':'Lock in guess ↗';
@@ -66,7 +66,18 @@ function renderQuestion() {
       document.querySelectorAll('.choice-card').forEach(card=>card.classList.toggle('selected',card===button));
       $('#hint-text').textContent=`Selected: ${button.dataset.label}`;
     });
-  }else $('#answer-input').focus();
+  }else{
+    const input=$('#answer-input');
+    state.unitChoice=lengthUnit(q.unit);
+    input.addEventListener('input',()=>{const v=formatGuess(input.value);if(v!==input.value)input.value=v;});
+    document.querySelectorAll('.unit-chip').forEach(chip=>chip.addEventListener('click',()=>{state.unitChoice=chip.dataset.unit;document.querySelectorAll('.unit-chip').forEach(c=>c.classList.toggle('active',c===chip));$('#input-unit').textContent=chip.dataset.unit;input.focus();}));
+    input.focus();
+  }
+}
+function inputMarkup(q){
+  const active=lengthUnit(q.unit);
+  const picker=active?`<div class="unit-picker" role="group" aria-label="Answer in your unit">${Object.keys(LENGTH_UNITS).map(u=>`<button type="button" class="unit-chip${u===active?' active':''}" data-unit="${u}">${u}</button>`).join('')}</div>`:'';
+  return `<label class="answer-input-wrap"><input id="answer-input" type="text" inputmode="decimal" autocomplete="off" placeholder="Your best guess" aria-label="Your best guess"><span class="input-unit" id="input-unit">${q.unit}</span></label>${picker}`;
 }
 function mapMarkup(){
   return `<div class="globe-shell"><div id="globe-canvas" class="globe-canvas" aria-label="Interactive Earth globe"></div><div id="flat-map" class="flat-map hidden" role="img" aria-label="World map. Click to place your pin"><img src="${earthTexture}" alt="Satellite image of Earth"><span class="flat-pin guess-pin hidden"></span><span class="flat-pin target-pin hidden"></span></div><div id="coordinate-entry" class="coordinate-entry hidden"><span class="coordinate-title">Map unavailable on this device</span><span class="coordinate-copy">Enter the coordinates of your best guess.</span><div class="coordinate-fields"><label>Latitude<input id="guess-lat" type="number" min="-90" max="90" step="any" placeholder="0°"></label><label>Longitude<input id="guess-lng" type="number" min="-180" max="180" step="any" placeholder="0°"></label></div><button id="coordinate-submit" class="button button-primary">Place pin ↗</button></div><div class="globe-prompt"><span class="globe-live-dot"></span><span id="globe-instruction">Drag to turn the globe · tap to place your pin</span></div><div class="globe-credit">Earth imagery: <a href="https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/base-map/" target="_blank" rel="noreferrer">NASA Blue Marble</a></div></div>`;
@@ -123,16 +134,18 @@ function scoreAnswer(q,value){
   return {points:Math.max(0,Math.round(100*Math.exp(-2.1*err))),distance:null};
 }
 function submitAnswer(){
-  const q=questionList()[state.index], isChoice=state.index<2;let value=q.type==='map'?state.click:isChoice?state.choiceValue:$('#answer-input')?.value;
+  const q=questionList()[state.index], isChoice=state.index<2;let value=q.type==='map'?state.click:isChoice?state.choiceValue:parseGuess($('#answer-input')?.value);
   if(value===null||value===undefined||value===''||(!q.type.includes('map')&&(!Number.isFinite(Number(value))||Number(value)<0))){$('#hint-text').textContent=q.type==='map'?'Tap the map to place your pin first.':isChoice?'Choose one of the four estimates.':'Enter a number to lock in your guess.';return;}
   if(q.type!=='map')value=Number(value);
+  let entered=null;
+  if(q.type!=='map'&&!isChoice&&state.unitChoice&&lengthUnit(q.unit)&&state.unitChoice!==lengthUnit(q.unit)){entered={amount:value,unit:state.unitChoice};value=convertLength(value,state.unitChoice,q.unit);}
   const result=scoreAnswer(q,value);if(!result)return;
   const multiplier=scoreMultiplier(state.index), available=maxPoints(state.index), points=Math.round(result.points*multiplier);
   state.locked=true;
   state.answers.push({value,points,maxPoints:available});
   const feedback=$('#answer-feedback');feedback.classList.remove('hidden');let reveal;
   if(q.type==='map')reveal=`You were ${Math.round(result.distance).toLocaleString()} km away.`;
-  else reveal=`The answer: <strong>${q.answer.toLocaleString()} ${q.unit}</strong>.`;
+  else{reveal=`The answer: <strong>${q.answer.toLocaleString()} ${q.unit}</strong>.`;if(entered)reveal+=` Your ${entered.amount.toLocaleString()} ${entered.unit} = ${Math.round(value).toLocaleString()} ${q.unit}.`;}
   feedback.innerHTML=`${reveal} You earned <strong>${points} of ${available} points.</strong><br>${q.explanation}`;
   if(q.type==='map')revealGlobeAnswer(value,q.answer);
   $('#submit-button').textContent=state.index===state.questions.length-1?'Finish round ↗':'Next question ↗';
