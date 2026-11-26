@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
 const require = createRequire(import.meta.url);
-const { multiplierFor, maxPointsFor, haversineKm, scoreNumberGuess, scorePinGuess, defaultChoices, createSession } = require('../../static/engine.js');
+const { multiplierFor, maxPointsFor, haversineKm, scoreNumberGuess, scorePinGuess, defaultChoices, createSession, imperializeQuestion } = require('../../static/engine.js');
 
 test('the ladder is x1 x1 x2 x3 x3 = 100/100/200/300/300', () => {
   assert.deepEqual([0, 1, 2, 3, 4].map(multiplierFor), [1, 1, 2, 3, 3]);
@@ -86,4 +86,32 @@ test('country borders: inside scores 0 km, holes and distance outside', () => {
   assert.ok(km > 105 && km < 115, `got ${km}`);
   assert.equal(kmOutside({ lat: 2, lng: 10.1 }, polys, 15), 0); // within the grace band
   assert.ok(kmOutside({ lat: 2, lng: 11 }, polys, 15) > 100);
+});
+
+test('imperializeQuestion asks in feet/miles/inches (Spencer rule)', () => {
+  const everestM = imperializeQuestion({ type: 'number', answer: 8849, unit: 'meters', prompt: 'About how many meters tall is Everest?', explanation: 'It stands 8,849 meters.' });
+  assert.equal(everestM.unit, 'feet');
+  assert.equal(everestM.answer, 29032); // the number everyone knows
+  assert.ok(everestM.prompt.includes('feet') && !everestM.prompt.includes('meters'));
+  assert.ok(everestM.explanation.includes('29,032 feet'));
+  const everestKm = imperializeQuestion({ type: 'number', answer: 8.849, unit: 'kilometers', prompt: 'How many kilometers?', explanation: '' });
+  assert.equal(everestKm.unit, 'feet'); // km-authored Everest still lands in feet
+  const orbit = imperializeQuestion({ type: 'number', answer: 2400000, unit: 'kilometers', prompt: 'How many kilometers?', explanation: '' });
+  assert.equal(orbit.unit, 'miles');
+  // the title converts too, keeping its capital letter
+  const saturn = imperializeQuestion({ type: 'number', answer: 120536, unit: 'kilometers', title: 'Kilometers wide is Saturn', prompt: 'About how many kilometers wide is Saturn?', explanation: 'About 120,536 kilometers, roughly 9 times Earth (12,742 kilometers).' });
+  assert.equal(saturn.title, 'Miles wide is Saturn');
+  assert.ok(saturn.explanation.includes('74,898 miles') && saturn.explanation.includes('12,742 kilometers')); // other figures stay true
+  const noFigure = imperializeQuestion({ type: 'number', answer: 8849, unit: 'meters', prompt: 'How many meters?', explanation: 'It is the tallest mountain above sea level.' });
+  assert.equal(noFigure.explanation, "It is the tallest mountain above sea level. That's about 29,032 feet.");
+  assert.ok(Math.abs(orbit.answer - 1491290) / 1491290 < 0.001);
+  const ruler = imperializeQuestion({ type: 'number', answer: 30, unit: 'centimeters', prompt: 'How many centimeters?', explanation: '' });
+  assert.equal(ruler.unit, 'inches');
+  // already imperial, non-length, and map questions pass through untouched
+  const whale = { type: 'number', answer: 80, unit: 'feet', prompt: 'How many feet?', explanation: '' };
+  assert.equal(imperializeQuestion(whale), whale);
+  const keys = { type: 'number', answer: 88, unit: 'keys', prompt: 'How many keys?', explanation: '' };
+  assert.equal(imperializeQuestion(keys), keys);
+  const pin = { type: 'map', answer: { lat: 0, lng: 0 }, unit: 'km' };
+  assert.equal(imperializeQuestion(pin), pin);
 });
