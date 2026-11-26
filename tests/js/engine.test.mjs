@@ -22,7 +22,12 @@ test('pin scoring: <=22 km is (near) full marks, distance decays', () => {
   assert.equal(scorePinGuess(paris, paris).base, 100);
   assert.equal(scorePinGuess(paris, paris).distanceKm, 0);
   const near = scorePinGuess(paris, { lat: 48.9, lng: 2.4 });
-  assert.ok(near.distanceKm < 22 && near.base >= 97);
+  assert.ok(near.distanceKm < 22 && near.base === 100);
+  // The recalibrated curve, pinned (1° of latitude = 111.195 km):
+  // 1,000 km → 90, 5,000 km → 61, 10,000 km → 37.
+  assert.equal(scorePinGuess(paris, { lat: 48.8566 + 8.9932, lng: 2.3522 }).base, 90);
+  assert.equal(scorePinGuess(paris, { lat: 48.8566 + 44.9661, lng: 2.3522 }).base, 61);
+  assert.equal(scorePinGuess({ lat: 0, lng: 0 }, { lat: 89.9321, lng: 0 }).base, 37);
   assert.equal(scorePinGuess(paris, null), null);
   assert.ok(Math.abs(haversineKm(paris, { lat: 51.5074, lng: -0.1278 }) - 343) < 5);
 });

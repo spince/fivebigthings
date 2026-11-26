@@ -25,10 +25,15 @@ function scoreNumberGuess(answer, guess) {
   const err = Math.abs(n - answer) / Math.max(answer, 1);
   return { base: Math.max(0, Math.round(100 * Math.exp(-2.1 * err))), distanceKm: null };
 }
+// Pin decay (recalibrated 2026-11-26, legacy #27): the old 900 km
+// constant scored a 1,000 km miss at 33 and anything past ~4,000 km
+// at zero — near misses felt like total misses. At 10,000 km the
+// curve reads: 22 km → 100 (the scoring law's full-marks zone),
+// 1,000 km → 90, 5,000 km → 61, 10,000 km → 37, antipode → 14.
 function scorePinGuess(answer, pin) {
   if (!pin) return null;
   const km = haversineKm(answer, pin);
-  return { base: Math.max(0, Math.round(100 * Math.exp(-km / 900))), distanceKm: km };
+  return { base: Math.max(0, Math.round(100 * Math.exp(-km / 10000))), distanceKm: km };
 }
 // Geo: is a point inside a country outline, and how far outside is it?
 // polys = [polygon, ...], polygon = [outer ring, ...holes], ring = [[lng, lat], ...]
