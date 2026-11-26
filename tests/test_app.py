@@ -4,7 +4,9 @@ These guard the promises the app makes: every page route answers, the daily
 round can never be served from a cache, the service worker is root-scoped,
 and the question calendar is complete and gap-free.
 """
+import hashlib
 import json
+import re
 import sys
 from datetime import date, timedelta
 from pathlib import Path
@@ -40,7 +42,7 @@ def test_manifest_is_valid_and_icons_exist():
     manifest = json.loads(resp.data)
     assert manifest["name"]
     for icon in manifest["icons"]:
-        assert (ROOT / icon["src"].lstrip("/")).exists(), icon["src"]
+        assert (ROOT / icon["src"].split("?")[0].lstrip("/")).exists(), icon["src"]
 
 
 def test_daily_api_shape_and_no_store(monkeypatch):
@@ -113,6 +115,38 @@ def test_static_assets_are_immutable():
     resp = client.get("/static/style.css")
     assert resp.status_code == 200
     assert "immutable" in resp.headers.get("Cache-Control", "")
+
+
+STATIC_SOURCES = ["index.html", "junior.html", "globe.html", "offline.html", "sw.js", "manifest.webmanifest"]
+SERVED = {"/": "index.html", "/junior": "junior.html", "/globe": "globe.html", "/offline.html": "offline.html",
+          "/sw.js": "sw.js", "/manifest.webmanifest": "manifest.webmanifest"}
+
+
+def test_sources_never_hand_version_static_urls():
+    # app.py stamps ?v=<content hash> at startup; a hand-written ?v= would go stale.
+    for name in STATIC_SOURCES:
+        text = (ROOT / "static" / name).read_text()
+        assert not re.search(r"/static/[\w./-]+\?v=", text), f"remove the hand-written ?v= in static/{name}"
+
+
+def test_served_static_urls_carry_their_content_hash():
+    for path, name in SERVED.items():
+        body = client.get(path).get_data(as_text=True)
+        refs = re.findall(r"/(static/[\w./-]+)\?v=(\w+)", body)
+        source_refs = re.findall(r"/(static/[\w./-]+)", (ROOT / "static" / name).read_text())
+        assert len(refs) == len([r for r in source_refs if (ROOT / r).is_file()]), path
+        for asset, version in refs:
+            assert version == hashlib.sha256((ROOT / asset).read_bytes()).hexdigest()[:10], (path, asset)
+
+
+def test_service_worker_version_tracks_the_shell(monkeypatch):
+    body = client.get("/sw.js").get_data(as_text=True)
+    version = re.search(r"const VERSION = 'fbt-(\w+)'", body).group(1)
+    assert version != "__ASSET_VERSION__" and "__ASSET_VERSION__" not in body
+    # Changing any shell file must change the service worker's VERSION.
+    monkeypatch.setitem(app_module.ASSET_HASH, "static/engine.js", "changed000")
+    changed = app_module.render_service_worker().decode("utf-8")
+    assert re.search(r"const VERSION = 'fbt-(\w+)'", changed).group(1) != version
 
 
 def test_question_calendar_is_complete():
