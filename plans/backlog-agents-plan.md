@@ -7,9 +7,9 @@ repo's October GitHub issues, kept only because the work was first scoped
 there; every item of work in this plan gets an MB number in Notion, and
 new work is filed there, never as a GitHub issue.
 House rules that apply to every workstream below: PRs assigned to spince,
-tests + prek green before merge, static changes bump the `?v=` refs and the
-service-worker VERSION, production deploys stay manual behind the approval
-gate.
+tests + prek green before merge, never hand-write `?v=` or the service-worker
+VERSION (app.py stamps both from file hashes), production deploys stay manual
+behind the approval gate.
 
 ## 1. Backlog attack order
 
@@ -79,7 +79,7 @@ that curls the live site and fails the run loudly if any check fails:
 - `GET /api/practice`, `/api/junior`, `/api/junior-practice` → 200, 5 each.
 - `GET /sw.js` → 200 with `Service-Worker-Allowed: /`.
 - `GET /api/daily` response header `Cache-Control: no-store`.
-- Fetch `/`, extract the `app.js?v=N` reference, fetch it → 200 (the new
+- Fetch `/`, extract the `app.js?v=<hash>` reference, fetch it → 200 (the new
   build actually reached players; catches cache/version skew like #28).
 
 ### 2b. Daily scheduled smoke (catches slow-motion failures)

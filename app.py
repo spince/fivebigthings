@@ -1,5 +1,7 @@
+import hashlib
 import os
 import json
+import re
 import mimetypes
 from datetime import date, timedelta
 from pathlib import Path
@@ -14,6 +16,34 @@ ASSETS = {
 }
 app = Flask(__name__, static_folder=None)
 
+# Cache-busting, automatically. /static/* is served immutable for a year, so a
+# changed file needs a new URL. Pages and sw.js reference plain /static/...
+# paths; at startup every such reference gets ?v=<hash of that file's bytes>,
+# and the service worker's VERSION becomes a hash of its own rewritten shell.
+# Edit a file and its URL changes on the next deploy — never write ?v= by hand.
+ASSET_HASH = {key: hashlib.sha256(body).hexdigest()[:10] for key, body in ASSETS.items()}
+STATIC_REF = re.compile(r"/(static/[\w./-]+)(?![\w./-]|\?)")
+
+
+def versioned(text):
+    return STATIC_REF.sub(
+        lambda m: f"{m.group(0)}?v={ASSET_HASH[m.group(1)]}" if m.group(1) in ASSET_HASH else m.group(0),
+        text,
+    )
+
+
+def render_service_worker():
+    body = versioned(ASSETS["static/sw.js"].decode("utf-8"))
+    build = hashlib.sha256(body.encode("utf-8")).hexdigest()[:10]
+    return body.replace("__ASSET_VERSION__", build).encode("utf-8")
+
+
+PAGES = {
+    key: versioned(ASSETS[key].decode("utf-8")).encode("utf-8")
+    for key in ("static/index.html", "static/junior.html", "static/globe.html", "static/offline.html", "static/manifest.webmanifest")
+}
+PAGES["static/sw.js"] = render_service_worker()
+
 QUESTION_CALENDAR = json.loads(ASSETS["static/question-calendar.json"])
 JUNIOR_QUESTIONS = json.loads(ASSETS["static/junior-questions.json"])
 
@@ -27,7 +57,7 @@ PRACTICE_QUESTIONS = [
 
 @app.get("/")
 def index():
-    return Response(ASSETS["static/index.html"], mimetype="text/html")
+    return Response(PAGES["static/index.html"], mimetype="text/html")
 
 @app.get("/static/<path:asset_path>")
 def static_asset(asset_path):
@@ -88,31 +118,31 @@ def practice():
 
 @app.get("/junior")
 def junior():
-    return Response(ASSETS["static/junior.html"], mimetype="text/html")
+    return Response(PAGES["static/junior.html"], mimetype="text/html")
 
 
 @app.get("/globe")
 def globe():
-    return Response(ASSETS["static/globe.html"], mimetype="text/html")
+    return Response(PAGES["static/globe.html"], mimetype="text/html")
 
 
 @app.get("/sw.js")
 def service_worker():
     # Served from the root so its scope is the whole origin; static files are
     # loaded into ASSETS at startup, so the bytes live under static/sw.js.
-    response = Response(ASSETS["static/sw.js"], mimetype="application/javascript")
+    response = Response(PAGES["static/sw.js"], mimetype="application/javascript")
     response.headers["Service-Worker-Allowed"] = "/"
     return response
 
 
 @app.get("/manifest.webmanifest")
 def manifest():
-    return Response(ASSETS["static/manifest.webmanifest"], mimetype="application/manifest+json")
+    return Response(PAGES["static/manifest.webmanifest"], mimetype="application/manifest+json")
 
 
 @app.get("/offline.html")
 def offline():
-    return Response(ASSETS["static/offline.html"], mimetype="text/html")
+    return Response(PAGES["static/offline.html"], mimetype="text/html")
 
 
 @app.get("/api/junior")
