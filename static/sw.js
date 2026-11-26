@@ -5,7 +5,7 @@
 // - /api/daily and /api/junior: network-first, NEVER serve a stale day's round
 // - /api/practice and /api/junior-practice: network-first, cache fallback OK
 // Bump VERSION whenever the shell changes to retire old caches.
-const VERSION = 'fbt-v4';
+const VERSION = 'fbt-v5';
 const SHELL_CACHE = `${VERSION}-shell`;
 const RUNTIME_CACHE = `${VERSION}-runtime`;
 
@@ -20,7 +20,8 @@ const SHELL_URLS = [
   '/static/app.js?v=9',
   '/static/junior.js?v=2',
   '/static/junior-data.js?v=1',
-  '/static/globe.js?v=2',
+  '/static/globe.js?v=3',
+  '/static/globe-borders.js?v=1',
   '/static/globe-countries.js?v=1',
   '/static/icons/icon.svg',
   '/static/icons/apple-touch-icon.svg'
