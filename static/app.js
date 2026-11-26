@@ -4,7 +4,7 @@
 // This file owns only what is specific to this mode: where questions
 // come from, the daily lock, feedback copy, results, and sharing.
 const $ = (s) => document.querySelector(s);
-const state = { mode: 'daily', date: null };
+const state = { mode: 'daily', date: null, entered: [] };
 const session = createSession();
 const localKey = 'fivebigthings-daily-v3';
 const earthTexture = 'https://assets.science.nasa.gov/content/dam/science/esd/eo/images/bmng/bmng-base/january/world.200401.3x5400x2700.jpg';
@@ -37,8 +37,15 @@ function renderQuestion() {
   $('#points-note').innerHTML = `Question ${session.index + 1}: up to <b>${maxPointsFor(session.index)} points</b>`;
   const area = $('#answer-area');
   if (q.type === 'map') {
+    // The daily pin question is flat — simple and quick (Spencer,
+    // 2026-11-26). The round, movable globe lives on /globe. The flat
+    // map rotates daily through the world-map variants.
+    const variant = mapVariantForDate(state.date || localDateText());
     view = mountMap(area, {
       texture: earthTexture,
+      flatOnly: true,
+      flatVariant: variant,
+      variantLabel: variant.label,
       onPin: (coords) => {
         $('#hint-text').textContent = `Pin placed · ${coords.lat.toFixed(1)}°, ${coords.lng.toFixed(1)}°`;
         view.setInstruction('Pin placed · tap again to adjust');
@@ -62,6 +69,7 @@ function submitAnswer() {
     return;
   }
   const entry = session.submit(value); if (!entry) return;
+  state.entered[session.index] = entered;
   const feedback = $('#answer-feedback'); feedback.classList.remove('hidden');
   let reveal;
   if (q.type === 'map') reveal = `You were ${Math.round(entry.distanceKm).toLocaleString()} km away.`;
@@ -90,7 +98,10 @@ function showResults() {
   $('#share-button').onclick = () => shareScore(total, breakdown, state.mode);
   if ($('#again-button')) $('#again-button').onclick = () => loadMode('practice');
   if (state.mode === 'daily') {
-    localStorage.setItem(localKey, JSON.stringify({ date: state.date || localDateText(), score: total, breakdown }));
+    // Save the answers and the questions as played (imperialized), so
+    // the round can be reviewed later from the lock screen.
+    const answers = session.answers.map((a, i) => ({ value: a.value, points: a.points, maxPoints: a.maxPoints, distanceKm: a.distanceKm, entered: state.entered[i] || null }));
+    localStorage.setItem(localKey, JSON.stringify({ date: state.date || localDateText(), score: total, breakdown, answers, questions: session.questions }));
   }
 }
 
@@ -117,8 +128,54 @@ async function shareScore(score, breakdown = session.questions.map((q, i) => ({ 
   } catch (e) { if (e.name !== 'AbortError') alert('Could not share just now.'); }
 }
 
+// ---------- review: click through today's round, answers pre-filled ----------
+let review = null;
+function startReview(saved) {
+  review = { data: saved, index: 0 };
+  $('#result-panel').classList.add('hidden');
+  renderReview();
+}
+function renderReview() {
+  const { data } = review, i = review.index;
+  const q = data.questions[i], a = data.answers[i];
+  if (view && view.destroy) view.destroy();
+  view = null;
+  $('#mode-label').textContent = 'REVIEW';
+  $('#progress-label').textContent = `QUESTION ${String(i + 1).padStart(2, '0')} OF 05 · YOUR ANSWERS`;
+  $('#progress-fill').style.width = `${((i + 1) / data.questions.length) * 100}%`;
+  const title = `<div class="question-heading"><span class="question-title">${q.title}</span><span class="q-number">${String(i + 1).padStart(2, '0')} / 05</span></div><h2 class="question-prompt">${q.prompt}</h2>`;
+  $('#question-area').innerHTML = title + `<div id="answer-area"></div><div class="hint-row"><span id="hint-text"></span>${i > 0 ? '<button class="hint-button" id="review-back" type="button">← Back</button>' : ''}</div>`;
+  const feedback = $('#answer-feedback'); feedback.classList.remove('hidden');
+  let reveal;
+  if (q.type === 'map') reveal = `You were ${Math.round(a.distanceKm).toLocaleString()} km away.`;
+  else {
+    reveal = `The answer: <strong>${q.answer.toLocaleString()} ${q.unit}</strong>.`;
+    if (a.entered) reveal += ` Your ${a.entered.amount.toLocaleString()} ${a.entered.unit} = ${Math.round(a.value).toLocaleString()} ${q.unit}.`;
+  }
+  feedback.innerHTML = `${reveal} You earned <strong>${a.points} of ${a.maxPoints} points.</strong><br>${q.explanation}`;
+  $('#points-note').innerHTML = `Question ${i + 1}: you earned <b>${a.points} of ${a.maxPoints} points</b>`;
+  const area = $('#answer-area');
+  if (q.type === 'map') {
+    const variant = mapVariantForDate(data.date);
+    view = mountMap(area, { texture: earthTexture, flatOnly: true, flatVariant: variant, variantLabel: variant.label, initialPin: a.value, readOnly: true });
+    view.reveal(a.value, q.answer);
+  } else if (i < 2) {
+    view = mountChoices(area, defaultChoices(q), { initialValue: a.value, readOnly: true });
+  } else {
+    view = mountInput(area, q, { initialValue: a.entered ? a.entered.amount : a.value, initialUnit: a.entered ? a.entered.unit : null, readOnly: true, autofocus: false });
+  }
+  const btn = $('#submit-button');
+  btn.textContent = i === data.questions.length - 1 ? 'Back to my score ✓' : 'Next question →';
+  btn.onclick = () => {
+    if (review.index < review.data.questions.length - 1) { review.index++; renderReview(); }
+    else { review = null; loadMode('daily'); }
+  };
+  if ($('#review-back')) $('#review-back').onclick = () => { review.index--; renderReview(); };
+}
+
 async function loadMode(mode) {
   state.mode = mode;
+  state.entered = [];
   session.reset([]);
   $('#result-panel').classList.add('hidden');
   document.querySelectorAll('.nav-link').forEach((b) => b.classList.toggle('active', b.dataset.mode === mode));
@@ -126,19 +183,20 @@ async function loadMode(mode) {
     const today = localDateText();
     const saved = JSON.parse(localStorage.getItem(localKey) || 'null');
     if (saved?.date === today) {
-      $('#question-area').innerHTML = `<div style="padding:30px 0;text-align:center"><div class="question-title">TODAY'S ROUND IS IN THE BOOKS</div><h2 class="question-prompt" style="margin:16px auto">You scored ${saved.score} out of 1,000.</h2><p style="font-size:12px;color:#85897e">Come back tomorrow for five fresh questions, or head to practice.</p><button class="button button-primary" style="margin:20px auto 0" id="resume-share">Share today's score ↗</button></div>`;
+      $('#question-area').innerHTML = `<div style="padding:30px 0;text-align:center"><div class="question-title">TODAY'S ROUND IS IN THE BOOKS</div><h2 class="question-prompt" style="margin:16px auto">You scored ${saved.score} out of 1,000.</h2><p style="font-size:12px;color:#85897e">Come back tomorrow for five fresh questions, or head to practice.</p><button class="button button-primary" style="margin:20px auto 0" id="resume-share">Share today's score ↗</button>${saved.answers && saved.questions ? '<button class="button button-outline" style="margin:10px auto 0" id="resume-review">Review my answers ↺</button>' : ''}</div>`;
       $('#resume-share').onclick = () => shareScore(saved.score, saved.breakdown, 'daily');
+      if ($('#resume-review')) $('#resume-review').onclick = () => startReview(saved);
       $('#progress-label').textContent = 'ROUND COMPLETE';
       $('#progress-fill').style.width = '100%';
       return;
     }
     const data = await api('/api/daily?date=' + today);
-    session.reset(data.questions);
+    session.reset(data.questions.map(imperializeQuestion));
     state.date = data.date;
     $('#date-label').textContent = new Date(data.date + 'T12:00:00').toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' }).toUpperCase();
   } else {
     const data = await api('/api/practice');
-    session.reset(data.questions);
+    session.reset(data.questions.map(imperializeQuestion));
     $('#date-label').textContent = 'NO SCOREBOARD · ALL FOR FUN';
   }
   renderQuestion();

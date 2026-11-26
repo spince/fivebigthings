@@ -125,4 +125,35 @@ function createSession({ questions = [], score = scoreQuestion } = {}) {
   };
 }
 
-if (typeof module !== 'undefined' && module.exports) module.exports = { multiplierFor, maxPointsFor, haversineKm, inPolygons, kmToPolygons, kmOutside, scoreNumberGuess, scorePinGuess, scoreQuestion, defaultChoices, createSession };
+// Spencer's rule: length questions are ASKED in imperial units —
+// feet, miles, inches — the numbers people actually carry in their
+// heads (Everest is 29,032 feet, not 8,849 meters). The bank stays as
+// authored; this converts at presentation time, and the unit picker
+// still lets a player switch to any unit they think in. Scoring is
+// relative-error, so converting changes nothing about fairness.
+// Kilometers become feet below 50,000 ft (heights and human-scale
+// distances are quoted in feet — Everest included) and miles above.
+const METERS_PER = { centimeters: 0.01, meters: 1, kilometers: 1000, inches: 0.0254, feet: 0.3048, miles: 1609.344 };
+function roundSig(n, sig = 5) {
+  if (n === 0) return 0;
+  const p = Math.pow(10, sig - Math.ceil(Math.log10(Math.abs(n))));
+  return Math.round(n * p) / p;
+}
+function imperializeQuestion(q) {
+  if (!q || q.type === 'map') return q;
+  const from = String(q.unit || '').trim().toLowerCase();
+  if (!(from in METERS_PER) || from === 'feet' || from === 'miles' || from === 'inches') return q;
+  const meters = Number(q.answer) * METERS_PER[from];
+  const to = from === 'centimeters' ? 'inches' : (meters / METERS_PER.feet >= 50000 ? 'miles' : 'feet');
+  const answer = roundSig(meters / METERS_PER[to]);
+  const swapUnit = (text) => text ? text.replace(new RegExp(`\\b${from}\\b`, 'g'), to) : text;
+  let explanation = q.explanation;
+  if (explanation) {
+    const oldFigure = `${Number(q.answer).toLocaleString('en-US')} ${from}`;
+    const newFigure = `${answer.toLocaleString('en-US')} ${to}`;
+    explanation = swapUnit(explanation.split(oldFigure).join(newFigure));
+  }
+  return { ...q, answer, unit: to, prompt: swapUnit(q.prompt), explanation };
+}
+
+if (typeof module !== 'undefined' && module.exports) module.exports = { multiplierFor, maxPointsFor, haversineKm, inPolygons, kmToPolygons, kmOutside, scoreNumberGuess, scorePinGuess, scoreQuestion, defaultChoices, createSession, imperializeQuestion };
