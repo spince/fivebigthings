@@ -84,30 +84,39 @@ function kmOutside(pt, polys, graceKm = 0) {
 
 function scoreQuestion(q, value) { return q.type === 'map' ? scorePinGuess(q.answer, value) : scoreNumberGuess(q.answer, value); }
 
-// Default choice cards for number/percent questions: 0.5x / 0.8x / 1x /
-// 1.3x of the answer, deduped (percent clamped to 0-100), padded back
-// to four with answer +/- small offsets, then rotated by a hash of the
-// question id so the right card is not always in the same seat. A mode
-// with its own choice strategy (junior pads differently, the trainer
-// uses strings) builds the same {value, label, marker} shape itself.
-function defaultChoices(q) {
+// Default choice cards for number/percent questions (MB-006). The 1x card
+// is the exact answer, decimals and all, so it can always be picked. The
+// fillers are 0.5x / 0.8x / 1.3x, rounded to the answer's own precision
+// (26.2 -> 13.1 / 21 / 34.1), never negative (percent clamped to 0-100),
+// deduped, and padded back to four with answer +/- whole steps at that
+// precision. Rotated by a hash of the question id so the right card is not
+// always in the same seat. A mode with its own choice strategy (the
+// trainer uses strings) builds the same {value, label, marker} shape itself.
+function decimalsOf(n) {
+  const m = String(n).match(/\.(\d+)$/);
+  return m ? Math.min(m[1].length, 6) : 0;
+}
+
+function numberChoices(q) {
   const answer = Number(q.answer);
-  const factors = [0.5, 0.8, 1, 1.3];
-  const unique = [...new Set(factors.map((f) => {
-    let v = Math.round(answer * f);
-    if (q.type === 'percent') v = Math.min(100, Math.max(0, v));
-    return v;
-  }))];
-  while (unique.length < 4) {
-    const offset = Math.ceil(unique.length / 2);
-    const candidates = [answer - offset, answer + offset].filter((v) => q.type !== 'percent' || (v >= 0 && v <= 100));
-    const candidate = candidates.find((v) => !unique.includes(v));
-    if (candidate === undefined) break;
-    unique.push(candidate);
+  const dp = decimalsOf(answer), step = Math.pow(10, -dp);
+  const max = q.type === 'percent' ? 100 : Infinity;
+  const fix = (v) => Number(Math.min(max, Math.max(0, v)).toFixed(dp));
+  const values = [answer];
+  const add = (v) => { if (v >= 0 && v <= max && !values.includes(v)) values.push(v); };
+  for (const f of [0.5, 0.8, 1.3]) add(fix(answer * f));
+  for (let k = 1; values.length < 4 && k <= 8; k++) {
+    add(fix(answer + k * step));
+    if (values.length < 4) add(fix(answer - k * step));
   }
+  // Keep the ladder's low-to-high order, then rotate the seats.
+  values.sort((a, b) => a - b);
   const shift = [...String(q.id)].reduce((sum, c) => sum + c.charCodeAt(0), 0) % 4;
-  const rotated = unique.slice(shift).concat(unique.slice(0, shift));
-  return rotated.slice(0, 4).map((value, i) => ({ value, label: `${value.toLocaleString()} ${q.unit}`, marker: String.fromCharCode(65 + i) }));
+  return values.slice(shift).concat(values.slice(0, shift)).slice(0, 4);
+}
+
+function defaultChoices(q) {
+  return numberChoices(q).map((value, i) => ({ value, label: `${value.toLocaleString()} ${q.unit}`, marker: String.fromCharCode(65 + i) }));
 }
 
 // The session state machine. score(q, value, index) must return
@@ -176,4 +185,4 @@ function imperializeQuestion(q) {
   return { ...q, answer, unit: to, title: swapUnit(q.title), prompt: swapUnit(q.prompt), explanation };
 }
 
-if (typeof module !== 'undefined' && module.exports) module.exports = { multiplierFor, maxPointsFor, haversineKm, inPolygons, kmToPolygons, kmOutside, scoreNumberGuess, scorePinGuess, scoreQuestion, defaultChoices, createSession, imperializeQuestion, isAntipode };
+if (typeof module !== 'undefined' && module.exports) module.exports = { multiplierFor, maxPointsFor, haversineKm, inPolygons, kmToPolygons, kmOutside, scoreNumberGuess, scorePinGuess, scoreQuestion, defaultChoices, numberChoices, createSession, imperializeQuestion, isAntipode };

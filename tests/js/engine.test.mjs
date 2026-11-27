@@ -133,3 +133,57 @@ test('imperializeQuestion asks in feet/miles/inches (Spencer rule)', () => {
   const pin = { type: 'map', answer: { lat: 0, lng: 0 }, unit: 'km' };
   assert.equal(imperializeQuestion(pin), pin);
 });
+
+// MB-006: the exact answer is always a card; fillers are distinct, non-negative,
+// and rounded to the answer's own precision.
+const fs = require('node:fs');
+function assertGoodChoices(q, where) {
+  const values = defaultChoices(q).map((c) => c.value);
+  assert.equal(values.length, 4, `${where}: four cards`);
+  assert.equal(new Set(values).size, 4, `${where}: distinct cards ${values}`);
+  assert.ok(values.includes(Number(q.answer)), `${where}: exact answer ${q.answer} in ${values}`);
+  assert.ok(values.every((v) => Number.isFinite(v) && v >= 0), `${where}: non-negative ${values}`);
+  if (q.type === 'percent') assert.ok(values.every((v) => v <= 100), `${where}: percent <= 100`);
+}
+
+test('defaultChoices keeps a decimal answer exact (marathon 26.2 miles)', () => {
+  const cs = defaultChoices({ answer: 26.2, unit: 'miles', type: 'number', id: 'x' });
+  assert.deepEqual(cs.map((c) => c.value), [13.1, 21, 26.2, 34.1]);
+  assert.equal(cs[2].label, '26.2 miles');
+});
+
+test('defaultChoices never offers a negative filler (1 moon)', () => {
+  const cs = defaultChoices({ answer: 1, unit: 'moons', type: 'number', id: 'x' });
+  assert.deepEqual(cs.map((c) => c.value), [0, 1, 2, 3]);
+});
+
+test('defaultChoices rounds small decimals at the answer precision (Burj Khalifa 0.828 km)', () => {
+  const cs = defaultChoices({ answer: 0.828, unit: 'km', type: 'number', id: 'x' });
+  assert.deepEqual(cs.map((c) => c.value), [0.414, 0.662, 0.828, 1.076]);
+});
+
+test('defaultChoices clamps percent fillers and still finds four (99%)', () => {
+  assertGoodChoices({ answer: 99, unit: '%', type: 'percent', id: 'x' }, '99%');
+  assertGoodChoices({ answer: 100, unit: '%', type: 'percent', id: 'x' }, '100%');
+  assertGoodChoices({ answer: 0, unit: '%', type: 'percent', id: 'x' }, '0%');
+});
+
+test('every scheduled number question gets four good cards, as played (imperialized)', () => {
+  const calendar = JSON.parse(fs.readFileSync(new URL('../../static/question-calendar.json', import.meta.url), 'utf8'));
+  let checked = 0;
+  for (const [day, questions] of Object.entries(calendar)) {
+    questions.map(imperializeQuestion).forEach((q, i) => {
+      if (q.type === 'map') return;
+      assertGoodChoices(q, `${day} #${i + 1} ${q.id}`);
+      checked++;
+    });
+  }
+  assert.ok(checked > 0);
+});
+
+test('every junior number question gets four good cards', () => {
+  const junior = JSON.parse(fs.readFileSync(new URL('../../static/junior-questions.json', import.meta.url), 'utf8'));
+  for (const set of ['daily', 'practice']) {
+    junior[set].forEach((q, i) => { if (q.type !== 'map') assertGoodChoices(q, `junior ${set} #${i + 1} ${q.id}`); });
+  }
+});

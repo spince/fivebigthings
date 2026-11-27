@@ -13,15 +13,10 @@ const state = { hintLevel: 0, easierUsed: false };
 const EARTH = 'https://assets.science.nasa.gov/content/dam/science/esd/eo/images/bmng/bmng-base/january/world.200401.3x5400x2700.jpg';
 let view = null; // the mounted question presenter for the current question
 
-// Junior's own choice strategy: the main game's factors, padded with
-// answer+offsets and rotated by a hash of the question id.
+// Junior uses the main game's choice values (engine.js numberChoices,
+// MB-006: the exact answer is always a card) with its own labels.
 function choicesFor(q) {
-  const a = Number(q.answer), factors = [0.5, 0.8, 1, 1.3];
-  let vals = [...new Set(factors.map((f) => Math.max(0, Math.round(a * f))))];
-  while (vals.length < 4) { const c = a + (vals.length - 1) * 2 + 1; if (!vals.includes(c)) vals.push(c); else break; }
-  const shift = [...String(q.id)].reduce((s, c) => s + c.charCodeAt(0), 0) % 4;
-  return vals.slice(shift).concat(vals.slice(0, shift)).slice(0, 4)
-    .map((v, i) => ({ value: v, label: `${v.toLocaleString()} ${q.unit}`, marker: String.fromCharCode(65 + i) }));
+  return numberChoices(q).map((v, i) => ({ value: v, label: `${v.toLocaleString()} ${q.unit}`, marker: String.fromCharCode(65 + i) }));
 }
 
 function speak(text) {
