@@ -148,12 +148,43 @@ function submitStep() {
   const fb = $('#answer-feedback');
   fb.innerHTML = feedback; fb.classList.remove('hidden');
   const btn = $('#submit-button');
-  btn.textContent = s === 4 ? 'See my score ↗' : 'Next step ↗';
-  btn.onclick = () => { if (session.advance()) renderStep(); else showResults(); };
+  btn.textContent = s === 4 ? 'Share my score ↗' : 'Next step ↗';
+  btn.onclick = () => {
+    if (s === 4) { shareScore(); showResults(); }
+    else if (session.advance()) renderStep();
+    else showResults();
+  };
 }
 function nudge(msg) {
   const fb = $('#answer-feedback');
   fb.innerHTML = msg; fb.classList.remove('hidden');
+}
+
+async function shareScore() {
+  const total = session.total();
+  const c = state.country;
+  const marks = session.answers.map((r, i) => {
+    const pct = Math.round(100 * r.points / STEP_MAX[i]);
+    const emoji = pct >= 90 ? '🎯' : pct >= 75 ? '🔥' : pct >= 50 ? '🙂' : '🤔';
+    return `${pct}${emoji}`;
+  }).join(' ');
+  const text = `${location.origin}/globe · Country trainer: ${c.country}\n${marks}\nFinal score: ${total}/1,000`;
+  // Resolve the button lazily (Copilot review, PR #47): from the last
+  // step, shareScore() runs BEFORE showResults() swaps in the results
+  // panel — a button captured up front is the hidden play-panel one by
+  // the time the async copy lands, and the confirmation would update
+  // a button nobody can see.
+  const liveButton = () => $('#share-button') || $('#submit-button');
+  // Same belt-and-braces as the main game: always copy the text, so a
+  // share target that keeps only the link still leaves the score pastable.
+  const copied = navigator.clipboard?.writeText(text).then(() => true).catch(() => false);
+  try {
+    if (navigator.share) {
+      await navigator.share({ title: 'Five Big Things Globe score', text });
+      if (await copied) { const b = liveButton(); if (b) b.textContent = 'Score text copied too ✓'; }
+    } else if (await copied) { const b = liveButton(); if (b) b.textContent = 'Copied to clipboard ✓'; }
+    else { throw new Error('Clipboard unavailable'); }
+  } catch (e) { if (e.name !== 'AbortError') alert('Could not share just now.'); }
 }
 
 function showResults() {
@@ -170,7 +201,8 @@ function showResults() {
     <div class="result-score">${total}<span style="font:12px 'DM Mono',monospace;color:#c8d5c2"> / 1,000</span></div></div>
     <div class="result-list">${session.answers.map((r, i) => `<div class="result-line"><span>${STEP_NAMES[i].charAt(0) + STEP_NAMES[i].slice(1).toLowerCase()}</span><b>${r.points} / ${STEP_MAX[i]}</b></div>`).join('')}</div>
     <p style="font-size:12.5px;line-height:1.6;color:#d0ddcf;margin:16px 0 0">🌍 ${c.fact}</p>
-    <div class="result-actions"><button class="button button-light" id="new-country">New country ↗</button></div>`;
+    <div class="result-actions"><button class="button button-light" id="share-button">Share my score ↗</button><button class="button button-outline" id="new-country">New country ↗</button></div>`;
+  $('#share-button').onclick = shareScore;
   $('#new-country').onclick = newSession;
   panel.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
