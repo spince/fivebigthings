@@ -44,8 +44,12 @@ PAGES = {
 }
 PAGES["static/sw.js"] = render_service_worker()
 
-QUESTION_CALENDAR = json.loads(ASSETS["static/question-calendar.json"])
-JUNIOR_QUESTIONS = json.loads(ASSETS["static/junior-questions.json"])
+# Question data lives in data/, never static/: everything under static/ is
+# public at /static/..., and the calendar holds every future round with its
+# answers. The APIs below serve one day at a time instead.
+DATA_ROOT = ROOT / "data"
+QUESTION_CALENDAR = json.loads((DATA_ROOT / "question-calendar.json").read_bytes())
+JUNIOR_QUESTIONS = json.loads((DATA_ROOT / "junior-questions.json").read_bytes())
 
 PRACTICE_QUESTIONS = [
     {"id":"moon","type":"number","title":"The long way to the Moon","prompt":"About how many miles away is the Moon on average?","unit":"miles","answer":238855,"explanation":"The average Earth–Moon distance is about 238,855 miles."},

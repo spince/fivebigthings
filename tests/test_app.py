@@ -150,7 +150,7 @@ def test_service_worker_version_tracks_the_shell(monkeypatch):
 
 
 def test_question_calendar_is_complete():
-    calendar = json.loads((ROOT / "static" / "question-calendar.json").read_text())
+    calendar = json.loads((ROOT / "data" / "question-calendar.json").read_text())
     days = sorted(calendar)
     assert len(days) == 90
     start = date(2026, 10, 22)
@@ -162,3 +162,12 @@ def test_question_calendar_is_complete():
     prompts = [q["prompt"] for day in days for q in calendar[day]]
     assert len(prompts) == 450
     assert len(set(prompts)) == 450, "duplicate questions in the calendar"
+
+
+def test_question_data_is_not_publicly_downloadable():
+    # The calendar holds every future round with its answers; serving it
+    # would let anyone skip the /api/daily date window and read ahead.
+    for path in ["/static/question-calendar.json", "/static/junior-questions.json"]:
+        assert client.get(path).status_code == 404, path
+    for key in app_module.ASSETS:
+        assert not key.endswith(("question-calendar.json", "junior-questions.json")), key

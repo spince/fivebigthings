@@ -22,7 +22,7 @@ Open http://localhost:8000. A completed daily round is remembered in that browse
 - Free practice rounds, score explanations, distance-based map scoring, and share/copy score actions.
 - A lightweight Flask app with no database or account data. Static files are read into memory at startup, which also makes them available to Fastly Compute's Python runtime.
 
-The calendar is stored in `static/question-calendar.json` and bundled with the app. Numeric estimates include an explanatory note; some geographic and historical measurements vary by source or definition.
+The calendar is stored in `data/question-calendar.json` and bundled with the app. It is kept out of `static/` on purpose: everything there is publicly downloadable, and the calendar holds future rounds with their answers. Numeric estimates include an explanatory note; some geographic and historical measurements vary by source or definition.
 
 The globe renderer is pinned to globe.gl 2.46.2 on jsDelivr, and its image is loaded from NASA's Blue Marble collection. No map API key or paid map account is needed. Before launch, bundle these assets locally so the game does not depend on third-party delivery.
 
